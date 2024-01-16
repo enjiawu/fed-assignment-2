@@ -21,7 +21,7 @@ Lastly, a community forum page for users to post events and invite other users t
 The website is designed to provide an engaging and comprehensive experience for the general public interested in our environment by providing a responsive and gamified design. 
 
 
-[Figma Link]()
+[Figma Link](https://www.figma.com/file/dDuVR3js5RHNZrQAFmejXv/FED-Assignment?type=design&node-id=0%3A1&mode=design&t=PRGTqcsSJe6tBqQE-1)
 
 ## Features
 ### Existing Features
