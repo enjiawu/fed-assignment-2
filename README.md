@@ -14,7 +14,7 @@ Firstly, a profile page that will include a user's level, achievements and progr
 Secondly, a green challenges pop-up will be featured on the hero slider of the home page. The green challenges will reward users with points or virtual currency for completing green challenges. \
 Thirdly, an interactive map that shows the recycling corners in Singapore allows users to easily identify nearby recycling corners around Singapore. \
 Fourthly, educational quizzes about the environment, such as about good practices for saving the environment. \
-Lastly, a community forum page for users to post events and invite other users to join. \
+Lastly, a community forum page for users to post events and invite other users to join. 
 
 
 ## Design Process
