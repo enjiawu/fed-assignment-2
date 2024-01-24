@@ -1,0 +1,22 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+#quiz-container {
+    border-radius: 10px;
+    padding: 150px;
+    background-color: rgb(176, 226, 176);
+    margin: auto;
+    align-items: center;
+}
+
+.btn{
+    margin: 10px;
+}
+
+#quiz-content{
+    display: none;
+}
