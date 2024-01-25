@@ -20,3 +20,7 @@ body {
 #quiz-content{
     display: none;
 }
+
+#end-content{
+    display: none;
+}
