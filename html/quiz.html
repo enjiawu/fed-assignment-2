@@ -4,55 +4,65 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Green Recycling | Quiz</title>
-    <link rel="stylesheet" href="/fed-assignment-2/css/quiz.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anonymous+Pro:ital,wght@0,400;0,700;1,400;1,700&family=B612+Mono:ital,wght@0,400;0,700;1,400;1,700&family=B612:ital,wght@0,400;0,700;1,400;1,700&family=Bangers&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link rel="stylesheet" href="/fed-assignment-2/css/quiz.css">
 </head>
 
 <body>
-    <main id="quiz-container" class="flex-center flex-column text-center">
-        <section id="start-content" class="flex-fluid">
+    <main id="quiz-container" class="container">
+        <div id = "question-tracker">
+            <div id = "question-tracker-inner"></div>
+        </div>
+    
+        <section id="start-content" class="flex-center flex-column text-center">
             <h1>SCIENCE AND NATURE QUIZ</h1>
-            <a class="btn"></a>
-            <button type="button" id="start-button" class="btn btn-primary btn-lg">Start now</button>
-            <button type="button" class="quit-button btn btn-secondary btn-lg">Quit</button>
+            <button type="button" id="start-button">Start now</button>
+            <button type="button" id = "start-quit-button" class="quit-button">Quit</button>
         </section>
 
-        <section id="quiz-content" class="flex-fluid">
-            <div id="question-container" class="flex-center flex-column">
-                <div>
-                    <button class="quit-button btn btn-primary btn-lg">Quit</button>
-                    <p id = "points"><span id = "points-earned">0</span>/10000</p> <!--To keep track of number of points earned-->
+        <section id="quiz-content" class="flex-center flex-column text-center">
+            <div id = "quiz-content-header">
+                <button id = "quiz-quit-button" class="quit-button">Quit</button>
+                <p id = "points"><span id = "points-earned">0</span>/1000</p> <!--To keep track of number of points earned-->
+            </div>
+            <p id = "question-number">Question <span id = "current-question-number">0</span>/10</p>
+            <h2 id="question">Question</h2>
+            <p class = "option-seperator"></p>
+            <div id="answer-buttons">
+                <div class = "choice-container">
+                    <p class = "choice-prefix">A</p>
+                    <p class ="option-info"></p>
                 </div>
-                <p id = "question-number">Question <span id = "current-question-number"></span>/10</p>
-                <h2 id="question"></h2>
-                <div id="answer-buttons" class="btn-grid">
-                    <button id ="option-a" class="btn btn-primary btn-lg">
-                        <p class ="option-info"></p>
-                    </button> 
-                    <button id ="option-b" class="btn btn-primary btn-lg">
-                        <p class ="option-info"></p>
-                    </button>
-                    <button id ="option-c" class="btn btn-primary btn-lg">
-                        <p class ="option-info"></p>
-                    </button>
-                    <button id ="option-d" class="btn btn-primary btn-lg">
-                        <p class ="option-info"></p>
-                    </button>
+                <div class = "choice-container">
+                    <p class = "choice-prefix">B</p>
+                    <p class ="option-info"></p>
+                </div>
+                <div class = "choice-container">
+                    <p class = "choice-prefix">C</p>
+                    <p class ="option-info"></p>
+                </div>
+                <div class = "choice-container">
+                    <p class = "choice-prefix">D</p>
+                    <p class ="option-info"></p>
                 </div>
             </div>
         </section>
 
-        <section id = "end-content" class="flex-fluid">
+        <section id = "end-content" class="flex-center flex-column text-center">
             <h1>Quiz Complete!</h1>
             <p id = "final-score">Your final score is <span id = "final-score-points"></span>/10000</p>
             <button type="button" id="restart-button" class="btn btn-primary btn-lg">Try Again</button>
             <button type="button" class="quit-button btn btn-secondary btn-lg">Quit</button>
+        </section>
     </main>
 </body>
 </html>
     </main>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
-    <script src = "/fed-assignment-2/js/quiz.js"></script>
+    <script src="/fed-assignment-2/js/quiz.js"></script>
   </body>
 </html>
