@@ -38,6 +38,7 @@ let count = 1;
 
 startButton.addEventListener("click", function() {
   document.getElementById("start-content").style.display = "none";
+  document.getElementById("quiz-content-header").style.display = "flex";
   quizContent.style.display = "flex";
 
   fetch(url)
