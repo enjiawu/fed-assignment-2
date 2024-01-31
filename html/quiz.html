@@ -14,8 +14,8 @@
 <body>
     <main id="quiz-container" class="container">
         <div id = "question-tracker">
-            <div id = "question-tracker-inner"></div>
         </div>
+        <div id = "question-tracker-inner"></div>
     
         <section id="start-content" class="flex-center flex-column text-center">
             <h1>SCIENCE AND NATURE QUIZ</h1>
@@ -23,46 +23,44 @@
             <button type="button" id = "start-quit-button" class="quit-button">Quit</button>
         </section>
 
+        <div id = "quiz-content-header">
+            <button id = "quiz-quit-button" class="quit-button">Quit</button>
+            <p id = "points"><span id = "points-earned">0</span>points</p> <!--To keep track of number of points earned-->
+        </div>
+
         <section id="quiz-content" class="flex-center flex-column text-center">
-            <div id = "quiz-content-header">
-                <button id = "quiz-quit-button" class="quit-button">Quit</button>
-                <p id = "points"><span id = "points-earned">0</span>/1000</p> <!--To keep track of number of points earned-->
-            </div>
-            <p id = "question-number">Question <span id = "current-question-number">0</span>/10</p>
+            <p id = "question-number">Question <span id = "current-question-number">1</span>/10</p>
             <h2 id="question">Question</h2>
             <p class = "option-seperator"></p>
             <div id="answer-buttons">
                 <div class = "choice-container">
                     <p class = "choice-prefix">A</p>
-                    <p class ="option-info"></p>
+                    <p class = "option-info" data-number = "1">Option 1</p>
                 </div>
                 <div class = "choice-container">
                     <p class = "choice-prefix">B</p>
-                    <p class ="option-info"></p>
+                    <p class = "option-info" data-number = "2">Option 2</p>
                 </div>
                 <div class = "choice-container">
                     <p class = "choice-prefix">C</p>
-                    <p class ="option-info"></p>
+                    <p class = "option-info" data-number = "3">Option 3</p>
                 </div>
                 <div class = "choice-container">
                     <p class = "choice-prefix">D</p>
-                    <p class ="option-info"></p>
+                    <p class = "option-info" data-number = "4">Option 4</p>
                 </div>
             </div>
         </section>
 
         <section id = "end-content" class="flex-center flex-column text-center">
             <h1>Quiz Complete!</h1>
-            <p id = "final-score">Your final score is <span id = "final-score-points"></span>/10000</p>
-            <button type="button" id="restart-button" class="btn btn-primary btn-lg">Try Again</button>
-            <button type="button" class="quit-button btn btn-secondary btn-lg">Quit</button>
+            <p id = "final-score">Your final score is <span id = "final-score-points"></span>!</p>
+            <button type="button" id="restart-button">Try Again</button>
+            <button type="button" class="quit-button">Quit</button>
         </section>
-    </main>
-</body>
-</html>
     </main>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
     <script src="/fed-assignment-2/js/quiz.js"></script>
-  </body>
+</body>
 </html>
