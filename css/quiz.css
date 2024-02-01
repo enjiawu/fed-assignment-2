@@ -106,17 +106,30 @@ h1{
     left: 5%;
 }
 
-#points{
+#points-container{
     position: fixed;
     display: inline;
     font-size: 12px;
-    width: 20vw;
     color: white;
     text-align: center;
     padding-top: 3px;
+    right: 5%;
+}
+
+#points{
+    width: 20vw;
     background-color: rgb(56, 77, 56);
     border-radius: 15px;
-    right: 5%;
+    margin-bottom: 5%;
+}
+
+#points-popup{
+    display: none;
+    color: black;
+    font-size: 18px;
+    font-weight: bold;
+    transform: rotate(4deg); /*Make it slant a little*/
+    transition: 0.35s;
 }
 
 #points-earned{
@@ -183,16 +196,71 @@ h1{
 }
 
 #final-score{
-    font-size: 20px;
+    font-size: 21px;
     font-weight: bold;
 }
 
 #end-content{
     display: none;
     justify-content: center;
-    align-items: center;
+    align-content: center;
+}
+
+#end-content .quit-button{
+    margin: 0 25%;
+    width: 50%;
 }
 
 #restart-button{
-    margin: 3%;
+    margin: 20% 5% 3% 5%;
+    width: 90%;
+}
+
+#xp-container{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+#xp-message{
+    font-size: 18px;
+    font-weight: bold;
+    margin: 1% 70%;
+}
+
+#xp-tracker{
+    background-color: rgb(106, 150, 106);
+    width: 100%;
+    height: 40%;
+    border-radius: 10px;
+}
+
+#xp-tracker-inner{
+    background-color: rgb(64, 94, 64);
+    width: 80%;
+    border-radius: 15px;
+    height: 100%;
+}
+
+#level-tracker{
+    display: flex;
+    font-size: 14px;
+    justify-content: space-between;
+    margin: 1% 4%;
+}
+
+#level{
+    font-weight: bold;
+}
+
+#player-xp{
+    font-size: 11px;
+}
+
+#current-xp{
+    font-weight: bold;
+    font-size: 15px;
 }
