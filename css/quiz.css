@@ -106,17 +106,30 @@ h1{
     left: 5%;
 }
 
-#points{
+#points-container{
     position: fixed;
     display: inline;
     font-size: 12px;
-    width: 20vw;
     color: white;
     text-align: center;
     padding-top: 3px;
+    right: 5%;
+}
+
+#points{
+    width: 20vw;
     background-color: rgb(56, 77, 56);
     border-radius: 15px;
-    right: 5%;
+    margin-bottom: 5%;
+}
+
+#points-popup{
+    display: none;
+    color: black;
+    font-size: 18px;
+    font-weight: bold;
+    transform: rotate(4deg); /*Make it slant a little*/
+    transition: 0.35s;
 }
 
 #points-earned{

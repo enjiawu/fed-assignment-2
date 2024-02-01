@@ -214,11 +214,13 @@ options.forEach(option => { //For each choice
 
         if (selectedAnswer == currentQuestion.answer) { //If the selected answer is the same as the current question's answer
             score += 1000; //Add correct points
+            document.getElementById("points-popup").style.display = "block"; //Show the points popup
             pointsEarned.innerHTML = score; //Set the points earned to the score
             selectedOption.parentElement.classList.add("correct"); //Add the correct class to the selected option's parent element
 
             setTimeout(() => { //Wait for a second
                 selectedOption.parentElement.classList.remove("correct"); //Remove the correct class to the selected option's parent element
+                document.getElementById("points-popup").style.display = "none"; //Hide the points popup
                 getNewQuestion(); //Get a new question
             }, 1000);
         }
@@ -228,6 +230,7 @@ options.forEach(option => { //For each choice
             setTimeout(() => {//Wait for a second
                 selectedOption.parentElement.classList.remove("wrong"); //Remove the correct class to the selected option's parent element
                 //selectedAnswer.parentElement.classList.remove("correct"); //Remove the correct class to the selected answer's parent element
+                document.getElementById("points-popup").style.display = "none"; //Hide the points popup
                 getNewQuestion(); //Get a new question
             },1000)
         }
