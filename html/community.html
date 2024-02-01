@@ -8,11 +8,91 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Anonymous+Pro:ital,wght@0,400;0,700;1,400;1,700&family=B612+Mono:ital,wght@0,400;0,700;1,400;1,700&family=B612:ital,wght@0,400;0,700;1,400;1,700&family=Bangers&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
-    <link rel="stylesheet" href="/fed-assignment-2/css/quiz.css">
+    <link rel="stylesheet" href="../css/community.css">
 </head>
 <body>
-    
+    <main id = "community-container">
+        <section id = "community-header">
+            <h1>Community</h1>
+            <p>Join the conversation</p>
+
+            <div class = "d-flex flex-column">
+                <div id = "add-post-continer" class="input-group mb-3">
+                    <input type="text" class="form-control" placeholder="Add a new post" aria-label="Add a new post" aria-describedby="add-post-button">
+                    <button class="btn btn-outline-secondary" type="button" id="add-post-button">+</button>
+                </div>
+            
+                <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Sort by
+                    </button>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="#">Popular</a></li>
+                      <li><a class="dropdown-item" href="#">Latest</a></li>
+                      <li><a class="dropdown-item" href="#">Oldest</a></li>
+                    </ul>
+                </div>    
+            </div>
+          
+        </section>  
+
+        <section class = "post-container">
+            <div class="card mb-3">
+                <div class="row g-0">
+                    <div class="col-md-4">
+                        <img src="..." class="img-fluid rounded-start" alt="...">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="post-body card-body">
+                                <h5 class="post-title card-title">Recycling Drive</h5>
+                                <div id = "user-info-container" class="d-flex flex-column">
+                                    <div class = "d-flex flex-row">
+                                        <img src="../images/user.png" alt="user" class="user-image">
+                                        <p class="user-name">John Doe</p>
+                                    </div>
+                                    <p class="post-data card-text"><small class="text-body-secondary">Last updated <span id = "data-updated">3 mins</span> ago</small></p>
+                                </div>
+
+                                <p class="post-text card-text">Inviting all individuals to participate in a 1 week recycling drive at Clementi Community Centre! <br>
+                                Sign up here at: ############## <br>
+                                Email ####### for any enquiries.</p>
+
+                                <div class = "post-details d-flex flex-column">
+                                    <p class = "location">Location: <span class = "post-location">Clementi</span></p>
+                                    <p class = "dates">Dates: <span class = "post-dates">Clementi</span></p>
+                                    <p class = "contact">Contact: <span class = "post-contact">91112222</span></p>
+                                </div>
+                                <a href="#" class="join-button btn btn-primary">Join now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <nav id = "navigation">
+            <ul class="pagination justify-content-center">
+              <li class="page-item">
+                <a class="page-link" href="#" aria-label="Previous">
+                  <span aria-hidden="true">&laquo;</span>
+                </a>
+              </li>
+              <li class="page-item"><a class="page-link" href="#">1</a></li>
+              <li class="page-item"><a class="page-link" href="#">2</a></li>
+              <li class="page-item"><a class="page-link" href="#">3</a></li>
+              <li class="page-item">
+                <a class="page-link" href="#" aria-label="Next">
+                  <span aria-hidden="true">&raquo;</span>
+                </a>
+              </li>
+            </ul>
+          </nav>
+    </main>
+
+
+
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
-    <script src="/fed-assignment-2/js/quiz.js"></script>
+    <script src="../js/community.js"></script>
 </body>
 </html>
