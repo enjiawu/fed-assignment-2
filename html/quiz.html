@@ -25,7 +25,10 @@
 
         <div id = "quiz-content-header">
             <button id = "quiz-quit-button" class="quit-button">Quit</button>
-            <p id = "points"><span id = "points-earned">0</span>points</p> <!--To keep track of number of points earned-->
+            <div id = "points-container">
+                <p id = "points"><span id = "points-earned">0</span>points</p> <!--To keep track of number of points earned-->
+                <p id = "points-popup">+1000</p>
+            </div>
         </div>
 
         <section id="quiz-content" class="flex-center flex-column text-center">
@@ -55,6 +58,16 @@
         <section id = "end-content" class="flex-center flex-column text-center">
             <h1>Quiz Complete!</h1>
             <p id = "final-score">Your final score is <span id = "final-score-points"></span>!</p>
+            <div xp = "xp-container">
+                <p id = "xp-message">+500xp</p>
+                <div id = "xp-tracker">
+                    <div id = "xp-tracker-inner"></div>
+                    <div id = "level-tracker">
+                        <p id = "level">Level <span id= "player-level">1</span></p>
+                        <p id = "player-xp"><span id = "current-xp">18000</span>/250000</p>
+                    </div>
+                </div>
+            </div>
             <button type="button" id="restart-button">Try Again</button>
             <button type="button" class="quit-button">Quit</button>
         </section>
