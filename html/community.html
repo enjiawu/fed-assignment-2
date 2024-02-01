@@ -13,16 +13,45 @@
 <body>
     <main id = "community-container">
         <section id = "community-header">
-            <h1>Community</h1>
-            <p>Join the conversation</p>
-
             <div class = "d-flex flex-column">
-                <div id = "add-post-continer" class="input-group mb-3">
-                    <input type="text" class="form-control" placeholder="Add a new post" aria-label="Add a new post" aria-describedby="add-post-button">
-                    <button class="btn btn-outline-secondary" type="button" id="add-post-button">+</button>
+                <button id="add-post-button" class="btn btn-outline-secondary" type="button">Add new post</button>
+                <div id ="new-post-info">
+                    <form>
+                        <div class="form-group">
+                          <label for="exampleFormControlInput1">Email address</label>
+                          <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+                        </div>
+                        <div class="form-group">
+                          <label for="exampleFormControlSelect1">Example select</label>
+                          <select class="form-control" id="exampleFormControlSelect1">
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5</option>
+                          </select>
+                        </div>
+                        <div class="form-group">
+                          <label for="exampleFormControlSelect2">Example multiple select</label>
+                          <select multiple class="form-control" id="exampleFormControlSelect2">
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5</option>
+                          </select>
+                        </div>
+                        <div class="form-group">
+                          <label for="exampleFormControlTextarea1">Example textarea</label>
+                          <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleFormControlFile1">Example file input</label>
+                            <input type="file" class="form-control-file" id="exampleFormControlFile1">
+                        </div>
+                      </form>
                 </div>
-            
-                <div class="dropdown">
+                <div id = "sorting" class="dropdown">
                     <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                       Sort by
                     </button>
@@ -44,13 +73,20 @@
                         </div>
                         <div class="post-content col-md-8">
                             <div class="post-body card-body">
-                                <h5 class="post-title card-title">Recycling Drive</h5>
+                            <div class = "post-header d-flex flex-row">
+                                <h2 class="post-title card-title">Recycling Drive</h3>
+                                <div class="post-options dropdown">
+                                    <button class="btn btn-secondary" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    ...</button>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="#">Edit</a></li>
+                                        <li><a class="dropdown-item" href="#">Delete</a></li>
+                                    </ul>
+                                </div> 
+                            </div>
                                 <div id = "user-info-container" class="d-flex flex-column">
-                                    <div class = "d-flex flex-row">
-                                        <img src="../images/user.png" alt="user" class="user-image">
-                                        <p class="user-name">John Doe</p>
-                                    </div>
-                                    <p class="post-data card-text"><small class="text-body-secondary">Last updated <span id = "data-updated">3 mins</span> ago</small></p>
+                                    <p class="user-name">@John Doe</p>
+                                    <p class="post-date">Last updated <span id = "data-updated">3 mins</span> ago</p>
                                 </div>
 
                                 <p class="post-text card-text">Inviting all individuals to participate in a 1 week recycling drive at Clementi Community Centre! <br>
@@ -62,7 +98,14 @@
                                     <p class = "dates">Dates: <span class = "post-dates">Clementi</span></p>
                                     <p class = "contact">Contact: <span class = "post-contact">91112222</span></p>
                                 </div>
-                                <a href="#" class="join-button btn btn-primary">Join now</a>
+
+                                <div class = "post-buttons d-flex flex-row ">
+                                    <a href="#" class="join-button btn btn-primary">Join now</a>
+                                    <a class = "likes"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="heart bi bi-heart" viewBox="0 0 16 16">
+                                        <path d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143q.09.083.176.171a3 3 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15"/> 
+                                      </svg> <span class ="post-likes">23</span></a>
+                                </div>
+
                             </div>
                         </div>
                     </div>
