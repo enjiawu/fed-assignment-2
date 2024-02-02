@@ -128,8 +128,21 @@ var questionTrackerInner = document.getElementById("question-tracker-inner"); //
 var url = "https://opentdb.com/api.php?amount=10&category=17&type=multiple";
 let questions = [];
 
+function lottieLoading(){
+    document.getElementById("loading-screen").style.display = "flex"; //Showing the lottie animation
+    document.getElementsByTagName("body")[0].style.backgroundColor = "#061f37"; //Changing the background color 
+    document.getElementsByTagName("main")[0].style.display = "none"; //Hiding the quiz content
+
+    setTimeout(() => { //Change back after 3 seconds
+        document.getElementById("loading-screen").style.display = "none"; //Hiding the lottie animation
+        document.getElementsByTagName("body")[0].style.backgroundColor = "white"; //Changing background back to white
+        document.getElementsByTagName("main")[0].style.display = "flex"; //Showing the quiz content
+    }, 3000);
+}
+
 //When the start button is clicked
 startButton.addEventListener("click", function(){ //Add an event listener for when the start button is clicked
+    lottieLoading(); //Showing the lottie animation while the quiz loads
     document.getElementById("start-content").style.display = "none"; //Hide the start content
     document.getElementById("quiz-content-header").style.display = "flex"; //Show the quiz content header
     document.getElementById("quiz-content").style.display = "flex"; //Show the quiz content
