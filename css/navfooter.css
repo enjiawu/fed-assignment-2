@@ -28,6 +28,7 @@ img {
 /* sticky navbar */
 .navbar.sticky{
     background-color: #fff;
+    border-bottom: #8D8B8A;
 }
 
 /* Navbar content styles */
