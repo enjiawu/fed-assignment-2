@@ -13,56 +13,61 @@
 <body>
     <main id = "community-container">
         <section id = "community-header">
-            <div class = "d-flex flex-column">
-                <button id="add-post-button" class="btn btn-outline-secondary" type="button">Add new post</button>
-                <div id ="new-post-info">
-                    <form>
-                        <div class="form-group">
-                          <label for="exampleFormControlInput1">Email address</label>
-                          <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
-                        </div>
-                        <div class="form-group">
-                          <label for="exampleFormControlSelect1">Example select</label>
-                          <select class="form-control" id="exampleFormControlSelect1">
-                            <option>1</option>
-                            <option>2</option>
-                            <option>3</option>
-                            <option>4</option>
-                            <option>5</option>
-                          </select>
-                        </div>
-                        <div class="form-group">
-                          <label for="exampleFormControlSelect2">Example multiple select</label>
-                          <select multiple class="form-control" id="exampleFormControlSelect2">
-                            <option>1</option>
-                            <option>2</option>
-                            <option>3</option>
-                            <option>4</option>
-                            <option>5</option>
-                          </select>
-                        </div>
-                        <div class="form-group">
-                          <label for="exampleFormControlTextarea1">Example textarea</label>
-                          <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-                        </div>
-                        <div class="form-group">
-                            <label for="exampleFormControlFile1">Example file input</label>
-                            <input type="file" class="form-control-file" id="exampleFormControlFile1">
-                        </div>
-                      </form>
-                </div>
-                <div id = "sorting" class="dropdown">
-                    <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                      Sort by
-                    </button>
-                    <ul class="dropdown-menu">
-                      <li><a class="dropdown-item" href="#">Popular</a></li>
-                      <li><a class="dropdown-item" href="#">Latest</a></li>
-                      <li><a class="dropdown-item" href="#">Oldest</a></li>
-                    </ul>
-                </div>    
+          <button id="add-post-button" class="post-button btn btn-outline-secondary" type="button">Add new post</button>
+
+          <div id = "add-post-container" class = "flex-column">
+            <div id = "add-new-post-header" class = "d-flex flex-row">
+              <h3>Add new post</h3>
+              <button type="button" id="close-add-new-post" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
             </div>
-          
+
+            <form>
+              <div class="form-group">
+                <textarea class="form-control" id="post-title" rows="1" maxlength="50" placeholder="Enter title here" required></textarea>
+              </div>
+              <div class="form-group">
+                <textarea class="form-control" id="post-description" rows="8" placeholder="Enter description here" minlength ="100" maxlength="500" required></textarea>
+              </div>
+              <div class="form-group">
+                <input type="text" class="form-control" id="post-location" maxlength="50" placeholder="Enter location here" required>
+              </div>
+              <div class="form-group">
+                <input type="email" class="form-control" id="post-contact" maxlength="50" placeholder="Enter email to contact here" required>
+              </div>
+              <div class = "post-dates d-flex flex-row">
+                <div class="start-date form-group d-flex flex-column">
+                  <label for="start-date">Start date</label>
+                  <input type="date" id="post-start-date" name="post-start-date" required>
+                </div>
+                <div class="end-date form-group d-flex flex-column">
+                  <label for="end-date">End date</label>
+                  <input type="date" id="post-end-date" name="post-end-date" required>
+                </div>
+              </div>
+              <div id = "add-post-image" class="form-group d-flex flex-column">
+                  <label for="post-image">Add Image</label>
+                  <input type="file" class="post-image form-control-file" id="post-image">
+              </div>
+              <div class="join-now-link form-group">
+                  <input type="url" id="join-now-link" name="join-now-link" placeholder = "Join now link" required>
+              </div>
+              <button id="submit-post" class="post-button btn btn-outline-secondary" type="submit">Post</button>
+            </form>
+          </div>
+              
+
+          <div id = "sorting" class="dropdown">
+              <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Sort by
+              </button>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Popular</a></li>
+                <li><a class="dropdown-item" href="#">Latest</a></li>
+                <li><a class="dropdown-item" href="#">Oldest</a></li>
+              </ul>
+          </div>              
         </section>  
 
         <section class = "post-container">
@@ -77,7 +82,7 @@
                                 <h2 class="post-title card-title">Recycling Drive</h3>
                                 <div class="post-options dropdown">
                                     <button class="btn btn-secondary" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                    ...</button>
+                                    &hellip;</button>
                                     <ul class="dropdown-menu">
                                         <li><a class="dropdown-item" href="#">Edit</a></li>
                                         <li><a class="dropdown-item" href="#">Delete</a></li>
@@ -86,7 +91,7 @@
                             </div>
                                 <div id = "user-info-container" class="d-flex flex-column">
                                     <p class="user-name">@John Doe</p>
-                                    <p class="post-date">Last updated <span id = "data-updated">3 mins</span> ago</p>
+                                    <p class="post-date">1 jan 2024</p>
                                 </div>
 
                                 <p class="post-text card-text">Inviting all individuals to participate in a 1 week recycling drive at Clementi Community Centre! <br>
@@ -103,7 +108,7 @@
                                     <a href="#" class="join-button btn btn-primary">Join now</a>
                                     <a class = "likes"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="heart bi bi-heart" viewBox="0 0 16 16">
                                         <path d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143q.09.083.176.171a3 3 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15"/> 
-                                      </svg> <span class ="post-likes">23</span></a>
+                                      </svg> <span id ="post-likes">0</span></a>
                                 </div>
 
                             </div>

@@ -3,7 +3,7 @@
     margin: 5% auto auto auto;
 }
 
-#add-post-button{
+.post-button{
     width: 100%;
     margin-bottom: 30px;
     background-color: #558E4C;
@@ -16,7 +16,7 @@
     transition: 0.35s;
 }
 
-#add-post-button:hover{
+.post-button:hover{
     border: 1px solid black;
     color: black;
     background-color: white;
@@ -49,9 +49,8 @@
     background-color: rgb(165, 207, 165);
     border: none;
     color: black;
-    letter-spacing: 2px;
     font-weight: bolder;
-    padding-bottom: 20%;
+    transform: rotate(270deg);
 }
 
 .post-content{
@@ -114,4 +113,67 @@
     cursor: pointer;
     text-decoration: none;
     color: black;
+}
+
+#add-post-container{
+    display: none;
+    background-color: #A5b9AD;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    transition: 0.35s;
+}
+
+#add-new-post-header{
+    margin: 40px 5% 20px 5%;
+    justify-content: space-between;
+}
+
+#close-add-new-post{
+    font-size: 25px;
+    font-weight: bold;
+    color: black;
+    cursor: pointer;
+    background-color: #A5b9AD;
+    border: none;
+    transition: 0.35s;
+}
+
+.close:hover{
+    color: white;
+}
+
+#add-post-form{
+    margin: 5% 5% 5% 5%;
+}
+
+.form-group{
+    margin: 5px 5%;
+}
+
+.end-date{
+    margin: 5px 0;
+}
+
+#post-start-date, #post-end-date{
+    border-radius: 5px;
+    color: gray;
+    border: none;
+    padding: 5px;
+}
+
+#add-post-image{
+    margin-top: 10px;
+}
+
+#submit-post{
+    width: 90%;
+    margin: 30px 5%;
+}
+
+.join-now-link input{
+    width: 100%;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
 }
