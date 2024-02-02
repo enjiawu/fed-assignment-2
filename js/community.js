@@ -28,6 +28,7 @@ likeButtons.forEach((button, index) => {
 //Allowing user to add posts
 document.addEventListener("DOMContentLoaded", function () {
     const APIKEY = "65bcaa26383507023123fbae"; //Our api key
+    getPost();
   
     document.getElementById("submit-post").addEventListener("click", function (e) { //hen user submits the form to add new post
         e.preventDefault(); //Prevent default action of the button 
@@ -64,39 +65,34 @@ document.addEventListener("DOMContentLoaded", function () {
         },
         body: JSON.stringify(jsondata),
         beforeSend: function () {
-          //@TODO use loading bar instead
           // Disable our button or show loading bar
-          document.getElementById("contact-submit").disabled = true;
+          document.getElementById("submit-button").disabled = true;
           // Clear our form using the form ID and triggering its reset feature
-          document.getElementById("add-contact-form").reset();
+          document.getElementById("add-new-post-form").reset();
         }
       }
   
-      //[STEP 5]: Send our AJAX request over to the DB and print response of the RESTDB storage to console.
-      fetch("https://interactivedev-57dd.restdb.io/rest/contact", settings)
+      //Send AJAX request over to the DB and print response of the RESTDB storage to console.
+      fetch("https://greenrecycling-8b3e.restdb.io/rest/post", settings)
         .then(response => response.json())
         .then(data => {
           console.log(data);
-          document.getElementById("contact-submit").disabled = false;
-          //@TODO update frontend UI 
-          document.getElementById("update-msg").style.display = "block";
-          setTimeout(function () {
-            document.getElementById("add-update-msg").style.display = "none";
-          }, 3000);
+          document.getElementById("submit-button").disabled = true;
+          //document.getElementById("update-msg").style.display = "block";
+          //setTimeout(function () {
+          //  document.getElementById("add-update-msg").style.display = "none";
+         // }, 3000);
           // Update our table 
-          getContacts();
+          getPost();
         });
-    });//end click 
+    });
   
+    // Retrieving information of all posts
+    function getContacts(all = true) {
   
-    //[STEP] 6
-    // Let's create a function to allow you to retrieve all the information in your contacts
-    // By default, we only retrieve 10 results
-    function getContacts(limit = 10, all = true) {
-  
-      //[STEP 7]: Create our AJAX settings
+      //Creating AJAX settings
       let settings = {
-        method: "GET", //[cher] we will use GET to retrieve info
+        method: "GET", //Used to get info
         headers: {
           "Content-Type": "application/json",
           "x-apikey": APIKEY,
@@ -107,7 +103,7 @@ document.addEventListener("DOMContentLoaded", function () {
       //[STEP 8]: Make our AJAX calls
       // Once we get the response, we modify our table content by creating the content internally. We run a loop to continuously add on data
       // RESTDb/NoSql always adds in a unique id for each data; we tap on it to have our data and place it into our links 
-      fetch("https://interactivedev-57dd.restdb.io/rest/contact", settings)
+      fetch("https://greenrecycling-8b3e.restdb.io/rest/post", settings)
         .then(response => response.json())
         .then(response => {
           let content = "";
