@@ -177,3 +177,18 @@
     border-radius: 5px;
     padding: 5px 10px;
 }
+
+.alert{
+    position: fixed;
+    top: 2%;
+    width: 90vw;
+}
+
+#add-post-msg, #update-msg, #delete-msg{
+    display:none;
+    z-index: 1001;
+}
+
+#update-post-container h3{
+    padding: 5% 10% 0px 10%;
+}

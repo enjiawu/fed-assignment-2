@@ -15,13 +15,13 @@
     <main id = "community-container">
         <section id = "community-header">
           <button id="add-post-button" class="post-button btn btn-outline-secondary" type="button">Add new post</button>
-
-          <div id = "add-post-container" class = "flex-column">
-            <div id="add-post-msg">
-              <div class="alert alert-success" role="alert">
-                Post has been successfully added!
-              </div>
+          
+          <div id="add-post-msg">
+            <div class="alert alert-success" role="alert">
+              Post has been successfully added!
             </div>
+          </div>
+          <div id = "add-post-container" class = "flex-column">
             <div id = "add-new-post-header" class = "d-flex flex-row">
               <h3>Add new post</h3>
               <button type="button" id="close-add-new-post" aria-label="Close">
@@ -32,6 +32,9 @@
             <form id = "add-new-post-form">
               <div class="form-group">
                 <textarea class="form-control" id="post-title" rows="1" maxlength="50" placeholder="Enter title here" required></textarea>
+              </div>
+              <div class="form-group">
+                <textarea class="form-control" id="post-organisation" rows="1" maxlength="50" placeholder="Enter organisation name" required></textarea>
               </div>
               <div class="form-group">
                 <textarea class="form-control" id="post-description" rows="8" placeholder="Enter description here" minlength ="50" maxlength="500" required></textarea>
@@ -72,25 +75,21 @@
           </div>              
         </section>  
 
-        <section id = "post-container">
-          
-        </section>
+        <section id = "post-container"></section>
 
+        <div id="update-msg">
+          <div class="alert alert-success" role="alert">
+            Post has been updated!
+          </div>
+        </div>
         <div class = "contianer" id = "update-post-container">
-          <div id="update-msg">
-            <div class="alert alert-success" role="alert">
-              Post has been updated!
-            </div>
-          </div>
-          <div id = "update-post-header" class = "d-flex flex-row">
-            <h3>Update post</h3>
-            <button type="button" id="close-update-post" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
+          <h3>Update post</h3>
           <form id = "update-post">
             <div class="form-group">
               <textarea class="form-control" id="update-post-title" rows="1" maxlength="50" placeholder="Enter title here" required></textarea>
+            </div>
+            <div class="form-group">
+              <textarea class="form-control" id="update-post-organisation" rows="1" maxlength="50" placeholder="Enter title here" required></textarea>
             </div>
             <div class="form-group">
               <textarea class="form-control" id="update-post-description" rows="8" placeholder="Enter description here" minlength ="50" maxlength="500" required></textarea>
@@ -114,27 +113,17 @@
             <div class="join-now-link form-group">
                 <input type="url" id="update-join-now-link" name="join-now-link" placeholder = "Join now link" required>
             </div>
+            <input type="hidden" id="update-post-id">
+
             <button id="update-post" class="post-button btn btn-outline-secondary" type="submit">Update</button>
           </form>
         </div>
 
-        <nav id = "navigation">
-            <ul class="pagination justify-content-center">
-              <li class="page-item">
-                <a class="page-link" href="#" aria-label="Previous">
-                  <span aria-hidden="true">&laquo;</span>
-                </a>
-              </li>
-              <li class="page-item"><a class="page-link" href="#">1</a></li>
-              <li class="page-item"><a class="page-link" href="#">2</a></li>
-              <li class="page-item"><a class="page-link" href="#">3</a></li>
-              <li class="page-item">
-                <a class="page-link" href="#" aria-label="Next">
-                  <span aria-hidden="true">&raquo;</span>
-                </a>
-              </li>
-            </ul>
-          </nav>
+        <div id="delete-msg">
+          <div class="alert alert-danger" role="alert">
+            Post has been deleted!
+          </div>
+        </div>
     </main>
 
     <section id = "loading-screen">
