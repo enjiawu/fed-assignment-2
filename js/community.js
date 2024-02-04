@@ -11,8 +11,6 @@ document.getElementById("close-add-new-post").addEventListener("click", function
     addPostContainer.style.display = "none"; //Hide the add post form
 });
 
-const postLikes = {}; // Store the likes count for each post
-
 function lottieLoading(){ //Function for loading lottie for 3 seconds
     document.getElementById("loading-screen").style.display = "flex"; //Showing the lottie animation
     document.getElementsByTagName("body")[0].style.backgroundColor = "#061f37"; //Changing the background color 
@@ -169,6 +167,12 @@ document.addEventListener("DOMContentLoaded", function () {
     // Here we tap onto our previous table when we click on update
     // This is a delegation feature of jQuery
     // Because our content is dynamic in nature, we listen in on the main container which is "#contact-list". For each row, we have a class .update to help us
+    document.getElementById("close-update-post").addEventListener("click", function (e) {
+      e.preventDefault();
+      // Hide the update form
+      document.getElementById("update-post-container").style.display = "none";
+    });
+
     document.getElementById("post-container").addEventListener("click", function (e) {
       if (e.target.classList.contains("update")) {
         e.preventDefault();
@@ -261,7 +265,7 @@ document.addEventListener("DOMContentLoaded", function () {
           // Update our contacts table
           getPosts();
 
-          document.getElementById("update-post").addEventListener("click", function (e) {
+          document.getElementById("update-post-button").addEventListener("click", function (e) {
             document.getElementById("update-post-container").style.display = "none"; //Hiding the post container
             lottieLoading(); //Loading lottie animation
             document.getElementById("update-msg").style.display = "block";

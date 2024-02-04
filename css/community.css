@@ -189,6 +189,21 @@
     z-index: 1001;
 }
 
-#update-post-container h3{
-    padding: 5% 10% 0px 10%;
+
+#update-post-container{
+    position: fixed;
+    top: 0;
+    width: 80vw;
+    height: 97vh;
+    margin: 1.5vh 5vw;
+}
+
+#update-post-header{
+    margin: 15px 10% 5px 10%;
+    justify-content: space-between;
+}
+
+#update-post-button{
+    margin-top: 0;
+    margin-bottom: 10px;
 }

@@ -83,7 +83,13 @@
           </div>
         </div>
         <div class = "contianer" id = "update-post-container">
-          <h3>Update post</h3>
+          <div id = "update-post-header" class = "d-flex flex-row">
+            <h3>Update post</h3>
+            <button type="button" id="close-update-post" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+
           <form id = "update-post">
             <div class="form-group">
               <textarea class="form-control" id="update-post-title" rows="1" maxlength="50" placeholder="Enter title here" required></textarea>
@@ -115,7 +121,7 @@
             </div>
             <input type="hidden" id="update-post-id">
 
-            <button id="update-post" class="post-button btn btn-outline-secondary" type="submit">Update</button>
+            <button id="update-post-button" class="post-button btn btn-outline-secondary" type="submit">Update</button>
           </form>
         </div>
 
