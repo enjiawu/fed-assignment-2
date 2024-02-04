@@ -1,7 +1,9 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+body{
+    background-image: url(/image/index/body.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
 }
 
 /* apply styles to all images */  
@@ -14,14 +16,14 @@ h1 {
     font-size: 45px;
     line-height: 1;
     color: #fff;
-    margin: 0 0 45px;
+    margin: 0 0 40px;
 }
 
 h2{
     font-size: 38px;
     line-height: 1;
     color: #404a3d;
-    margin: 0 0 45px;
+    margin: 0 0 30px;
 }
 
 h3{
@@ -40,8 +42,8 @@ h4 {
 p {
     color: #404a3d;
     font-size: 15px;
-    line-height: 1.8;
-    margin-bottom: 40px;
+    line-height: 1.5;
+    margin-bottom: 20px;
 }
 
 .hero .hero-bgimg {
@@ -60,20 +62,21 @@ p {
     z-index: 1;
     position: absolute;
     width: 30%;
-    max-width: 300px;
-    top: 25%;
-    left: 20%;
+    max-width: 200px;
+    top: 15%;
+    right: 20%;
+
 }
 
 .hero-text {
-    background-color: rgba(0, 0, 0, 0.5); 
+    background-color: rgba(0, 0, 0, 0.6); 
     width: 35%;
     min-width: 400px;
     padding: 50px 30px;
     border-radius: 10px;
     position: absolute;
-    top: 20%;
-    right: 10%;
+    top: 25%;
+    left: 3.5%;
     z-index: 1;
 }
 
@@ -93,6 +96,7 @@ p {
     font-size: 14px;
     border-radius: 5px;
     transition: all .55s ease;
+    text-decoration: none;
 }
 
 .hero-text a:hover{
@@ -100,20 +104,12 @@ p {
     color: #fff;
 }
 
-
 /* why recycle section */
 .recycle{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    margin: 60px 100px;
+    padding: 60px 30px;
+    background-color: #fff;
 }
 
-.recycle-text,
-.recycle-img{
-    flex: 1;
-    padding: 20px;
-}
 
 .recycle h4 {
     color: #558E4C;
@@ -122,13 +118,14 @@ p {
 /* recycle importance section */
 .importance {
     position: relative;
-    margin: 0 0 300px;
+    padding: 0 0 1400px;
+    background-color: #fff;
 }
 
 .importance-header {
     height: 50%;
     width: 100%;
-    min-height: 500px;
+    min-height: 300px;
     background-image: url(/image/index/importance.jpg);
     background-size: cover;
     background-repeat: no-repeat;
@@ -147,23 +144,240 @@ p {
 
 .importance-row{
     position: absolute;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    top: 300px;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    margin: 0 70px;
+    top: 200px;
 }
 
 .importance-col {
     flex: 1;
-    margin: 0 20px;
+    margin: 20px 30px;
     background-color: #fff;
     border:2px solid #EAE1D8;
 }
 
 .importance-text {
     padding: 30px 30px 50px 30px;
+}
+
+/* benefits section */
+.benefits {
+    /*background-color: rgba(85, 142, 76, .90);*/
+    background-color: rgba(0, 0, 0, .70);
+    padding: 60px 30px;
+}
+
+.benefits-header{
+    text-align: center;
+}
+
+.benefits h2,
+.benefits p {
+    color: #fff;
+}
+
+.benefits-btn a{
+    text-align: center;
+    display: block;
+    color: #404a3d;
+    background-color: #ecdd5e;
+    padding: 12px 30px;
+    line-height: 1.4;
+    font-size: 14px;
+    border-radius: 5px;
+    transition: all .55s ease;
+    text-decoration: none;
+    margin-bottom: 40px;
+}
+
+
+.benefits-col{
+    background-color: #558E4C;
+    margin: 20px 0;
+    padding: 50px 30px;
+    border-radius: 5px;
+}
+
+.benefits-col h3{
+    color: #fff;
+}
+
+/* join us section */
+.join{
+    text-align: center;
+    background-color: #fff;
+    position: relative;
+    padding-bottom: 270px;
+}
+
+.join h4{
+    color: #558E4C;
+}
+
+.join-img {
+    width: 100%;
+    min-height: 200px;
+    background-image: url(/image/index/join1.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: bottom;
+}
+
+.join-text{
+    position: absolute;
+    background-color: #558E4C;
+    padding: 30px 30px;
+    margin: 0 30px;
+    top: 100px;
+    border-radius: 5px;
+}
+
+.join-text h4 {
+    color: #ecdd5e;
+}
+
+.join-text h2{
+    color: #fff;
+}
+
+.join-btn {
+    background-color: #fff;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 2px;
+    margin-top: 30px;
+}
+
+.join-btn input {
+    border: 0;
+    outline: none;
+    padding: 10px 20px;
+    height: 50px;
+    border-radius: 2px 0 0 2px;
+}
+
+.join-btn button {
+    background-color: #ecdd5e;
+    border: none;
+    outline: none;
+    height: 50px;
+    padding: 0 20px;
+    color: #404a3d;
+}
+
+
+
+
+/* destop view */
+@media screen and (min-width: 992px) {
+
+
+    p {
+        margin-bottom: 40px;
+    }
+
+    .hero-img {
+        width: 30%;
+        max-width: 300px;
+        top: 25%;
+        left: 20%;
+    }
+
+    .hero-text {
+        background-color: rgba(0, 0, 0, 0.5); 
+        width: 35%;
+        min-width: 400px;
+        padding: 50px 30px;
+        border-radius: 10px;
+        position: absolute;
+        top: 20%;
+        right: 10%;
+        z-index: 1;
+    }
+
+
+    /* why recycle section */
+    .recycle{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        padding: 60px 100px;
+    }
+
+    .recycle-text,
+    .recycle-img{
+        flex: 1;
+        padding: 20px;
+    }
+
+    .recycle h4 {
+        color: #558E4C;
+    }
+
+    /* recycle importance section */
+    .importance {
+        position: relative;
+        padding: 0 0 400px;
+        background-color: #fff;
+    }
+
+    .importance-header {
+        height: 50%;
+        width: 100%;
+        min-height: 300px;
+        background-image: url(/image/index/importance.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        padding: 50px 30px;
+    }
+
+    .importance-header h2 {
+        text-align: center;
+    }
+
+    .importance-header h4 {
+        text-align: center;
+        color: #558E4C;
+    }
+
+    .importance-row{
+        position: absolute;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        top: 50px;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        margin: 0 70px;
+    }
+
+    .importance-col {
+        flex: 1;
+        margin: 0 20px;
+        background-color: #fff;
+        border:2px solid #EAE1D8;
+    }
+
+    .importance-text {
+        padding: 30px 30px 50px 30px;
+    }
+
+    /* benefits section */
+    .benefits {
+        /*background-color: rgba(85, 142, 76, .90);*/
+        background-color: rgba(0, 0, 0, .70);
+    }
+
+    .benefits-row{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0 30px;
+        
+    }
+
+    .benefits-col{
+        background-color: #fff;
+        padding: 50px 30px;
+    }
 }
