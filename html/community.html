@@ -13,7 +13,14 @@
 </head>
 <body>
     <main id = "community-container">
-        <section id = "community-header">
+      <section id = "community-title">
+        <h1>Welcome to the Community!</h1>
+        <p>Join or post any environmental events now!</p>
+      </section>
+
+      <p id = "divider"></p>
+
+      <section id = "community-header">
           <button id="add-post-button" class="post-button btn btn-outline-secondary" type="button">Add new post</button>
           
           <div id="add-post-msg">
@@ -60,19 +67,7 @@
               </div>
               <button id="submit-post" class="post-button btn btn-outline-secondary" type="submit">Post</button>
             </form>
-          </div>
-            
-
-          <div id = "sorting" class="dropdown">
-              <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Sort by
-              </button>
-              <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">Popular</a></li>
-                <li><a class="dropdown-item" href="#">Latest</a></li>
-                <li><a class="dropdown-item" href="#">Oldest</a></li>
-              </ul>
-          </div>              
+          </div>           
         </section>  
 
         <section id = "post-container"></section>

@@ -3,6 +3,19 @@
     margin: 5% auto auto auto;
 }
 
+#community-title{
+    margin: 50px 0 3cqb 0;
+    text-align: center;
+}
+
+#divider{
+    width: 90vw;
+    background-color: gray;
+    opacity: 0.7;
+    height: 0.5px;
+    margin-bottom: 50px;
+}
+
 .post-button{
     width: 100%;
     margin-bottom: 30px;
@@ -21,15 +34,6 @@
     color: black;
     background-color: white;
     box-shadow: 0 5px #666;
-}
-
-#sorting{
-    margin: auto 0 10px auto;
-}
-
-#sorting button{
-    background-color: #404a3d;
-    border-radius: 5px;
 }
 
 #post-container{
