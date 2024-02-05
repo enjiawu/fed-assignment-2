@@ -78,6 +78,7 @@ p {
 .about-mission,
 .about-vision{
     background-color: #f5fffb;
+    padding-top: 30px;
 }
 
 .mission-img.destop-view{
@@ -87,4 +88,65 @@ p {
 .mission-text,
 .vision-text {
     padding: 30px;
+}
+
+
+/* Tablet view */
+@media screen and (min-width: 688px) {
+    .about-banner p{
+        max-width: 700px;
+    }
+
+    .recycle-text,
+    .mission-text,
+    .vision-text{
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+    
+}
+
+/* destop view */
+@media screen and (min-width: 992px) {
+    /* why recycle section */
+    .recycle{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .recycle-text,
+    .recycle-img{
+        flex: 1;
+    }
+
+
+    .recycle h2 {
+        text-align: left;
+    }
+
+    /* about page mission and vision */
+    .about-mission,
+    .about-vision{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .mission-img.destop-view{
+        display: flex;
+        flex: 1;
+    }
+    .mission-img.mobile-view{
+        display: none;
+    }
+
+    .mission-text{
+        flex: 1;
+    }
+
+    .mission-text h2,
+    .vision-text h2 {
+        text-align: left;
+    }
 }
