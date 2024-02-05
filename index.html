@@ -1,12 +1,12 @@
-<!DOCTYPE html>
+]<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Green Recycling</title>
 
     <!-- CSS Link -->
-    <link rel="stylesheet" href="css/navfooter.css">
+    <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/index.css">
 
     <!-- FA-BRANDS -->
@@ -18,16 +18,26 @@
       referrerpolicy="no-referrer"
     />
 
+    <!-- Google Font-->
+    <link href="https://fonts.googleapis.com/css2?family=Anonymous+Pro:ital,wght@0,400;0,700;1,400;1,700&family=B612+Mono:ital,wght@0,400;0,700;1,400;1,700&family=B612:ital,wght@0,400;0,700;1,400;1,700&family=Bangers&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Yellowtail&display=swap" rel="stylesheet">
+
 </head>
 <body>
     <header>
         <!-- Navigation -->
         <nav class="navbar">
             <div class="content">
-                <div class="logo">
-                    <p><a href="index.html">logo</a></p>
+                <div class="logo-green">
+                    <a href="index.html"><img src="/image/logo/GR-green.png"/></a>
                 </div>
-                <ul class = "menu-list">
+                <div class="logo-white">
+                  <a href="index.html"><img src="/image/logo/GR-white.png"/></a>
+              </div>
+                <nav>
+                  <ul class = "menu-list">
                     <div class="icon cancel-btn">
                         <i class="fa fa-times"></i>
                     </div>
@@ -35,8 +45,10 @@
                     <li><a href="#">About</a></li>
                     <li><a href="#">Quizzes</a></li>
                     <li><a href="#">Community</a></li>
-                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">Contact</a></li>   
+                    <button class="login-btn-pop">Login</button>
                 </ul>
+                </nav>
                 <div class="icon menu-btn">
                     <i class="fa fa-bars"></i>
                 </div>
@@ -44,14 +56,77 @@
         </nav>
     </header>
 
+    <div class="wrapper-container">
+      <div class="wrapper">
+        <span class="icon-close"><ion-icon name="close"></ion-icon></span>
+        <div class="form-box login">
+          <h2>Login</h2>
+          <form action="#">
+            <div class="input-box">
+              <span class="icon"><ion-icon name="mail"></ion-icon></span>
+              <input type="email" required>
+              <label>Email</label>
+            </div>
+            <div class="input-box">
+              <sapn class="icon"><ion-icon name="lock-closed"></ion-icon></sapn>
+              <input type="password" required>
+              <label>Password</label>
+            </div>
+            <div class="remeber-forgot">
+              <label><input type="checkbox">Remember me</label>
+              <a href="#">Forgot Password?</a>
+            </div>
+            <button type="submit" class="btn">Login</button>
+            <div class="login-rigister">
+              <p>Don't have an account?
+                <a href="#" class="register-link">Register</a>
+              </p>
+            </div>
+          </form>
+        </div>
+
+        <div class="form-box register">
+          <h2>Registraction</h2>
+          <form action="#">
+            <div class="input-box">
+              <span class="icon"><ion-icon name="person"></ion-icon></span>
+              <input type="text" required>
+              <label>Username</label>
+            </div>
+            <div class="input-box">
+              <span class="icon"><ion-icon name="mail"></ion-icon></span>
+              <input type="email" required>
+              <label>Email</label>
+            </div>
+            <div class="input-box">
+              <sapn class="icon"><ion-icon name="lock-closed"></ion-icon></sapn>
+              <input type="password" required>
+              <label>Password</label>
+            </div>
+            <div class="remeber-forgot">
+              <label><input type="checkbox">I agree to the terms & conditions</label>
+            </div>
+            <button type="submit" class="btn">Register</button>
+            <div class="login-rigister">
+              <p>Already have an account?
+                <a href="#" class="login-link">Login</a>
+              </p>
+            </div>
+          </form>
+        </div>
+
+      </div>
+    </div>
+
     <main>
+
         <!-- index page hero banner -->
         <section class="hero">
           <div class="hero-bgimg"></div>
             <div class="hero-text">
                 <h4>Green Challenges</h4>
                 <h1>Think you know how to recycle?</h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore</p>
+                <p>Ready for a sustainable adventure? Embrace the Green Challenges and test your recycling knowledge. Click the challenges button to embark on an eco-friendly journey!</p>
                 <a href="#">Take the Challenge</a>
             </div>
             <div class="hero-img">
@@ -100,11 +175,7 @@
               </div>
               <div class="importance-text">
                 <h3>Paper Recycling:</h3>
-                <ul>
-                  <li>Approximately 17 trees</li>
-                  <li>7,000 gallons of oil</li>
-                  <li>3.3 cubic yards of landfill space</li>
-                </ul>
+                <p>By diverting waste from landfills and incineration, recycling helps minimize air and water pollution, creating a cleaner and healthier environment for all.</p>
               </div>
             </div>
             <div class="importance-col">
@@ -113,16 +184,58 @@
               </div>
               <div class="importance-text">
                 <h3>Paper Recycling:</h3>
-                <ul>
-                  <li>Approximately 17 trees</li>
-                  <li>7,000 gallons of oil</li>
-                  <li>3.3 cubic yards of landfill space</li>
-                </ul>
+                <p>Embracing recycling practices supports a sustainable circular economy, where materials are reused and repurposed, minimizing the environmental impact of our consumption.</p>
               </div>
             </div>
           </div>
         </section>
+
+        <!-- benefits -->
+        <section class="benefits">
+          <div class="benefits-text">
+            <div class="benefits-header">
+              <h4>Time to change</h4>
+              <h2>Benefits of Recycling</h2>
+              <p>Making a positive impact – these statistics are not just numbers;  they represent a tangible difference we can collectively make through recycling.</p>
+            </div>
+            <div class="benefits-btn">
+              <a href="#">View All Benefits</a>
+            </div>
+          </div>
+          <div class="benefits-row">
+            <div class="benefits-col">
+              <h3>Conserves Resources: </h3>
+              <p>Recycling conserves valuable natural resources, such as timber, water, and minerals, by reducing the need for extracting, refining, and processing raw materials.</p>
+            </div>
+            <div class="benefits-col">
+              <h3>Reduces Pollution: </h3>
+              <p>By diverting waste from landfills and incineration, recycling helps minimize air and water pollution, creating a cleaner and healthier environment for all.</p>
+            </div>
+            <div class="benefits-col">
+              <h3>Promotes Sustainability: </h3>
+              <p>Embracing recycling practices supports a sustainable circular economy, where materials are reused and repurposed, minimizing the environmental impact of our consumption.</p>
+            </div>
+          </div>
+        </section>
         
+        <!-- join us -->
+        <section class="join">
+          <div class="join-img">
+          </div>
+          <div class="join-img2">
+          </div>
+          <div class="join-text">
+            <div class="join-header">
+              <h4>Join Us</h4>
+              <h2>Get Recycle News</h2>
+              <p>Join us to receive our newsletter and become part of a growing community dedicated to creating positive change through recycling.</p>
+            </div>
+            <div class="join-btn">
+              <input type="email" placeholder="Enter your email" name="mail" required>
+              <button type="submit" value="Subscribe">Subscribe</button>
+            </div>
+          </div>
+        </section>
     </main>
 
     <!-- footer section -->
@@ -130,12 +243,11 @@
         <div class="footer-row">
           <div class="footer-col footer-logo">
             <div class="footer-logo-img">
-              <p><a href="index.html"
-                >Logo</a></p>
+              <img src="/image/logo/GR-white.png"/>
             </div>
   
             <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua
+              Empower a Greener Tomorrow through Responsible Recycling with Green Recycle. Nurturing a Greener Future for All begins with a click.
             </p>
             <div class="social">
               <a href="#"><i class="fa-brands fa-square-facebook"></i></a>
@@ -192,8 +304,12 @@
       </footer>
 
     <!-- JS -->
-    <script src="js/navfooter.js"></script>
     <script src="https://unpkg.com/scrollreveal"></script>
+
+    <!-- JS nav and footer -->
+    <script src="js/navfooter.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
     <script src="js/index.js"></script>
 </body>
 </html>
