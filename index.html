@@ -18,16 +18,26 @@
       referrerpolicy="no-referrer"
     />
 
+    <!-- Google Font-->
+    <link href="https://fonts.googleapis.com/css2?family=Anonymous+Pro:ital,wght@0,400;0,700;1,400;1,700&family=B612+Mono:ital,wght@0,400;0,700;1,400;1,700&family=B612:ital,wght@0,400;0,700;1,400;1,700&family=Bangers&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Yellowtail&display=swap" rel="stylesheet">
+
 </head>
 <body>
     <header>
         <!-- Navigation -->
         <nav class="navbar">
             <div class="content">
-                <div class="logo">
-                    <p><a href="index.html">logo</a></p>
+                <div class="logo-green">
+                    <a href="index.html"><img src="/image/logo/GR-green.png"/></a>
                 </div>
-                <ul class = "menu-list">
+                <div class="logo-white">
+                  <a href="index.html"><img src="/image/logo/GR-white.png"/></a>
+              </div>
+                <nav>
+                  <ul class = "menu-list">
                     <div class="icon cancel-btn">
                         <i class="fa fa-times"></i>
                     </div>
@@ -38,6 +48,7 @@
                     <li><a href="#">Contact</a></li>   
                     <button class="login-btn-pop">Login</button>
                 </ul>
+                </nav>
                 <div class="icon menu-btn">
                     <i class="fa fa-bars"></i>
                 </div>
@@ -45,7 +56,67 @@
         </nav>
     </header>
 
-    <div class="wrapper"></div>
+    <div class="wrapper-container">
+      <div class="wrapper">
+        <span class="icon-close"><ion-icon name="close"></ion-icon></span>
+        <div class="form-box login">
+          <h2>Login</h2>
+          <form action="#">
+            <div class="input-box">
+              <span class="icon"><ion-icon name="mail"></ion-icon></span>
+              <input type="email" required>
+              <label>Email</label>
+            </div>
+            <div class="input-box">
+              <sapn class="icon"><ion-icon name="lock-closed"></ion-icon></sapn>
+              <input type="password" required>
+              <label>Password</label>
+            </div>
+            <div class="remeber-forgot">
+              <label><input type="checkbox">Remember me</label>
+              <a href="#">Forgot Password?</a>
+            </div>
+            <button type="submit" class="btn">Login</button>
+            <div class="login-rigister">
+              <p>Don't have an account?
+                <a href="#" class="register-link">Register</a>
+              </p>
+            </div>
+          </form>
+        </div>
+
+        <div class="form-box register">
+          <h2>Registraction</h2>
+          <form action="#">
+            <div class="input-box">
+              <span class="icon"><ion-icon name="person"></ion-icon></span>
+              <input type="text" required>
+              <label>Username</label>
+            </div>
+            <div class="input-box">
+              <span class="icon"><ion-icon name="mail"></ion-icon></span>
+              <input type="email" required>
+              <label>Email</label>
+            </div>
+            <div class="input-box">
+              <sapn class="icon"><ion-icon name="lock-closed"></ion-icon></sapn>
+              <input type="password" required>
+              <label>Password</label>
+            </div>
+            <div class="remeber-forgot">
+              <label><input type="checkbox">I agree to the terms & conditions</label>
+            </div>
+            <button type="submit" class="btn">Register</button>
+            <div class="login-rigister">
+              <p>Already have an account?
+                <a href="#" class="login-link">Login</a>
+              </p>
+            </div>
+          </form>
+        </div>
+
+      </div>
+    </div>
 
     <main>
 
@@ -55,7 +126,7 @@
             <div class="hero-text">
                 <h4>Green Challenges</h4>
                 <h1>Think you know how to recycle?</h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore</p>
+                <p>Ready for a sustainable adventure? Embrace the Green Challenges and test your recycling knowledge. Click the challenges button to embark on an eco-friendly journey!</p>
                 <a href="#">Take the Challenge</a>
             </div>
             <div class="hero-img">
@@ -151,6 +222,8 @@
         <section class="join">
           <div class="join-img">
           </div>
+          <div class="join-img2">
+          </div>
           <div class="join-text">
             <div class="join-header">
               <h4>Join Us</h4>
@@ -170,12 +243,11 @@
         <div class="footer-row">
           <div class="footer-col footer-logo">
             <div class="footer-logo-img">
-              <p><a href="index.html"
-                >Logo</a></p>
+              <img src="/image/logo/GR-white.png"/>
             </div>
   
             <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua
+              Empower a Greener Tomorrow through Responsible Recycling with Green Recycle. Nurturing a Greener Future for All begins with a click.
             </p>
             <div class="social">
               <a href="#"><i class="fa-brands fa-square-facebook"></i></a>
@@ -232,8 +304,12 @@
       </footer>
 
     <!-- JS -->
-    <script src="js/navfooter.js"></script>
     <script src="https://unpkg.com/scrollreveal"></script>
+
+    <!-- JS nav and footer -->
+    <script src="js/navfooter.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
     <script src="js/index.js"></script>
 </body>
 </html>

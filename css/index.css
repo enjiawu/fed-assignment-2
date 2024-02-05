@@ -22,7 +22,8 @@ h1 {
 h2{
     font-size: 38px;
     line-height: 1;
-    color: #404a3d;
+    text-align: center;
+    color: #16381f;
     margin: 0 0 30px;
 }
 
@@ -34,16 +35,24 @@ h3{
 }
 
 h4 {
-    font-size: 18px;
+    font-size: 25px;
     color: #ecdd5e;
     margin-bottom: 10px;
+    font-family: 'Yellowtail', cursive;
 }
 
 p {
     color: #404a3d;
     font-size: 15px;
     line-height: 1.5;
+    font-weight: 400;
     margin-bottom: 20px;
+}
+
+.hero{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .hero .hero-bgimg {
@@ -75,14 +84,13 @@ p {
     padding: 50px 30px;
     border-radius: 10px;
     position: absolute;
-    top: 25%;
-    left: 3.5%;
+    top: 20%;
     z-index: 1;
 }
 
 .hero-text p {
     color: #fff;
-    font-size: 15px;
+    font-size: 14px;
     line-height: 1.9;
     margin-bottom: 40px;
 }
@@ -91,6 +99,7 @@ p {
     display: inline-block;
     color: #404a3d;
     background-color: #ecdd5e;
+    font-weight: 500;
     padding: 12px 30px;
     line-height: 1.4;
     font-size: 14px;
@@ -112,14 +121,18 @@ p {
 
 
 .recycle h4 {
+    text-align: center;
     color: #558E4C;
 }
 
 /* recycle importance section */
 .importance {
     position: relative;
-    padding: 0 0 1400px;
+    padding: 0 0 1500px;
     background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .importance-header {
@@ -135,6 +148,7 @@ p {
 
 .importance-header h2 {
     text-align: center;
+    color: #404a3d;
 }
 
 .importance-header h4 {
@@ -186,8 +200,13 @@ p {
     transition: all .55s ease;
     text-decoration: none;
     margin-bottom: 40px;
+    font-weight: 500;
 }
 
+.benefits-btn a:hover{
+    background-color: #558E4C;
+    color: #fff;
+}
 
 .benefits-col{
     background-color: #558E4C;
@@ -205,7 +224,10 @@ p {
     text-align: center;
     background-color: #fff;
     position: relative;
-    padding-bottom: 270px;
+    padding-bottom: 340px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .join h4{
@@ -261,8 +283,44 @@ p {
     height: 50px;
     padding: 0 20px;
     color: #404a3d;
+    cursor: pointer;
+    font-weight: 500;
 }
 
+.join-btn button:hover{
+    background-color: #404a3d;
+    color: #fff;
+}
+
+
+
+/* Tablet view */
+@media screen and (min-width: 688px) {
+    .recycle,
+    .importance,
+    .benefits {
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+
+    .importance {
+        padding: 0 0 2170px;
+        justify-content: center;
+    }
+
+    .join{
+        padding-bottom: 200px;
+    }
+
+    .join-img {
+        min-height: 300px;
+    }
+
+    .join-text{
+        max-width: 500px;
+    }
+
+}
 
 
 
@@ -315,36 +373,19 @@ p {
     /* recycle importance section */
     .importance {
         position: relative;
-        padding: 0 0 400px;
+        padding: 0 0 450px;
         background-color: #fff;
-    }
-
-    .importance-header {
-        height: 50%;
-        width: 100%;
-        min-height: 300px;
-        background-image: url(/image/index/importance.jpg);
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: center;
-        padding: 50px 30px;
-    }
-
-    .importance-header h2 {
-        text-align: center;
-    }
-
-    .importance-header h4 {
-        text-align: center;
-        color: #558E4C;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
     .importance-row{
         position: absolute;
         display: flex;
-        justify-content: space-around;
-        align-items: center;
-        top: 50px;
+        justify-content: space-between;
+        align-items: stretch;
+        top: 200px;
         right: 0;
         bottom: 0;
         left: 0;
@@ -354,8 +395,7 @@ p {
     .importance-col {
         flex: 1;
         margin: 0 20px;
-        background-color: #fff;
-        border:2px solid #EAE1D8;
+        max-height: 500px;
     }
 
     .importance-text {
@@ -368,16 +408,88 @@ p {
         background-color: rgba(0, 0, 0, .70);
     }
 
+    .benefits-text {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+    }
+
+    .benefits-header {
+        text-align: left;
+        max-width: 700px;
+    }
+
+    .benefits-header h2 {
+        text-align: left;
+    }
+
     .benefits-row{
         display: flex;
         justify-content: space-between;
-        align-items: center;
         margin: 0 30px;
         
     }
 
     .benefits-col{
-        background-color: #fff;
+        flex: 1;
+        background-color: #558E4C;
         padding: 50px 30px;
+        margin: 0 20px;
     }
+
+    /* join section */
+    .join{
+        padding-bottom: 420px;
+    }
+    .join-img {
+        position: absolute;
+        background-image: url(/image/index/join1.jpg);
+        background-position: center center; /* Center the background image */
+        max-width: 250px;
+        min-height: 250px;
+        max-height: 250px;
+        background-size: cover;
+        box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+        border-radius: 10px;
+        top: 70px;
+        right: 55%;
+        z-index: 1;
+    }
+
+    .join-img2 {
+        position: absolute;
+        background-image: url(/image/index/body.jpg);
+        background-position: center center; /* Center the background image */
+        width: 250px;
+        height: 250px;
+        background-size: cover;
+        box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+        border-radius: 10px;
+        top: 110px;
+        right: 75%;
+        z-index: 2;
+    }
+
+
+
+    .join-text{
+        position: absolute;
+        top: 50px;
+        left: 40%;
+        max-width: 800px;
+        text-align: left;
+    }
+
+    .join-text h2 {
+        text-align: left;
+    }
+
+    .join-header{
+        padding-left: 55px;
+    }
+
+    .join-btn{
+        margin-left: 55px;
+    }
+
 }

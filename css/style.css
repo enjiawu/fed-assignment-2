@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'poppins', sans-serif;
 }
 
 /* apply styles to all images */  
@@ -11,8 +12,9 @@ img {
 }
 
 /* logo width */
-.logo{
-    width: 70px;
+.logo-green,
+.logo-white{
+    width: 100px;
 }
 
 /* Mobile view */
@@ -21,14 +23,44 @@ img {
     position: fixed;
     width: 100%;
     z-index: 2;
-    padding: 5px 30px;
+    padding: 15px 20px;
     transition: all 0.3s ease;
 }
 
 /* sticky navbar */
 .navbar.sticky{
     background-color: #fff;
-    border-bottom: #8D8B8A;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+    z-index: 3;
+}
+
+.navbar.sticky .menu-list li a{
+    color: #fff;
+    font-weight: 400;
+}
+
+.navbar.sticky .menu-list li.active a{
+    color: #558E4C;
+}
+
+.navbar.sticky .menu-list li a:hover{
+    color: #558E4C; 
+}
+
+.navbar.sticky .logo-green {
+    display: flex;
+}
+
+.navbar.sticky .logo-white {
+    display: none;
+}
+
+.navbar.sticky .icon{
+    color: #558E4C;
+}
+
+.navbar.sticky .icon.cancel-btn{
+    color: #fff;
 }
 
 /* Navbar content styles */
@@ -38,32 +70,40 @@ img {
     justify-content: space-between;
 }
 
+.logo-white{
+    display: flex;
+}
+.logo-green{
+    display: none;
+}
+
 /* Menu list styles */
 .menu-list li{
     list-style: none; /* remove list dot*/
 }
 
 .menu-list li a {
-    color: #8D8B8A;
-    font-size: 18px;
-    font-weight: 500; /* change font weight */
+    position: relative;
+    color: #fff;
+    font-size: 1.1em;
+    font-weight: 400; /* change font weight */
     text-decoration: none; /* remove underline*/
     transition: all 0.3s ease;  /* hover transition for 0.3s */
 }
 
 /* Hover effect on menu list items */
 .menu-list li a:hover{
-    color: #404a3d; 
+    color: #558E4C; 
     border-bottom: #ecdd5e 3px solid;
 }
 
 .menu-list li.active a{
-    color: #404a3d;
+    color: #558E4C;
 }
 
 /* style icon button for burger menu and cancle btn */
 .icon{
-    color: #404a3d;
+    color: #fff;
     font-size: 25px;
     cursor: pointer; /* change the mouse cursor when hovering over an element */
 }
@@ -89,7 +129,7 @@ img {
     position: fixed;
     transform: translateX(100%);
     top: 0px;
-    display: block;
+    display: inline-block;
     text-align: center;
     background-color: rgba(0, 0, 0, 0.5); /* background color with 50% transparent */
     backdrop-filter: blur(5px); /* set background color to blur */
@@ -113,6 +153,196 @@ img {
     width: 130px;
     height: 50px;
     background-color: #558E4C;
+    cursor: pointer;
+    font-size: 1.1em;
+    border: none;
+    margin-top: 30px;
+    color: #fff;
+}
+
+.login-btn-pop:hover{
+    background-color: #ecdd5e;
+}
+
+.wrapper-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.wrapper {
+    position: fixed;
+    top: 15%;
+    width: 400px;
+    height: 440px;
+    background: rgba(255, 255, 255, 0.3);
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    border-radius: 20px;
+    backdrop-filter: blur(50px);
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+    overflow: hidden;
+    transform: scale(0);
+    transition: transform .5s ease, height .2s ease;
+}
+
+.wrapper.pop-active {
+    transform: scale(1);
+}
+
+.wrapper.link-active {
+    height: 520px;
+}
+
+.wrapper .form-box{
+    width: 100%;
+    padding: 40px;
+}
+
+.wrapper .form-box.login {
+    transition: transform .18s ease;
+    transform: translateX(0);
+}
+
+.wrapper.link-active .form-box.login {
+    transition: none;
+    transform: translateX(-400px);
+}
+
+.wrapper .form-box.register{
+    position: absolute;
+    transition: none;
+    transform: translateX(400px);
+}
+
+.wrapper.link-active .form-box.register{
+    transition: transform .18s ease;
+    transform: translateX(0);
+}
+
+.wrapper .icon-close{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 45px;
+    height: 45px;
+    background-color: #16381f;
+    font-size: 2em;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom-left-radius: 20px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.wrapper .form-box h2 {
+    font-size: 2em;
+    color: #16381f;
+    text-align: center;
+}
+
+.input-box {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    border-bottom: 2px solid #16381f;
+    margin: 30px 0;
+}
+
+.input-box label {
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    font-size: 1em;
+    color: #16381f;
+    pointer-events: none;
+    transition: 0.5s;
+}
+
+.input-box input:focus~label,
+.input-box input:valid~label {
+    top: -5px;
+}
+
+.input-box input {
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 1em;
+    color: #16381f;
+    font-weight: 600;
+    padding: 0 35px 0 5px;
+}
+
+.input-box .icon {
+    position: absolute;
+    right: 8px;
+    font-size: 1.2em;
+    color: #16381f;
+    line-height: 57px;
+}
+
+.remember-forgot {
+    font-size: .9em;
+    font-weight: 500;
+    color: #16381f;
+    margin: -15px 0 15px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.remember-forgot label input {
+    accent-color: #16381f;
+    margin-right: 3px;
+}
+
+.remember-forgot a{
+    color: #16381f;
+    text-decoration: none;
+}
+
+.remember-forgot a:hover {
+    text-decoration: underline;
+}
+
+.btn {
+    margin-top: 20px;
+    width: 100%;
+    height: 45px;
+    background-color: #16381f;
+    border: none;
+    outline: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1em;
+    color: #fff;
+    font-weight: 500;
+}
+
+.login-register {
+    font-size: .9em;
+    color: #16381f;
+    text-align: center;
+    margin: 25px 0 10px;
+    font-weight: 500;
+}
+
+.login-register p a {
+    color: #16381f;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.login-register p a:hover {
+    text-decoration: underline;
 }
 
 /* footer */
@@ -123,7 +353,7 @@ footer{
     background-position: center;
     background-attachment: fixed;
     color: #fff;
-    padding: 40px 30px;
+    padding: 40px 30px 0 30px;
 }
 
 footer p {
@@ -197,15 +427,44 @@ footer .social a i {
 }
 
 /* Tablet view */
-@media screen and (min-width: 445px) {
+@media screen and (min-width: 688px) {
         /* header nav */
         .icon {
             display: none;
+        }
+
+        .navbar.sticky .menu-list li a{
+            color: #8d8b8a;
+        }
+        
+        .navbar.sticky .menu-list li a:hover{
+            color: #558E4C; 
+        }
+
+        .navbar.sticky .menu-list li.active a{
+            color: #404a3d;
+        }
+
+        .navbar.sticky .menu-list li.active a:hover{
+            color: #558E4C;
+        }
+
+        .menu-list li.active a:hover{
+            color: #558E4C;
+        }
+
+        .menu-list li.active a{
+            color: #404a3d;
+        }
+
+        .login-btn-pop {
+            margin-top: 0px;
         }
     
         .navbar .menu-list {
             position: sticky;
             display: flex;
+            align-items: center;
             background-color: transparent;
             transform: none;
             padding-top: 0;
@@ -218,14 +477,25 @@ footer .social a i {
         .navbar .menu-list li a {
             padding: 0 5px;
         }
-        
-        .navbar .menu-list li a.sign {
-            padding: 5px 15px;
+
+        .navbar .menu-list li a:hover{
+            color: #404a3d;
         }
+
+        .login-btn-pop {
+            margin-left: 30px;
+        }
+
 }
 
 /* destop view */
 @media screen and (min-width: 992px) {
+    .navbar,
+    footer {
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+
     /* footer section */
     .footer-row{
         display: flex;
@@ -247,6 +517,22 @@ footer .social a i {
 
     .copyright p {
         padding-top: 20px;
+    }
+
+    .footer-row{
+        display: flex;
+        justify-content: center;
+        align-items: center; 
+    }
+
+    .footer-logo {
+        flex: 40%;
+    }
+
+    .footer-logo p,
+    .copyright p{
+        margin: 0;
+        padding: 10px 0;
     }
 }
 
