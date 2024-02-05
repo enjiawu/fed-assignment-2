@@ -1,0 +1,90 @@
+/* apply styles to all images */  
+img {
+    width: 100%;
+    display: block;
+}
+
+h1 {
+    font-size: 45px;
+    line-height: 1;
+    color: #fff;
+    margin: 0 0 40px;
+}
+
+h2{
+    font-size: 38px;
+    line-height: 1;
+    text-align: center;
+    color: #16381f;
+    margin: 0 0 30px;
+}
+
+h3{
+    font-size: 26px;
+    line-height: 1;
+    color: #404a3d;
+    margin: 0 0 20px;
+}
+
+h4 {
+    font-size: 25px;
+    color: #ecdd5e;
+    margin-bottom: 10px;
+    font-family: 'Yellowtail', cursive;
+}
+
+p {
+    color: #404a3d;
+    font-size: 15px;
+    line-height: 1.5;
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+
+/* banner section */
+.about-banner {
+    padding: 0 60px;
+    width: 100%;
+    min-height: 50vh;
+    background: rgba(0, 0, 0, .30) url(/image/about/about-banner.jpg);
+    background-blend-mode: darken;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+}
+
+.about-banner p{
+    color: #fff;
+}
+
+/* why recycle section */
+.recycle{
+    padding: 60px 30px;
+    background-color: #fff;
+}
+
+
+.recycle h4 {
+    text-align: center;
+    color: #558E4C;
+}
+
+.about-mission,
+.about-vision{
+    background-color: #f5fffb;
+}
+
+.mission-img.destop-view{
+    display: none;
+}
+
+.mission-text,
+.vision-text {
+    padding: 30px;
+}

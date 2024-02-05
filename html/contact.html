@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <!-- Form for adding contacts -->
+  <form id="add-contact-form">
+    <label for="contact-name">Name:</label>
+    <input type="text" id="contact-name" required>
+    
+    <label for="contact-email">Email:</label>
+    <input type="email" id="contact-email" required>
+    
+    <label for="contact-msg">Message:</label>
+    <textarea id="contact-msg" required></textarea>
+
+    <button type="submit" id="contact-submit">Add Contact</button>
+  </form>
+
+  <!-- Table for displaying contacts -->
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Message</th>
+      </tr>
+    </thead>
+    <tbody id="contact-list"></tbody>
+  </table>
+
+  <!-- Total contact count -->
+  <p>Total Contacts: <span id="total-contacts">0</span></p>
+
+
+<script src="/js/popper.min.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script src="/js/contact.js"></script>
+    
+</body>
+</html>
