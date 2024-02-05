@@ -1,7 +1,9 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+body{
+    background-image: url(/image/index/body.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
 }
 
 /* apply styles to all images */  
@@ -14,14 +16,15 @@ h1 {
     font-size: 45px;
     line-height: 1;
     color: #fff;
-    margin: 0 0 45px;
+    margin: 0 0 40px;
 }
 
 h2{
     font-size: 38px;
     line-height: 1;
-    color: #404a3d;
-    margin: 0 0 45px;
+    text-align: center;
+    color: #16381f;
+    margin: 0 0 30px;
 }
 
 h3{
@@ -32,16 +35,24 @@ h3{
 }
 
 h4 {
-    font-size: 18px;
+    font-size: 25px;
     color: #ecdd5e;
     margin-bottom: 10px;
+    font-family: 'Yellowtail', cursive;
 }
 
 p {
     color: #404a3d;
     font-size: 15px;
-    line-height: 1.8;
-    margin-bottom: 40px;
+    line-height: 1.5;
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+
+.hero{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .hero .hero-bgimg {
@@ -60,26 +71,26 @@ p {
     z-index: 1;
     position: absolute;
     width: 30%;
-    max-width: 300px;
-    top: 25%;
-    left: 20%;
+    max-width: 200px;
+    top: 15%;
+    right: 20%;
+
 }
 
 .hero-text {
-    background-color: rgba(0, 0, 0, 0.5); 
+    background-color: rgba(0, 0, 0, 0.6); 
     width: 35%;
     min-width: 400px;
     padding: 50px 30px;
     border-radius: 10px;
     position: absolute;
     top: 20%;
-    right: 10%;
     z-index: 1;
 }
 
 .hero-text p {
     color: #fff;
-    font-size: 15px;
+    font-size: 14px;
     line-height: 1.9;
     margin-bottom: 40px;
 }
@@ -88,11 +99,13 @@ p {
     display: inline-block;
     color: #404a3d;
     background-color: #ecdd5e;
+    font-weight: 500;
     padding: 12px 30px;
     line-height: 1.4;
     font-size: 14px;
     border-radius: 5px;
     transition: all .55s ease;
+    text-decoration: none;
 }
 
 .hero-text a:hover{
@@ -100,35 +113,32 @@ p {
     color: #fff;
 }
 
-
 /* why recycle section */
 .recycle{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    margin: 60px 100px;
+    padding: 60px 30px;
+    background-color: #fff;
 }
 
-.recycle-text,
-.recycle-img{
-    flex: 1;
-    padding: 20px;
-}
 
 .recycle h4 {
+    text-align: center;
     color: #558E4C;
 }
 
 /* recycle importance section */
 .importance {
     position: relative;
-    margin: 0 0 300px;
+    padding: 0 0 1500px;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .importance-header {
     height: 50%;
     width: 100%;
-    min-height: 500px;
+    min-height: 300px;
     background-image: url(/image/index/importance.jpg);
     background-size: cover;
     background-repeat: no-repeat;
@@ -138,6 +148,7 @@ p {
 
 .importance-header h2 {
     text-align: center;
+    color: #404a3d;
 }
 
 .importance-header h4 {
@@ -147,23 +158,345 @@ p {
 
 .importance-row{
     position: absolute;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    top: 300px;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    margin: 0 70px;
+    top: 200px;
 }
 
 .importance-col {
     flex: 1;
-    margin: 0 20px;
+    margin: 20px 30px;
     background-color: #fff;
     border:2px solid #EAE1D8;
 }
 
 .importance-text {
     padding: 30px 30px 50px 30px;
+}
+
+/* benefits section */
+.benefits {
+    /*background-color: rgba(85, 142, 76, .90);*/
+    background-color: rgba(0, 0, 0, .70);
+    padding: 60px 30px;
+}
+
+.benefits-header{
+    text-align: center;
+}
+
+.benefits h2,
+.benefits p {
+    color: #fff;
+}
+
+.benefits-btn a{
+    text-align: center;
+    display: block;
+    color: #404a3d;
+    background-color: #ecdd5e;
+    padding: 12px 30px;
+    line-height: 1.4;
+    font-size: 14px;
+    border-radius: 5px;
+    transition: all .55s ease;
+    text-decoration: none;
+    margin-bottom: 40px;
+    font-weight: 500;
+}
+
+.benefits-btn a:hover{
+    background-color: #558E4C;
+    color: #fff;
+}
+
+.benefits-col{
+    background-color: #558E4C;
+    margin: 20px 0;
+    padding: 50px 30px;
+    border-radius: 5px;
+}
+
+.benefits-col h3{
+    color: #fff;
+}
+
+/* join us section */
+.join{
+    text-align: center;
+    background-color: #fff;
+    position: relative;
+    padding-bottom: 340px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.join h4{
+    color: #558E4C;
+}
+
+.join-img {
+    width: 100%;
+    min-height: 200px;
+    background-image: url(/image/index/join1.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: bottom;
+}
+
+.join-text{
+    position: absolute;
+    background-color: #558E4C;
+    padding: 30px 30px;
+    margin: 0 30px;
+    top: 100px;
+    border-radius: 5px;
+}
+
+.join-text h4 {
+    color: #ecdd5e;
+}
+
+.join-text h2{
+    color: #fff;
+}
+
+.join-btn {
+    background-color: #fff;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 2px;
+    margin-top: 30px;
+}
+
+.join-btn input {
+    border: 0;
+    outline: none;
+    padding: 10px 20px;
+    height: 50px;
+    border-radius: 2px 0 0 2px;
+}
+
+.join-btn button {
+    background-color: #ecdd5e;
+    border: none;
+    outline: none;
+    height: 50px;
+    padding: 0 20px;
+    color: #404a3d;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.join-btn button:hover{
+    background-color: #404a3d;
+    color: #fff;
+}
+
+
+/* Tablet view */
+@media screen and (min-width: 688px) {
+    .recycle,
+    .importance,
+    .benefits {
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+
+    .importance {
+        padding: 0 0 1700px;
+        justify-content: center;
+    }
+
+    .importance-header h2 {
+        padding-left: 100px;
+        padding-right: 100px;
+    }
+
+    .importance-col {
+        max-width: 500px;
+    }
+
+    .join{
+        padding-bottom: 200px;
+    }
+
+    .join-img {
+        min-height: 300px;
+    }
+
+    .join-text{
+        max-width: 500px;
+    }
+
+}
+
+
+
+/* destop view */
+@media screen and (min-width: 992px) {
+
+
+    p {
+        margin-bottom: 40px;
+    }
+
+    .hero-img {
+        width: 30%;
+        max-width: 300px;
+        top: 25%;
+        left: 20%;
+    }
+
+    .hero-text {
+        background-color: rgba(0, 0, 0, 0.5); 
+        width: 35%;
+        min-width: 400px;
+        padding: 50px 30px;
+        border-radius: 10px;
+        position: absolute;
+        top: 20%;
+        right: 10%;
+        z-index: 1;
+    }
+
+
+    /* why recycle section */
+    .recycle{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        padding: 60px 100px;
+    }
+
+    .recycle-text,
+    .recycle-img{
+        flex: 1;
+        padding: 20px;
+    }
+
+    .recycle h4 {
+        color: #558E4C;
+    }
+
+    /* recycle importance section */
+    .importance {
+        position: relative;
+        padding: 0 0 450px;
+        background-color: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .importance-row{
+        position: absolute;
+        display: flex;
+        justify-content: space-between;
+        align-items: stretch;
+        top: 200px;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        margin: 0 70px;
+    }
+
+    .importance-col {
+        flex: 1;
+        margin: 0 20px;
+        max-height: 500px;
+    }
+
+    .importance-text {
+        padding: 30px 30px 50px 30px;
+    }
+
+    /* benefits section */
+    .benefits {
+        /*background-color: rgba(85, 142, 76, .90);*/
+        background-color: rgba(0, 0, 0, .70);
+    }
+
+    .benefits-text {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+    }
+
+    .benefits-header {
+        text-align: left;
+        max-width: 700px;
+    }
+
+    .benefits-header h2 {
+        text-align: left;
+    }
+
+    .benefits-row{
+        display: flex;
+        justify-content: space-between;
+        margin: 0 30px;
+        
+    }
+
+    .benefits-col{
+        flex: 1;
+        background-color: #558E4C;
+        padding: 50px 30px;
+        margin: 0 20px;
+    }
+
+    /* join section */
+    .join{
+        padding-bottom: 420px;
+    }
+    .join-img {
+        position: absolute;
+        background-image: url(/image/index/join1.jpg);
+        background-position: center center; /* Center the background image */
+        max-width: 250px;
+        min-height: 250px;
+        max-height: 250px;
+        background-size: cover;
+        box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+        border-radius: 10px;
+        top: 70px;
+        right: 55%;
+        z-index: 1;
+    }
+
+    .join-img2 {
+        position: absolute;
+        background-image: url(/image/index/body.jpg);
+        background-position: center center; /* Center the background image */
+        width: 250px;
+        height: 250px;
+        background-size: cover;
+        box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+        border-radius: 10px;
+        top: 110px;
+        right: 75%;
+        z-index: 2;
+    }
+
+
+
+    .join-text{
+        position: absolute;
+        top: 50px;
+        left: 40%;
+        max-width: 800px;
+        text-align: left;
+    }
+
+    .join-text h2 {
+        text-align: left;
+    }
+
+    .join-header{
+        padding-left: 55px;
+    }
+
+    .join-btn{
+        margin-left: 55px;
+    }
 }

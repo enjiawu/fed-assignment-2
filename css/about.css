@@ -1,0 +1,138 @@
+/* apply styles to all images */  
+img {
+    width: 100%;
+    display: block;
+}
+
+h1 {
+    font-size: 45px;
+    line-height: 1;
+    color: #fff;
+    margin: 0 0 40px;
+}
+
+h2{
+    font-size: 38px;
+    line-height: 1;
+    text-align: center;
+    color: #16381f;
+    margin: 0 0 30px;
+}
+
+p {
+    color: #404a3d;
+    font-size: 15px;
+    line-height: 1.5;
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+
+/* banner section */
+.about-banner {
+    padding: 0 60px;
+    width: 100%;
+    min-height: 50vh;
+    background: rgba(0, 0, 0, .30) url(/image/about/about-banner.jpg);
+    background-blend-mode: darken;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+}
+
+.about-banner p{
+    color: #fff;
+}
+
+/* why recycle section */
+.recycle{
+    padding: 60px 30px;
+    background-color: #fff;
+}
+
+
+.recycle h4 {
+    text-align: center;
+    color: #558E4C;
+}
+
+.about-mission,
+.about-vision{
+    background-color: #f5fffb;
+    padding-top: 30px;
+}
+
+.mission-img.destop-view{
+    display: none;
+}
+
+.mission-text,
+.vision-text {
+    padding: 30px;
+}
+
+
+/* Tablet view */
+@media screen and (min-width: 688px) {
+    .about-banner p{
+        max-width: 700px;
+    }
+
+    .recycle-text,
+    .mission-text,
+    .vision-text{
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+    
+}
+
+/* destop view */
+@media screen and (min-width: 992px) {
+    /* why recycle section */
+    .recycle{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .recycle-text,
+    .recycle-img{
+        flex: 1;
+    }
+
+
+    .recycle h2 {
+        text-align: left;
+    }
+
+    /* about page mission and vision */
+    .about-mission,
+    .about-vision{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .mission-img.destop-view{
+        display: flex;
+        flex: 1;
+    }
+    .mission-img.mobile-view{
+        display: none;
+    }
+
+    .mission-text{
+        flex: 1;
+    }
+
+    .mission-text h2,
+    .vision-text h2 {
+        text-align: left;
+    }
+}
