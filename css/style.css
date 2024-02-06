@@ -357,7 +357,7 @@ footer{
 }
 
 footer p {
-    color: #A5B9AD;
+    color: #f5fffb;
 }
 
 .footer-logo-img {
@@ -371,6 +371,7 @@ footer p {
 }
 
 footer .social a i {
+    color: #f5fffb;
     font-size: 40px;
     padding: 20px 20px 0 20px;
 }
@@ -395,12 +396,12 @@ footer .social a i {
 
 .footer-col a {
     text-decoration: none;
-    color: #A5B9AD;
+    color: #f5fffb;
     font-size: 16px;
 }
 
 .footer-col a:hover{
-    color: #fff;
+    color: #558E4C;
 }
 
 /* footer copyright */

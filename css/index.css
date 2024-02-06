@@ -293,7 +293,6 @@ p {
 }
 
 
-
 /* Tablet view */
 @media screen and (min-width: 688px) {
     .recycle,
@@ -304,8 +303,17 @@ p {
     }
 
     .importance {
-        padding: 0 0 2170px;
+        padding: 0 0 1700px;
         justify-content: center;
+    }
+
+    .importance-header h2 {
+        padding-left: 100px;
+        padding-right: 100px;
+    }
+
+    .importance-col {
+        max-width: 500px;
     }
 
     .join{
