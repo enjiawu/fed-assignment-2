@@ -73,6 +73,31 @@ if (window.location.pathname.includes("profile.html")) {
             }
           }
       });
+
+      fetch(historyUrl, settings)
+      .then(response => response.json())
+      .then(response => {
+        let content = "";
+  
+        for (var i = 0; i < response.length; i++) {
+          if (response[i].user[0]._id == userID) {
+            content = `${content}
+            <div id = ${response[i]._id}>
+            <div id = "history-data">
+              <div id = "history-container" class = "d-flex flex-row">
+                <div id = "quiz-details">
+                  <h3 id = "title">${response[i].title}</h3>
+                  <p id = "details">${response[i].description}</p>
+                </div>
+                <p id = "xp-earned">+ ${response[i].xp} xp</p>
+              </div>
+            </div>
+          </div>`;
+          }
+        }
+
+        document.getElementById("history-containers").innerHTML = content;
+      });
     });
   }
   
@@ -108,42 +133,4 @@ if (window.location.pathname.includes("profile.html")) {
         getInfo(); //Calling the getInfo function to get the user data
     });
   }
-  getHistory(); //Calling the getHistory function to get the history data
-  
-  function getHistory() {
-    let settings = {
-      method: "GET",
-      headers: {
-        "Content-Type": "application/json",
-        "x-apikey": APIKEY,
-        "Cache-Control": "no-cache"
-      },
-    }
-  
-    fetch(historyUrl, settings)
-      .then(response => response.json())
-      .then(response => {
-        let content = "";
-  
-        for (var i = 0; i < response.length; i++) {
-          content = `${content}
-          <div id = ${response[i]._id}>
-          <div id = "history-data">
-            <div id = "history-container" class = "d-flex flex-row">
-              <div id = "quiz-details">
-                <h3 id = "title">${response[i].title}</h3>
-                <p id = "details">${response[i].description}</p>
-              </div>
-              <p id = "xp-earned">+ ${response[i].xp} xp</p>
-            </div>
-          </div>
-        </div>`;
-        }
-  
-        //[STEP 9]: Update our HTML content
-        // Let's dump the content into our table body
-        document.getElementById("history-containers").innerHTML = content;
-      });
-  }
-  
 }
