@@ -134,3 +134,41 @@ if (window.location.pathname.includes("profile.html")) {
     });
   }
 }
+
+
+if (window.location.pathname.includes("quiz.html")) {
+
+  const settings = {
+    method: 'GET',
+    headers: {
+      "Content-Type": "application/json",
+      "x-apikey": APIKEY,
+      "Cache-Control": "no-cache"
+    },
+  };
+  
+   //fetching of data for the profile page
+   fetch(userdataUrl, settings)
+   .then(response => response.json())
+   .then(response => {
+     console.log(response);
+ 
+     fetch(profileUrl, settings)
+       .then(response => response.json())
+       .then(response => {
+         console.log(response);
+         for (let i = 0; i < response.length; i++) {
+           if (response[i].user[0]._id == userID) {
+             profileID = response[i]._id;
+             username.innerHTML = response[i].user[0].name;
+             description.innerHTML = response[i].description;
+             level.innerHTML = response[i].level;
+             currentXp.innerHTML = response[i].xp + 1000;
+             maxXp.innerHTML = level.innerHTML * 1000;
+ 
+             xpTrackerInner.style.width = (currentXp.innerHTML/maxXp.innerHTML)*100 + "%";
+           }
+         }
+     });
+   });
+}
