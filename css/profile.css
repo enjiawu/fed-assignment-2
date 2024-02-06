@@ -6,10 +6,11 @@
 
 body{
     background-color: white;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'B612';
     color: #40483D;
 }
 
+/*
 h1{
     font-family: Bangers;
     font-size: 55px;
@@ -47,7 +48,7 @@ img{
     width: 30%;
 }
 
-.container {
+#profile-details{
     padding: 5%;
     flex-grow: 1;
     flex-basis: 100%;
@@ -100,3 +101,4 @@ img{
     font-weight: bold;
     font-size: 15px;
 }
+*/

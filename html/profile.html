@@ -12,22 +12,35 @@
 </head>
 
   <body>
-        <div id="profile" class ="container">
-          <img src="../profile.png" alt="Profile Picture" id="profile-picture">
-          <h2>Username</h2>
-          <div xp = "xp-container">
-            <div id = "xp-tracker">
-                <div id = "xp-tracker-inner"></div>
-                <div id = "level-tracker">
-                    <p id = "level">Level <span id= "player-level">1</span></p>
-                    <p id = "player-xp"><span id = "current-xp">18000</span>/250000</p>
+        <main id="profile-container" class ="container">
+          <section id = "profile-details" class = "d-flex flex-row">
+            <img src="../image/profile/profile.png" alt="Profile Picture" id="profile-picture">
+            <div class = "d-flex flex-column">
+              <h2>Username</h2>
+              <div xp = "xp-container">
+                <div id = "xp-tracker">
+                    <div id = "xp-tracker-inner"></div>
+                      <div id = "level-tracker">
+                          <p id = "level">Level <span id= "player-level">1</span></p>
+                          <p id = "player-xp"><span id = "current-xp">18000</span>/250000</p>
+                      </div>
+                  </div>
                 </div>
+              </div>
             </div>
-          </div>
-        </div>
-        <div id="profile" class ="container">
+          </section>
+
+          <section id = "profile-history" class = "d-flex flex-column">
             <h2>History</h2>
-        </div>
+            <div id = "history-container" class = "d-flex flex-row">
+              <div id = "quiz-details">
+                <h3 id = "title">Completed Quiz</h3>
+                <p id = "details">SCore: 8/10</p>
+              </div>
+              <p id = "xp-earned">+ 1,000 xp</p>
+            </div>
+          </section>
+        </main>
 
         <!--
         <section id = "loading-screen">
