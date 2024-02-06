@@ -8,23 +8,39 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Anonymous+Pro:ital,wght@0,400;0,700;1,400;1,700&family=B612+Mono:ital,wght@0,400;0,700;1,400;1,700&family=B612:ital,wght@0,400;0,700;1,400;1,700&family=Bangers&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/profile.css">
 </head>
 
   <body>
-        <main id="profile-container" class ="container">
-          <section id = "profile-details" class = "d-flex flex-row">
+        <main id="profile-container">
+          <section id = "profile-main" class = "d-flex flex-row">
             <img src="../image/profile/profile.png" alt="Profile Picture" id="profile-picture">
-            <div class = "d-flex flex-column">
-              <h2>Username</h2>
-              <div xp = "xp-container">
-                <div id = "xp-tracker">
-                    <div id = "xp-tracker-inner"></div>
-                      <div id = "level-tracker">
-                          <p id = "level">Level <span id= "player-level">1</span></p>
-                          <p id = "player-xp"><span id = "current-xp">18000</span>/250000</p>
-                      </div>
+            <div id = "profile-details" class = "d-flex flex-column">
+              <h2 id = "username">Username</h2>
+              <div id = "description-container" class = "flex-row">
+                <p id = "description"></p>
+                <a id = "edit-description-button">
+                  <img src = "../image/profile/edit.png" alt = "Edit" id = "edit-description-icon">
+                </a>
+              </div>
+              <div id = "edit-description-container" class = "flex-row">
+                <form id = "edit-description-form">
+                  <div class="form-group">
+                    <textarea class="form-control" id="edit-description" rows="5" maxlength="100" placeholder="Enter your description here" required></textarea>
                   </div>
+                  <div id = "buttons" class = "d-flex flex-row">
+                    <button id="save-description-button" type="submit">Save</button>
+                    <button id="cancel-button" type="submit">Cancel</button>
+                  </div>
+                </form>
+              </div>
+              <div id = "xp-tracker">
+                  <div id = "xp-tracker-inner"></div>
+                    <div id = "level-tracker" class = "d-flex flex-row">
+                        <p id = "level">Level <span id= "player-level">1</span></p>
+                        <p id = "player-xp"><span id = "current-xp"></span>/<span id = "max-xp"></span></p>
+                    </div>
                 </div>
               </div>
             </div>
@@ -32,20 +48,13 @@
 
           <section id = "profile-history" class = "d-flex flex-column">
             <h2>History</h2>
-            <div id = "history-container" class = "d-flex flex-row">
-              <div id = "quiz-details">
-                <h3 id = "title">Completed Quiz</h3>
-                <p id = "details">SCore: 8/10</p>
-              </div>
-              <p id = "xp-earned">+ 1,000 xp</p>
-            </div>
+            <div id = "history-containers" class = "d-flex flex-column"></div>
           </section>
         </main>
 
-        <!--
         <section id = "loading-screen">
           <dotlottie-player src="https://lottie.host/b741b781-85ba-44a4-ab61-fa92685bc34d/hogrlivgr9.json" background="transparent" speed="1" style="width: 300px; height: 300px;" loop autoplay></dotlottie-player>
-        </section>-->
+        </section>
     
         <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script> 
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>

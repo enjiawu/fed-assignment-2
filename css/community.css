@@ -1,3 +1,7 @@
+body{
+    color: #40483D;
+}
+
 #community-container{
     max-width: 90vw;
     margin: 5% auto auto auto;
@@ -23,7 +27,7 @@
 
 .post-button:hover{
     border: 1px solid black;
-    color: black;
+    color: #40483D;
     background-color: white;
     box-shadow: 0 5px #666;
 }
@@ -49,7 +53,7 @@
 .post-options .btn{
     background-color: rgb(165, 207, 165);
     border: none;
-    color: black;
+    color: #40483D;
     font-weight: bolder;
     transform: rotate(270deg);
 }
@@ -105,7 +109,7 @@
 
 .join-button:hover{
     border: 1px solid black;
-    color: black;
+    color: #40483D;
     background-color: white;
     box-shadow: 0 5px #666;
 }
@@ -126,7 +130,7 @@
 #close-add-new-post, #close-update-post{
     font-size: 25px;
     font-weight: bold;
-    color: black;
+    color: #40483D;
     cursor: pointer;
     background-color: #A5b9AD;
     border: none;

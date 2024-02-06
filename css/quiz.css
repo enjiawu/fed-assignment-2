@@ -2,6 +2,7 @@ body{
     font-family: B612;
     margin: 0;
     padding: 0;
+    color: #40483D;   
 }
 
 #quiz-container {
@@ -36,7 +37,7 @@ button{
 
 button:hover{
     border: 1px solid black;
-    color: black;
+    color: #40483D;
     background-color: white;
     box-shadow: 0 5px #666;
 }
@@ -125,7 +126,7 @@ h1{
 
 #points-popup{
     display: none;
-    color: black;
+    color: #40483D;
     font-size: 18px;
     font-weight: bold;
     transform: rotate(4deg); /*Make it slant a little*/

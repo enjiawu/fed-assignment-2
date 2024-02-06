@@ -10,81 +10,119 @@ body{
     color: #40483D;
 }
 
-/*
-h1{
-    font-family: Bangers;
-    font-size: 55px;
-    margin-top: 50px;
-    text-align: center;
-    padding: 20px;
+main{
+    margin: 50px 10vw;
 }
 
 h2{
-    font-family: Bangers;
-    font-size: 30px;
-    margin-top: 50px;
-    text-align: center;
+    font-size: 28px;
+    font-weight: bold;
 }
 
-p{
-    font-family: Bangers;
-    color: #558E4C;
+#profile-main{
+    background-color: rgb(165, 207, 165);
+    border-radius: 10px;
+    padding: 40px 5vw;
+    margin-bottom: 50px;
+    box-shadow: 0 8px rgba(42, 58, 42, 0.5);
+    align-items: center;
+    height: auto;
 }
 
-a{
-    font-family: Bangers;
-    color: #558E4C;
-}
-
-a:hover {
-    color: #ECDD5E;
-  }
-
-
-img{
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 30%;
+#profile-picture{
+    width: 35%;
+    height: auto;
+    margin-right: 7%;
 }
 
 #profile-details{
-    padding: 5%;
-    flex-grow: 1;
-    flex-basis: 100%;
-    display: flex;
-    flex-direction: column;
-    background-color: rgb(176, 226, 176);
-    border-radius: 20px;
-    background-size: cover;
+    width: 55%;
 }
 
-#xp-container{
+#username{
+    font-weight: bold;
+}
+
+#description-container{
     display: flex;
-    flex-direction: column;
-    align-content: center;
-    justify-content: center;
+    font-size: 14px;
+    margin-bottom: 0;
+    justify-content: space-between;
+}
+
+#edit-description-button{
+    margin-left: 10px;
+    width: 5%;
+    height: 5%;
+}
+
+#edit-description-icon{
+    width: 20px;
+    height: 20px;
+}
+
+#edit-description-container{
+    display: none; /*Hide container so that it only shows when the edit description icon is clicked*/
+}
+
+#edit-description-form{
     width: 100%;
-    height: 100%;
+}
+
+#edit-description::placeholder {
+    font-size: 14px;
+}
+
+#buttons{
+    height: 25%;
+}
+
+#save-description-button, #cancel-button{
+    width: 60%;
+    border-radius: 10px;
+    font-size: 13px;
+    margin: 5px 0 10px 0;
+    font-weight: bold;
+    color: white;
+    background-color:#404a3d;
+    border: none;
+    transition: 0.35s;
+}
+
+#save-description-button:hover, #cancel-button:hover{
+    border: 1px solid black;
+    color: #40483D;
+    background-color: white;
+    box-shadow: 0 5px #666;
+}
+
+#save-description-button:active, #cancel-button:active{
+    background-color: #a5b9ad;
+    color: #404a3d;
+}
+
+#cancel-button{
+    margin-left: 10px;
+    width: 40%;
 }
 
 #xp-tracker{
+    margin-top: 15px;
     background-color: rgb(106, 150, 106);
     width: 100%;
-    height: 40%;
+    height: 2.5vh;
     border-radius: 10px;
 }
 
 #xp-tracker-inner{
-    background-color: rgb(64, 94, 64);
-    width: 80%;
+    background-color: rgb(22, 27, 22);
+    width: 0%;
     border-radius: 15px;
     height: 100%;
 }
 
 #level-tracker{
-    display: flex;
-    font-size: 14px;
+    font-size: 15px;
     justify-content: space-between;
     margin: 1% 4%;
 }
@@ -101,4 +139,30 @@ img{
     font-weight: bold;
     font-size: 15px;
 }
-*/
+
+#history-container{
+    background-color: rgb(165, 207, 165);
+    border-radius: 10px;
+    padding: 20px 5vw;
+    margin-bottom: 20px;
+    box-shadow: 0 8px rgba(42, 58, 42, 0.5);
+    align-items: center;
+    justify-content: space-between;
+}
+
+#title{
+    font-size: 24px;
+    font-weight: bolder;
+}
+
+#details{
+    font-size: 18px;
+    margin-bottom: 0;
+}
+
+#xp-earned{
+    font-size: 30px;
+    font-family: 'Bangers';
+    margin-bottom: 0px;
+}
+
