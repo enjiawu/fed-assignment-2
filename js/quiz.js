@@ -4,7 +4,7 @@ const startButton = document.getElementById("start-button"); //Getting start but
 //Making the quit button work when clicked
 quitButtons.forEach(button => { //For each choice
     button.addEventListener("click", () => { //When the quit button is clicked
-        window.location.href = "/fed-assignment-2/index.html"; //Redirect the user back to index.html
+        window.location.href = "../index.html"; //Redirect the user back to index.html
     });
 });
 
