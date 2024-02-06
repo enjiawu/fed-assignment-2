@@ -31,19 +31,22 @@ document.addEventListener("DOMContentLoaded", function () {
     getPosts();
 
     document.getElementById("submit-post").addEventListener("click", function (e) { //hen user submits the form to add new post
-        e.preventDefault(); //Prevent default action of the button 
+      //Retrieving the form data
+      let postTitle = document.getElementById("post-title").value;
+      let postDescription = document.getElementById("post-description").value;
+      let postLocation = document.getElementById("post-location").value;
+      let postContact = document.getElementById("post-contact").value;
+      let postStartDate = document.getElementById("post-start-date").value;
+      let postEndDate = document.getElementById("post-end-date").value;
+      let postLink = document.getElementById("join-now-link").value;
+      let postUser = document.getElementById("post-organisation").value;
 
-        //Retrieving the form data
-        let postTitle = document.getElementById("post-title").value;
-        let postDescription = document.getElementById("post-description").value;
-        let postLocation = document.getElementById("post-location").value;
-        let postContact = document.getElementById("post-contact").value;
-        let postStartDate = document.getElementById("post-start-date").value;
-        let postEndDate = document.getElementById("post-end-date").value;
-        let postLink = document.getElementById("join-now-link").value;
-        let postUser = document.getElementById("post-organisation").value;
-       // let likes = 0;
+      if (postTitle === "" || postDescription === "" || postLocation === "" || postContact === "" || postStartDate === "" || postEndDate === "" || postLink === "" || postUser === "") { //Make sure that every input is properly validated first
+        alert("Please fill in all the fields"); //If not alert them 
+        return;
+      } 
 
+      e.preventDefault(); //Prevent default action of the button 
       //Getting form values
       let jsondata = {
         "title": postTitle,
@@ -209,7 +212,6 @@ document.addEventListener("DOMContentLoaded", function () {
     //[STEP 12]: Here we load in our contact form data
     // Update form listener
     document.getElementById("update-post").addEventListener("click", function (e) {
-        e.preventDefault();
         // Retrieve all my update form values
         let postTitle = document.getElementById("update-post-title").value;
         let postDescription = document.getElementById("update-post-description").value;
@@ -221,6 +223,12 @@ document.addEventListener("DOMContentLoaded", function () {
         let postUser = document.getElementById("update-post-organisation").value;
         let postId = document.getElementById("update-post-id").value;
 
+        if (postTitle === "" || postDescription === "" || postLocation === "" || postContact === "" || postStartDate === "" || postEndDate === "" || postLink === "" || postUser === "") {
+          alert("Please fill in all the fields");
+          return;
+        }
+
+        e.preventDefault();
         
         postStartDate = new Date(postStartDate).toISOString();
         postEndDate = new Date(postEndDate).toISOString();
