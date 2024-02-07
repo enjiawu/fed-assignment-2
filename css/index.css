@@ -112,7 +112,8 @@ p {
     margin-bottom: 40px;
 }
 
-.hero-text a {
+.hero-text a,
+#popup-link {
     display: inline-block;
     color: #404a3d;
     background-color: #ecdd5e;
@@ -125,7 +126,8 @@ p {
     text-decoration: none;
 }
 
-.hero-text a:hover{
+.hero-text a:hover,
+#popup-link:hover{
     background-color: #558E4C;
     color: #fff;
 }
@@ -136,11 +138,45 @@ p {
     background-color: #fff;
 }
 
-
 .recycle h4 {
     text-align: center;
     color: #558E4C;
 }
+
+#popup-window {
+    display: none;
+    position: fixed;
+    border-radius: 10px;
+    width: 100vw;
+    height: 100vh;
+    max-height: 50vh;
+    max-width: 80vw;
+    justify-content: center;
+    text-align: center;
+    background-color: rgb(176, 226, 176);
+    position: fixed;
+    padding: 5%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+  }
+
+#close-button {
+    position: absolute;
+    cursor: pointer;
+    bottom: 10%;
+    right: 20%;
+    width: 60%;
+    border-radius: 90px;
+    padding: 0.5% 0;
+    background-color: rgb(56, 77, 56);
+    font-family: B612;
+    font-weight: bold;
+    font-size: 18px;
+    color: white;
+    transition: 0.35s;
+  }
 
 /* recycle importance section */
 .importance {
@@ -391,8 +427,13 @@ p {
         padding: 20px;
     }
 
+    .recycle h2 {
+        text-align: left;
+    }
+
     .recycle h4 {
         color: #558E4C;
+        text-align: left;
     }
 
     /* recycle importance section */
