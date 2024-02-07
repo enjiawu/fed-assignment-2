@@ -19,6 +19,13 @@ h2{
     margin: 0 0 30px;
 }
 
+h4 {
+    font-size: 25px;
+    color: #ecdd5e;
+    margin-bottom: 10px;
+    font-family: 'Yellowtail', cursive;
+}
+
 p {
     color: #404a3d;
     font-size: 15px;
