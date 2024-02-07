@@ -221,6 +221,10 @@ p {
     border:2px solid #EAE1D8;
 }
 
+.importance-img img{
+    max-height: 180px;
+}
+
 .importance-text {
     padding: 30px 30px 50px 30px;
 }
@@ -310,6 +314,10 @@ p {
 }
 
 .join-text h2{
+    color: #fff;
+}
+
+.join-text p{
     color: #fff;
 }
 
