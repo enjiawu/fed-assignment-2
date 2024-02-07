@@ -106,10 +106,14 @@ img {
     list-style: none; /* remove list dot*/
 }
 
+ul {
+    margin-bottom: 0;
+}
+
 .menu-list li a {
     position: relative;
     color: #fff;
-    font-size: 1.1em;
+    font-size: 17px;
     font-weight: 400; /* change font weight */
     text-decoration: none; /* remove underline*/
     transition: all 0.3s ease;  /* hover transition for 0.3s */

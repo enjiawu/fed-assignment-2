@@ -1,15 +1,3 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body{
-    background-color: white;
-    font-family: 'Roboto', sans-serif;
-    color: #40483D;
-}
-
 h1{
     font-size: 45px;
     line-height: 1;
@@ -25,7 +13,7 @@ h2{
 }
 
 h4 {
-    font-size: 25px;
+    font-size: 2px;
     color: #ecdd5e;
     margin-bottom: 10px;
     font-family: 'Yellowtail', cursive;
@@ -38,6 +26,16 @@ p{
 
 ul {
     padding-left: 0;
+}
+
+.login-btn-pop {
+    font-size: 28px;
+}
+
+.menu-list li a{
+    font-size: 23px;
+    font-weight: 500;
+    margin-left: 10px;
 }
 
 .news-banner {
