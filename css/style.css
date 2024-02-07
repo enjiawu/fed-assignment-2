@@ -25,7 +25,7 @@ img {
 
 /* Mobile view */
 /* Navbar */
-.navbar{
+.navigationbar{
     position: fixed;
     width: 100%;
     z-index: 2;
@@ -34,43 +34,43 @@ img {
 }
 
 /* sticky navbar */
-.navbar.sticky{
+.navigationbar.sticky{
     background-color: #fff;
     box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
     z-index: 3;
 }
 
-.navbar.sticky .menu-list li a{
+.navigationbar.sticky .menu-list li a{
     color: #fff;
     font-weight: 400;
 }
 
-.navbar.sticky .menu-list li.active a{
+.navigationbar.sticky .menu-list li.active a{
     color: #558E4C;
 }
 
-.navbar.sticky .menu-list li a:hover{
+.navigationbar.sticky .menu-list li a:hover{
     color: #558E4C; 
 }
 
-.navbar.sticky .logo-green {
+.navigationbar.sticky .logo-green {
     display: flex;
 }
 
-.navbar.sticky .logo-white {
+.navigationbar.sticky .logo-white {
     display: none;
 }
 
-.navbar.sticky .icon{
+.navigationbar.sticky .icon{
     color: #558E4C;
 }
 
-.navbar.sticky .icon.cancel-btn{
+.navigationbar.sticky .icon.cancel-btn{
     color: #fff;
 }
 
 /* Navbar content styles */
-.navbar .content{
+.navigationbar .content{
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -131,7 +131,7 @@ img {
 }
 
 /* navbar menu list styles */
-.navbar .menu-list{
+.navigationbar .menu-list{
     position: fixed;
     transform: translateX(100%);
     top: 0px;
@@ -145,11 +145,11 @@ img {
 }
 
 /* show the menu */
-.navbar.show .menu-list{
+.navigationbar.show .menu-list{
     transform: translateX(0%);
 }
 
-.navbar .menu-list li {
+.navigationbar .menu-list li {
     margin-top: 35px;
     padding: 5px;
 }
@@ -440,19 +440,19 @@ footer .social a i {
             display: none;
         }
 
-        .navbar.sticky .menu-list li a{
+        .navigationbar.sticky .menu-list li a{
             color: #8d8b8a;
         }
         
-        .navbar.sticky .menu-list li a:hover{
+        .navigationbar.sticky .menu-list li a:hover{
             color: #558E4C; 
         }
 
-        .navbar.sticky .menu-list li.active a{
+        .navigationbar.sticky .menu-list li.active a{
             color: #404a3d;
         }
 
-        .navbar.sticky .menu-list li.active a:hover{
+        .navigationbar.sticky .menu-list li.active a:hover{
             color: #558E4C;
         }
 
@@ -468,7 +468,7 @@ footer .social a i {
             margin-top: 0px;
         }
     
-        .navbar .menu-list {
+        .navigationbar .menu-list {
             position: sticky;
             display: flex;
             align-items: center;
@@ -477,15 +477,15 @@ footer .social a i {
             padding-top: 0;
         }
     
-        .navbar .menu-list li {
+        .navigationbar .menu-list li {
             margin-top: 0px;
         }
         
-        .navbar .menu-list li a {
+        .navigationbar .menu-list li a {
             padding: 0 5px;
         }
 
-        .navbar .menu-list li a:hover{
+        .navigationbar .menu-list li a:hover{
             color: #404a3d;
         }
 
@@ -497,7 +497,7 @@ footer .social a i {
 
 /* destop view */
 @media screen and (min-width: 992px) {
-    .navbar,
+    .navigationbar,
     footer {
         padding-left: 50px;
         padding-right: 50px;
