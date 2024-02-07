@@ -29,7 +29,7 @@ try {
 	let statsData = "";
 for (let i = 0; i < data.length; i++) {
 	statsData += "<div class='stats-item'>";
-	statsData += "<p class='stats-item'>" + data[i].item + ": " + data[i].counter + "</p>";
+	statsData += "<h3 class='stats-item'>" + data[i].item + ": " + data[i].counter + "</h3>";
 	statsData += "</div>";
 }
 document.getElementById("stats").innerHTML = statsData;

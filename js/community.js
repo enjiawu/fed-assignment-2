@@ -24,13 +24,13 @@ function lottieLoading(){ //Function for loading lottie for 3 seconds
 }
 
 //Allowing user to add posts
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", function () { //Make sure that the document is okay
     lottieLoading(); //Loading lottie animation
 
     const APIKEY = "65bcaa26383507023123fbae"; //Our api key
-    getPosts();
+    getPosts();  //Call get posts function
 
-    document.getElementById("submit-post").addEventListener("click", function (e) { //hen user submits the form to add new post
+    document.getElementById("submit-post").addEventListener("click", function (e) { //When user submits the form to add new post
       //Retrieving the form data
       let postTitle = document.getElementById("post-title").value;
       let postDescription = document.getElementById("post-description").value;
@@ -43,7 +43,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
       if (postTitle === "" || postDescription === "" || postLocation === "" || postContact === "" || postStartDate === "" || postEndDate === "" || postLink === "" || postUser === "") { //Make sure that every input is properly validated first
         alert("Please fill in all the fields"); //If not alert them 
-        return;
+        return; //Return so that it doesn't go to the rest of the function
       } 
 
       e.preventDefault(); //Prevent default action of the button 
@@ -76,23 +76,21 @@ document.addEventListener("DOMContentLoaded", function () {
         .then(data => {
           console.log(data);
 
-          // Disable our button or show loading bar
-          lottieLoading();
+          lottieLoading(); //Show lottie animation
 
-          // Clear our form using the form ID and triggering its reset feature
-          document.getElementById("add-new-post-form").reset();
+          document.getElementById("add-new-post-form").reset(); //Resetting the form
 
           //Updating the UI
           addPostButton.style.display = "block"; //Dispaly the add post button
           addPostContainer.style.display = "none"; //Hide the add post form
-          document.getElementById("add-post-msg").style.display = "block";
+          document.getElementById("add-post-msg").style.display = "block";  //Show the alert messsage that the post has been added
 
 
-          setTimeout(function () {
+          setTimeout(function () {  //Hide alert message after 10 seconds
             document.getElementById("add-post-msg").style.display = "none";
           }, 10000);
           
-          getPosts();
+          getPosts(); //Call get posts function
         });
     });
   
@@ -108,23 +106,23 @@ document.addEventListener("DOMContentLoaded", function () {
           "Cache-Control": "no-cache"
         },
       }
-  
-      //[STEP 8]: Make our AJAX calls
-      // Modify post content by creating the content internally. We run a loop to continuously add on data
+
+      //Making AJAX calls to modify post content by creating the content internally and running the loop to continously add on data
       fetch("https://greenrecycling-8b3e.restdb.io/rest/post", settings)
         .then(response => response.json())
         .then(response => {
             let content = "";
   
-            for (var i = 0; i < response.length; i++) {
+            for (var i = 0; i < response.length; i++) { //Iteraating through all the data fetched
                 console.log(response[i]);
                 
                 // Convert the date to "yyyy-mm-dd" format
                 const startDate = new Date(response[i].startDate).toDateString();
                 const endDate = new Date(response[i].endDate).toDateString();
 
-                content = `${content}
-                <div class="card mb-3" id='${response[i]._id}'>
+                //Adding all the post content into the content variable
+                content = `${content} 
+                <article class="card mb-3" id='${response[i]._id}'>
                     <div class="post-content">
                         <div class="post-body card-body">
                             <div class = "post-header d-flex flex-row">
@@ -157,28 +155,24 @@ document.addEventListener("DOMContentLoaded", function () {
                             </div>
                         </div>
                     </div>
-                </div>`;
+                </article>`;
             }
                                     
-            // Updating html content
-            // Let's dump the content into our table body
-            document.getElementById("post-container").innerHTML = content;
+            document.getElementById("post-container").innerHTML = content; //Dumping all the content into the post container so that it gets displayed neatly
         });
     }
-  
-    //[STEP 10]: Create our update listener
-    // Here we tap onto our previous table when we click on update
-    // This is a delegation feature of jQuery
-    // Because our content is dynamic in nature, we listen in on the main container which is "#contact-list". For each row, we have a class .update to help us
-    document.getElementById("close-update-post").addEventListener("click", function (e) {
+
+    //Update listener
+    document.getElementById("close-update-post").addEventListener("click", function (e) { //Function to check if user wants to close the update form
       e.preventDefault();
       // Hide the update form
       document.getElementById("update-post-container").style.display = "none";
     });
 
     document.getElementById("post-container").addEventListener("click", function (e) {
-      if (e.target.classList.contains("update")) {
-        e.preventDefault();
+      if (e.target.classList.contains("update")) { //Check if user clicked on update button
+        e.preventDefault(); //Prevent default action
+
         // Update our update form values
         let postTitle = e.target.getAttribute("data-title");
         let postDescription = e.target.getAttribute("data-description");
@@ -195,7 +189,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         console.log(e.target.getAttribute("data-id"));
   
-        //[STEP 11]: Load in our data from the selected row and add it to our update contact form 
+        //Load post data into the update form
         document.getElementById("update-post-title").value = postTitle;
         document.getElementById("update-post-description").value = postDescription;
         document.getElementById("update-post-location").value = postLocation;
@@ -209,8 +203,7 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     });
   
-    //[STEP 12]: Here we load in our contact form data
-    // Update form listener
+    //Loading in our update form data
     document.getElementById("update-post").addEventListener("click", function (e) {
         // Retrieve all my update form values
         let postTitle = document.getElementById("update-post-title").value;
@@ -223,22 +216,21 @@ document.addEventListener("DOMContentLoaded", function () {
         let postUser = document.getElementById("update-post-organisation").value;
         let postId = document.getElementById("update-post-id").value;
 
-        if (postTitle === "" || postDescription === "" || postLocation === "" || postContact === "" || postStartDate === "" || postEndDate === "" || postLink === "" || postUser === "") {
+        if (postTitle === "" || postDescription === "" || postLocation === "" || postContact === "" || postStartDate === "" || postEndDate === "" || postLink === "" || postUser === "") { //Making sure all the fields are filled up
           alert("Please fill in all the fields");
           return;
         }
 
-        e.preventDefault();
+        e.preventDefault(); //Prevent default action
         
-        postStartDate = new Date(postStartDate).toISOString();
+        postStartDate = new Date(postStartDate).toISOString(); //Changing the date format to required one 
         postEndDate = new Date(postEndDate).toISOString();
         
-        //[STEP 12a]: We call our update form function which makes an AJAX call to our RESTDB to update the selected information
+        //Callling update form function which makes an AJAX call to our RESTDB to update the selected information
         updateForm(postId, postTitle, postUser, postDescription, postLocation, postContact, postStartDate, postEndDate, postLink);
     });
   
-    //[STEP 13]: Function that makes an AJAX call and processes it 
-    // UPDATE Based on the ID chosen
+    //Updating based on the ID chosen
     function updateForm(postId, postTitle, postUser, postDescription, postLocation, postContact, postStartDate, postEndDate, postLink){
 
         var jsondata = { 
@@ -264,21 +256,21 @@ document.addEventListener("DOMContentLoaded", function () {
             body: JSON.stringify(jsondata)
         }
   
-      //[STEP 13a]: Send our AJAX request and hide the update contact form
+      //Sending AJAX request and hide the update contact form
       fetch(`https://greenrecycling-8b3e.restdb.io/rest/post/${postId}`, settings)
         .then(response => response.json())
         .then(data => {
           console.log(data);
-          //document.getElementById("update-post-container").style.display = "none";
-          // Update our contacts table
+
+          // Updating posts
           getPosts();
 
-          document.getElementById("update-post-button").addEventListener("click", function (e) {
+          document.getElementById("update-post-button").addEventListener("click", function (e) { //When update post button is clicked
             document.getElementById("update-post-container").style.display = "none"; //Hiding the post container
             lottieLoading(); //Loading lottie animation
-            document.getElementById("update-msg").style.display = "block";
+            document.getElementById("update-msg").style.display = "block"; //Showing update alert
 
-            setTimeout(function () {
+            setTimeout(function () { //Hiding alert after 10 seconds
               document.getElementById("update-msg").style.display = "none";
             }, 10000);
           });
@@ -288,25 +280,25 @@ document.addEventListener("DOMContentLoaded", function () {
   });
   
   
+  //Deleting a post
   const APIKEY = "65bcaa26383507023123fbae";
   
-    document
-      .getElementById("post-container")
-      .addEventListener("click", function (e) {
+    document.getElementById("post-container").addEventListener("click", function (e) { //Checking if post container delete button has been selected
         if (e.target.classList.contains("delete")) {
           e.preventDefault();
-          let postId = e.target.getAttribute("data-id");
+          let postId = e.target.getAttribute("data-id"); //Getting the post id
   
           // Show a confirmation dialog
-          if (confirm("Are you sure you want to delete this contact?")) {
+          if (confirm("Are you sure you want to delete this contact?")) { //Confirmating message to ask if they really want to delete
             // Call the delete function
-            deleteContact(postId);
+            deleteContact(postId); //If yes call deleteContact function
           }
         }
       });
   
-    function deleteContact(postId) {
-      console.log("Deleting post with ID:", postId);
+    function deleteContact(postId) { //Function to delete post
+      console.log("Deleting post with ID:", postId); 
+
       // Make an AJAX request to delete the contact
       fetch(`https://greenrecycling-8b3e.restdb.io/rest/post/${postId}`, {
         method: "DELETE",
@@ -319,33 +311,33 @@ document.addEventListener("DOMContentLoaded", function () {
       .then(response => {
         console.log("Response status:", response.status);
   
-        if (!response.ok) {
+        if (!response.ok) { //Throw error if got any problems
           throw new Error(`HTTP error! Status: ${response.status}`);
         }
   
         return response.json();
       })
+
       .then(data => {
         console.log("Response data:", data);
         console.log(`Post with ID ${postId} deleted`);
-        removePostFromUI(postId);
-        getPosts();
+        removePostFromUI(postId); //Remove the post from the UI
+        getPosts(); //load all the posts again
       })
       .catch(error => {
         console.error("Error deleting post:", error);
       });
     }
   
-    function removePostFromUI(postId) {
-      // Find the post and remove it from the UI
-      let post = document.getElementById(postId);
-      if (post) {
-        post.remove();
+    function removePostFromUI(postId) { //Function to remove post from UI
+      let post = document.getElementById(postId); //Getting the post from the UI
+      if (post) { //If post exists
+        post.remove(); //Remove post
       }
 
-      document.getElementById("delete-msg").style.display = "block";
+      document.getElementById("delete-msg").style.display = "block"; //Show alert for successful deletion of post
 
-      setTimeout(function () {
+      setTimeout(function () { //Hide alert after 5 seconds
         document.getElementById("delete-msg").style.display = "none";
       }, 5000);
     }
