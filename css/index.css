@@ -1,5 +1,5 @@
 body{
-    background-image: url(/image/index/body.jpg);
+    background-image: url(../image/index/body.jpg);
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
@@ -254,7 +254,7 @@ p {
 .join-img {
     width: 100%;
     min-height: 200px;
-    background-image: url(/image/index/join1.jpg);
+    background-image: url(../image/index/join1.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: bottom;
@@ -468,7 +468,7 @@ p {
     }
     .join-img {
         position: absolute;
-        background-image: url(/image/index/join1.jpg);
+        background-image: url(../image/index/join1.jpg);
         background-position: center center; /* Center the background image */
         max-width: 250px;
         min-height: 250px;
@@ -483,7 +483,7 @@ p {
 
     .join-img2 {
         position: absolute;
-        background-image: url(/image/index/body.jpg);
+        background-image: url(../image/index/body.jpg);
         background-position: center center; /* Center the background image */
         width: 250px;
         height: 250px;
