@@ -48,7 +48,9 @@ h2{
     font-size: 14px;
     margin-bottom: 0;
     justify-content: space-between;
+    height: 15vh;
 }
+
 
 #edit-description-button{
     margin-left: 10px;

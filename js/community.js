@@ -27,7 +27,7 @@ function lottieLoading(){ //Function for loading lottie for 3 seconds
 document.addEventListener("DOMContentLoaded", function () { //Make sure that the document is okay
     lottieLoading(); //Loading lottie animation
 
-    const APIKEY = "65bcaa26383507023123fbae"; //Our api key
+    const APIKEY = "65c2b0394405e18685db039c"; //Our api key
     getPosts();  //Call get posts function
 
     document.getElementById("submit-post").addEventListener("click", function (e) { //When user submits the form to add new post
@@ -41,7 +41,7 @@ document.addEventListener("DOMContentLoaded", function () { //Make sure that the
       let postLink = document.getElementById("join-now-link").value;
       let postUser = document.getElementById("post-organisation").value;
 
-      if (postTitle === "" || postDescription === "" || postLocation === "" || postContact === "" || postStartDate === "" || postEndDate === "" || postLink === "" || postUser === "") { //Make sure that every input is properly validated first
+      if (postTitle === "" || postDescription === "" || postLocation === "" || postContact === "" || postStartDate === "" || postEndDate === "" || postLink === "" || postUser === "" || postDescription.length < 50) { //Make sure that every input is properly validated first
         alert("Please fill in all the fields"); //If not alert them 
         return; //Return so that it doesn't go to the rest of the function
       } 
@@ -71,7 +71,7 @@ document.addEventListener("DOMContentLoaded", function () { //Make sure that the
       }
   
       //Send AJAX request over to the DB and print response of the RESTDB storage to console.
-      fetch("https://greenrecycling-8b3e.restdb.io/rest/post", settings)
+      fetch("https://greenrecycling-9fab.restdb.io/rest/post", settings)
         .then(response => response.json())
         .then(data => {
           console.log(data);
@@ -108,7 +108,7 @@ document.addEventListener("DOMContentLoaded", function () { //Make sure that the
       }
 
       //Making AJAX calls to modify post content by creating the content internally and running the loop to continously add on data
-      fetch("https://greenrecycling-8b3e.restdb.io/rest/post", settings)
+      fetch("https://greenrecycling-9fab.restdb.io/rest/post", settings)
         .then(response => response.json())
         .then(response => {
             let content = "";
@@ -257,7 +257,7 @@ document.addEventListener("DOMContentLoaded", function () { //Make sure that the
         }
   
       //Sending AJAX request and hide the update contact form
-      fetch(`https://greenrecycling-8b3e.restdb.io/rest/post/${postId}`, settings)
+      fetch(`https://greenrecycling-9fab.restdb.io/rest/post/${postId}`, settings)
         .then(response => response.json())
         .then(data => {
           console.log(data);
@@ -281,7 +281,7 @@ document.addEventListener("DOMContentLoaded", function () { //Make sure that the
   
   
   //Deleting a post
-  const APIKEY = "65bcaa26383507023123fbae";
+  const APIKEY = "65c2b0394405e18685db039c";
   
     document.getElementById("post-container").addEventListener("click", function (e) { //Checking if post container delete button has been selected
         if (e.target.classList.contains("delete")) {
@@ -300,7 +300,7 @@ document.addEventListener("DOMContentLoaded", function () { //Make sure that the
       console.log("Deleting post with ID:", postId); 
 
       // Make an AJAX request to delete the contact
-      fetch(`https://greenrecycling-8b3e.restdb.io/rest/post/${postId}`, {
+      fetch(`https://greenrecycling-9fab.restdb.io/rest/post/${postId}`, {
         method: "DELETE",
         headers: {
           "Content-Type": "application/json",
