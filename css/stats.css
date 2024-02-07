@@ -18,43 +18,7 @@
         z-index: 1000;
       }
 
-      *{
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-    }
-    
-    body{
-        background-color: white;
-        font-family: 'Roboto', sans-serif;
-        color: #40483D;
-    }
-    
-    h1{
-        font-family: Bangers;
-        font-size: 55px;
-        margin-top: 50px;
-        text-align: center;
-        padding: 20px;
-    }
-    
-    h3{
-        font-family: Bangers;
-        font-size: 3wh;
-        margin-top: 15px;
-        text-align: center;
-    }
-
-    a{
-        font-family: Bangers;
-        color: #558E4C;
-    }
-    
-    a:hover {
-        color: #ECDD5E;
-      }
-
-    button {
+    #close-button {
         position: absolute;
         bottom: 10%;
         right: 20%;

@@ -1,4 +1,35 @@
 /*Community Page CSS*/
+/* apply styles to all images */  
+img {
+    width: 100%;
+    display: block;
+}
+
+h1 {
+    font-size: 45px;
+    line-height: 1;
+    color: #fff;
+    margin: 0 0 40px;
+}
+
+h2{
+    font-size: 38px;
+    line-height: 1;
+    text-align: center;
+    color: #16381f;
+    margin: 0 0 30px;
+}
+
+h4 {
+    font-size: 25px;
+    color: #ecdd5e;
+    margin-bottom: 10px;
+    font-family: 'Yellowtail', cursive;
+}
+
+ul {
+    padding-left: 0;
+}
 /* banner section */
 .community-banner {
     padding: 0 60px;
@@ -15,6 +46,23 @@
     align-items: center;
     text-align: center;
     color: #fff;
+}
+
+.community-banner h1 {
+    font-size: 45px;
+    line-height: 1;
+    color: #fff;
+    margin: 0 0 40px;
+    font-family: 'poppins', sans-serif;
+}
+
+.contact-banner p{
+    color: #fff;
+    font-family: 'poppins', sans-serif;
+    font-size: 15px;
+    line-height: 1.5;
+    font-weight: 400;
+    margin-bottom: 20px;
 }
 
 /*Main community container style*/
