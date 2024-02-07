@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+<head> <!--Header content-->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Green Recycling | Community</title>
@@ -8,33 +8,35 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Anonymous+Pro:ital,wght@0,400;0,700;1,400;1,700&family=B612+Mono:ital,wght@0,400;0,700;1,400;1,700&family=B612:ital,wght@0,400;0,700;1,400;1,700&family=Bangers&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
-    <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="../css/community.css">
+    <link rel="stylesheet" href="../css/style.css"> <!--Standardised css file-->
+    <link rel="stylesheet" href="../css/community.css"> <!--Community css file-->
 </head>
+
 <body>
-    <main id = "community-container">
-      <section id = "community-title">
+    <main id = "community-container"> <!--Main container for community content-->
+      <section id = "community-title"> <!--Community Title / Hero Image-->
         <h1>Welcome to the Community!</h1>
         <p>Join or post any environmental events now!</p>
       </section>
 
-      <section id = "community-header">
-          <button id="add-post-button" class="post-button btn btn-outline-secondary" type="button">Add new post</button>
+      <section id = "community-header"> <!--Community Header content-->
+          <button id="add-post-button" class="post-button btn btn-outline-secondary" type="button">Add new post</button> <!--Button to add new post-->
           
-          <div id="add-post-msg">
+          <div id="add-post-msg"> <!--Alert message when new post is added-->
             <div class="alert alert-success" role="alert">
               Post has been successfully added!
             </div>
           </div>
-          <div id = "add-post-container" class = "flex-column">
-            <div id = "add-new-post-header" class = "d-flex flex-row">
+
+          <div id = "add-post-container" class = "flex-column"> <!--Container for add post form-->
+            <div id = "add-new-post-header" class = "d-flex flex-row"> <!--Add new post header including title and close button-->
               <h3>Add new post</h3>
               <button type="button" id="close-add-new-post" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
               </button>
             </div>
 
-            <form id = "add-new-post-form">
+            <form id = "add-new-post-form"> <!--Add new post form-->
               <div class="form-group">
                 <textarea class="form-control" id="post-title" rows="1" maxlength="50" placeholder="Enter title here" required></textarea>
               </div>
@@ -63,73 +65,78 @@
               <div class="join-now-link form-group">
                   <input type="url" id="join-now-link" name="join-now-link" placeholder = "Join now link" required>
               </div>
-              <button id="submit-post" class="post-button btn btn-outline-secondary" type="submit">Post</button>
+              <button id="submit-post" class="post-button btn btn-outline-secondary" type="submit">Post</button> <!--Button to submit post-->
             </form>
           </div>           
         </section>  
 
-        <section id = "post-container"></section>
+        <section id = "post-container"></section> <!--Post contianer to hold all the post content fetched from Rest DB-->
 
-        <div id="update-msg">
-          <div class="alert alert-success" role="alert">
-            Post has been updated!
+        <section id = "update-container">
+          <div id="update-msg"> <!--Update message if update has been successful-->
+            <div class="alert alert-success" role="alert">
+              Post has been updated!
+            </div>
           </div>
-        </div>
-        <div class = "contianer" id = "update-post-container">
-          <div id = "update-post-header" class = "d-flex flex-row">
-            <h3>Update post</h3>
-            <button type="button" id="close-update-post" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
-
-          <form id = "update-post">
-            <div class="form-group">
-              <textarea class="form-control" id="update-post-title" rows="1" maxlength="50" placeholder="Enter title here" required></textarea>
+          <div class = "contianer" id = "update-post-container"> <!--Update post container-->
+            <div id = "update-post-header" class = "d-flex flex-row">
+              <h3>Update post</h3>
+              <button type="button" id="close-update-post" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
             </div>
-            <div class="form-group">
-              <textarea class="form-control" id="update-post-organisation" rows="1" maxlength="50" placeholder="Enter title here" required></textarea>
-            </div>
-            <div class="form-group">
-              <textarea class="form-control" id="update-post-description" rows="8" placeholder="Enter description here" minlength ="50" maxlength="500" required></textarea>
-            </div>
-            <div class="form-group">
-              <input type="text" class="form-control" id="update-post-location" maxlength="50" placeholder="Enter location here" required>
-            </div>
-            <div class="form-group">
-              <input type="email" class="form-control" id="update-post-contact" maxlength="50" placeholder="Enter email to contact here" required>
-            </div>
-            <div class = "post-dates d-flex flex-row">
-              <div class="start-date form-group d-flex flex-column">
-                <label for="update-post-start-date">Start date</label>
-                <input type="date" id="update-post-start-date" name="update-post-start-date" required>
+  
+            <form id = "update-post"> <!--Update post form-->
+              <div class="form-group">
+                <textarea class="form-control" id="update-post-title" rows="1" maxlength="50" placeholder="Enter title here" required></textarea>
               </div>
-              <div class="end-date form-group d-flex flex-column">
-                <label for="end-date">End date</label>
-                <input type="date" id="update-post-end-date" name="update-post-end-date" required>
+              <div class="form-group">
+                <textarea class="form-control" id="update-post-organisation" rows="1" maxlength="50" placeholder="Enter title here" required></textarea>
               </div>
-            </div>
-            <div class="join-now-link form-group">
-                <input type="url" id="update-join-now-link" name="join-now-link" placeholder = "Join now link" required>
-            </div>
-            <input type="hidden" id="update-post-id">
-
-            <button id="update-post-button" class="post-button btn btn-outline-secondary" type="submit">Update</button>
-          </form>
-        </div>
-
-        <div id="delete-msg">
-          <div class="alert alert-danger" role="alert">
-            Post has been deleted!
+              <div class="form-group">
+                <textarea class="form-control" id="update-post-description" rows="8" placeholder="Enter description here" minlength ="50" maxlength="500" required></textarea>
+              </div>
+              <div class="form-group">
+                <input type="text" class="form-control" id="update-post-location" maxlength="50" placeholder="Enter location here" required>
+              </div>
+              <div class="form-group">
+                <input type="email" class="form-control" id="update-post-contact" maxlength="50" placeholder="Enter email to contact here" required>
+              </div>
+              <div class = "post-dates d-flex flex-row">
+                <div class="start-date form-group d-flex flex-column">
+                  <label for="update-post-start-date">Start date</label>
+                  <input type="date" id="update-post-start-date" name="update-post-start-date" required>
+                </div>
+                <div class="end-date form-group d-flex flex-column">
+                  <label for="end-date">End date</label>
+                  <input type="date" id="update-post-end-date" name="update-post-end-date" required>
+                </div>
+              </div>
+              <div class="join-now-link form-group">
+                  <input type="url" id="update-join-now-link" name="join-now-link" placeholder = "Join now link" required>
+              </div>
+              <input type="hidden" id="update-post-id">
+  
+              <button id="update-post-button" class="post-button btn btn-outline-secondary" type="submit">Update</button>
+            </form>
           </div>
-        </div>
+        </section>
+        
+
+        <section id = "delete-container"> <!--Delete container to hold alert message when post has been deleted-->
+          <div id="delete-msg">
+            <div class="alert alert-danger" role="alert">
+              Post has been deleted!
+            </div>
+          </div>
+        </section>
     </main>
 
-    <section id = "loading-screen">
+    <section id = "loading-screen"> <!--Lottie-->
       <dotlottie-player src="https://lottie.host/b741b781-85ba-44a4-ab61-fa92685bc34d/hogrlivgr9.json" background="transparent" speed="1" style="width: 300px; height: 300px;" loop autoplay></dotlottie-player>
     </section>
 
-    <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script> 
+    <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script>  <!--necessary js files-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
     <script src="../js/community.js"></script>
 </body>

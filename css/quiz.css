@@ -1,10 +1,9 @@
 body{
-    font-family: B612;
     margin: 0;
-    padding: 0;
-    color: #40483D;   
+    padding: 0; 
 }
 
+/*Styling quiz container to be in the center of the screen*/
 #quiz-container {
     display: flex;
     flex-direction: column;
@@ -23,6 +22,7 @@ body{
     transform: translate(-50%, -50%);
 }
 
+/*Styling all buttons*/
 button{
     width: 80%;
     border-radius: 90px;
@@ -35,6 +35,7 @@ button{
     transition: 0.35s;
 }
 
+/*Default animation for all buttons*/
 button:hover{
     border: 1px solid black;
     color: #40483D;
@@ -46,12 +47,14 @@ button:active{
     background-color: rgb(176, 226, 176);
 }
 
+/*Styling title*/
 h1{
     font-family: Bangers;
     font-size: 55px;
     margin-top: 50px;
 }
 
+/*Styling question tracker to make it appear at the top of the quiz container*/
 #question-tracker{
     background-color: rgb(118, 146, 118);
     position: fixed;
@@ -71,6 +74,7 @@ h1{
     height: 3%;
 }
 
+/*Styling start content*/
 #start-content{
     flex-direction: column;
 }
@@ -87,14 +91,7 @@ h1{
     padding: 0.25% 0;
 }
 
-#quiz-content{
-    display: none;
-    margin-top: 50px;
-    justify-content: center;
-    align-items: center;
-    flex: 1 1 0;
-}
-
+/*Styling quiz content header*/
 #quiz-content-header{
     display: none;
     position: fixed;
@@ -137,6 +134,15 @@ h1{
     font-size: 18px;
     font-weight: bold;
     margin-right: 5%;
+}
+
+/*Styling quiz content*/
+#quiz-content{
+    display: none;
+    margin-top: 50px;
+    justify-content: center;
+    align-items: center;
+    flex: 1 1 0;
 }
 
 #question-number{
@@ -188,6 +194,7 @@ h1{
     text-align: left;
 }
 
+/*Styling correct and wrong options*/
 .correct{
     background-color: green;
 }
@@ -201,6 +208,7 @@ h1{
     font-weight: bold;
 }
 
+/*Styling end content*/
 #end-content{
     display: none;
     justify-content: center;
