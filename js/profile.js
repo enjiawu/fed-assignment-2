@@ -8,30 +8,34 @@ function lottieLoading(){ //Function for loading lottie for 3 seconds
       document.getElementById("loading-screen").style.display = "none"; //Hiding the lottie animation
       document.getElementsByTagName("body")[0].style.backgroundColor = "white"; //Changing background back to white
       document.getElementsByTagName("main")[0].style.display = "block"; //Showing the community content
-  }, 4000);
+  }, 5000);
 }
 
-var username = document.getElementById("username"); //Getting the username from html
-var description = document.getElementById("description"); //Getting the description from html
-var level = document.getElementById("player-level"); //Getting the level from html
-var currentXp = document.getElementById("current-xp"); //Getting the current xp from html
-var maxXp = document.getElementById("max-xp"); //Getting the max xp from html
-var xpTrackerInner = document.getElementById("xp-tracker-inner"); //Getting the xp tracker inner from html
-
 //API keys and links 
-const profileUrl = 'https://greenrecycling-8b3e.restdb.io/rest/profile';
-const historyUrl = 'https://greenrecycling-8b3e.restdb.io/rest/history';
-const userdataUrl = 'https://greenrecycling-8b3e.restdb.io/rest/userdata';
-const APIKEY = "65bcaa26383507023123fbae";
+const profileUrl = 'https://greenrecycling-9fab.restdb.io/rest/profile';
+const historyUrl = 'https://greenrecycling-9fab.restdb.io/rest/history';
+const userdataUrl = 'https://greenrecycling-9fab.restdb.io/rest/userdata';
+const APIKEY = "65c2b0394405e18685db039c";
 var profileID = "";
-var userID = '65c24849d4a556290000c093';
+var userID = '65c2bffe249f9627000044b3';
+var userData = {};
 
 //For profile page
 if (window.location.pathname.includes("profile.html")) {
+
+  var username = document.getElementById("username"); //Getting the username from html
+  var description = document.getElementById("description"); //Getting the description from html
+  var level = document.getElementById("player-level"); //Getting the level from html
+  var currentXp = document.getElementById("current-xp"); //Getting the current xp from html
+  var maxXp = document.getElementById("max-xp"); //Getting the max xp from html
+  var xpTrackerInner = document.getElementById("xp-tracker-inner"); //Getting the xp tracker inner from html
+
   lottieLoading(); //Showing the lottie animation while the page loads
 
   document.getElementById("cancel-button").addEventListener("click", function (e) { //Function to check if user clicked on cancel button
     if (confirm("Are you sure you want to cancel?")) {
+      e.preventDefault();
+
       document.getElementById("description-container").style.display = "flex"; //Showing the description container
       document.getElementById("edit-description-container").style.display = "none"; //Hiding the edit description container
     } 
@@ -68,6 +72,13 @@ if (window.location.pathname.includes("profile.html")) {
               level.innerHTML = response[i].level;
               currentXp.innerHTML = response[i].xp;
               maxXp.innerHTML = level.innerHTML * 1000;
+
+              userData = {
+                "id": response[i].user[0]._id,
+                "name": response[i].user[0].name,
+                "password": response[i].user[0].password,
+                "email": response[i].user[0].email,
+              }
   
               xpTrackerInner.style.width = (currentXp.innerHTML/maxXp.innerHTML)*100 + "%";
             }
@@ -110,6 +121,9 @@ if (window.location.pathname.includes("profile.html")) {
   
   document.getElementById("save-description-button").addEventListener("click", function (e) { //Function to check if user clicked on save button
     let desc = document.getElementById("edit-description").value; //Setting the value of the description to the edited description value
+
+    e.preventDefault(); //Prevent default action
+
     updateDesc(desc); //Calling the updateDesc function to update the description in the database
   });
   
@@ -129,7 +143,12 @@ if (window.location.pathname.includes("profile.html")) {
       .then(response => response.json())
       .then(data => {
         console.log(document.getElementById("edit-description").value);
-        description.innerHTML = document.getElementById("edit-description").value; //Updating display
+        description.innerHTML = document.getElementById("edit-description").value;
+
+        //Updating display
+        document.getElementById("description-container").style.display = "flex"; //Showing the description container
+        document.getElementById("edit-description-container").style.display = "none"; //Hiding the edit description container
+
         getInfo(); //Calling the getInfo function to get the user data
     });
   }
@@ -137,6 +156,10 @@ if (window.location.pathname.includes("profile.html")) {
 
 
 if (window.location.pathname.includes("quiz.html")) {
+  var level = document.getElementById("player-level"); //Getting the level from html
+  var currentXp = document.getElementById("current-xp"); //Getting the current xp from html
+  var maxXp = document.getElementById("max-xp"); //Getting the max xp from html
+  var xpTrackerInner = document.getElementById("xp-tracker-inner"); //Getting the xp tracker inner from html
 
   const settings = {
     method: 'GET',
@@ -157,18 +180,76 @@ if (window.location.pathname.includes("quiz.html")) {
        .then(response => response.json())
        .then(response => {
          console.log(response);
-         for (let i = 0; i < response.length; i++) {
-           if (response[i].user[0]._id == userID) {
-             profileID = response[i]._id;
-             username.innerHTML = response[i].user[0].name;
-             description.innerHTML = response[i].description;
-             level.innerHTML = response[i].level;
-             currentXp.innerHTML = response[i].xp + 1000;
-             maxXp.innerHTML = level.innerHTML * 1000;
- 
-             xpTrackerInner.style.width = (currentXp.innerHTML/maxXp.innerHTML)*100 + "%";
-           }
-         }
+        for (let i = 0; i < response.length; i++) {
+          if (response[i].user[0]._id == userID ) {
+            profileID = response[i]._id;
+            level.innerHTML = response[i].level;
+            currentXp.innerHTML = response[i].xp + 1000;
+            maxXp.innerHTML = level.innerHTML * 1000;
+            
+            if (parseInt(currentXp.innerHTML) >= maxXp.innerHTML){ //checking if they can level up
+              level.innerHTML = response[i].level + 1;
+              currentXp.innerHTML = 0;
+              maxXp.innerHTML = level.innerHTML * 1000;
+              updateLevel(0, parseInt(level.innerHTML) + 1); //calling function to update level details
+            }
+            else{
+              updateLevel(parseInt(currentXp.innerHTML), parseInt(level.innerHTML)); //calling function to update xp details
+            }
+
+            xpTrackerInner.style.width = (currentXp.innerHTML/maxXp.innerHTML)*100 + "%";
+            updateHistory("Quiz", "You completed a quiz!" + 1000); //calling function to update history details
+          }
+        }
+         
      });
-   });
+
+    //Function to update history
+    function updateHistory(title, desc, xp) {
+      var jsondata = {
+         "title" : title, 
+         "description": desc, 
+         "xp": xp, 
+         "user": userData
+        };
+        
+      var settings = {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "x-apikey": APIKEY,
+          "Cache-Control": "no-cache"
+        },
+        body: JSON.stringify(jsondata)
+      }
+
+      //Send the AJAX request to update the history
+      fetch(historyUrl, settings)
+        .then(response => response.json())
+        .then(data => {
+          console.log(data);
+        });
+    }
+
+    //Function to update level
+    function updateLevel(xp, level) {
+      var jsondata = { "xp": xp , "level": level};
+      var settings = {
+        method: "PUT",
+        headers: {
+          "Content-Type": "application/json",
+          "x-apikey": APIKEY,
+          "Cache-Control": "no-cache"
+        },
+        body: JSON.stringify(jsondata)
+      }
+
+      //Send the AJAX request to update the history
+      fetch(`${profileUrl}/${profileID}`, settings)
+        .then(response => response.json())
+        .then(data => {
+          console.log(data);
+        });
+    }
+ });
 }
