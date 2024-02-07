@@ -124,6 +124,7 @@ document.addEventListener("DOMContentLoaded", function () { //Make sure that the
               console.log(data[i]);
               const successPopup = document.getElementById('login-success');
               successPopup.style.display = 'block';
+              document.getElementById("user-login").style.display = "block";
               document.getElementById("login-container").style.display = "none";
               emailFound = true;
               successfulLogin = true;
