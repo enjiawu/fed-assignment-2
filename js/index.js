@@ -10,6 +10,7 @@ sr.reveal('.hero-text', {delay:200, origin:'top'});
 sr.reveal('.hero-img', {delay:450, origin:'top'});
 
 
+/*
 document.addEventListener("DOMContentLoaded", function () {
     const APIKEY = "65c2b0394405e18685db039c";
     getUsers();
@@ -125,7 +126,6 @@ function loginUser(event) {
   });
 }
 
-*/
 
 document.addEventListener("DOMContentLoaded", function () {
     const APIKEY = "65c2b0394405e18685db039c";
@@ -193,4 +193,4 @@ document.addEventListener("DOMContentLoaded", function () {
       // Implement secure token storage using HttpOnly cookies or other techniques
       localStorage.setItem('token', token); // Not recommended for production!
     }
-  });
+  });*/
