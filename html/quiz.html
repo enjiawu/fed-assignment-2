@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+<head> <!--Header content-->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Green Recycling | Quiz</title>
@@ -8,60 +8,60 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Anonymous+Pro:ital,wght@0,400;0,700;1,400;1,700&family=B612+Mono:ital,wght@0,400;0,700;1,400;1,700&family=B612:ital,wght@0,400;0,700;1,400;1,700&family=Bangers&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
-    <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="../css/quiz.css">
+    <link rel="stylesheet" href="../css/style.css"> <!--Standardised css file-->
+    <link rel="stylesheet" href="../css/quiz.css"> <!--Community css file-->
 </head>
 
 <body>
-    <main id="quiz-container" class="container">
-        <div id = "question-tracker"></div>
+    <main id="quiz-container" class="container"> <!--Main container for quiz content-->
+        <div id = "question-tracker"></div> <!--Question trakcer to be placed at the top of the quiz container-->
         </div>
         <div id = "question-tracker-inner"></div>
     
-        <section id="start-content" class="flex-center flex-column text-center">
+        <section id="start-content" class="flex-center flex-column text-center"> <!--Start content of the quiz-->
             <h1>SCIENCE AND NATURE QUIZ</h1>
             <button type="button" id="start-button">Start now</button>
             <button type="button" id = "start-quit-button" class="quit-button">Quit</button>
         </section>
 
-        <div id = "quiz-content-header">
+        <div id = "quiz-content-header"> <!--Quiz content header including quit button and points-->
             <button id = "quiz-quit-button" class="quit-button">Quit</button>
             <div id = "points-container">
-                <p id = "points"><span id = "points-earned">0</span>points</p> <!--To keep track of number of points earned-->
+                <p id = "points"><span id = "points-earned"></span>points</p> <!--To keep track of number of points earned-->
                 <p id = "points-popup">+1000</p>
             </div>
         </div>
 
-        <section id="quiz-content" class="flex-center flex-column text-center">
-            <p id = "question-number">Question <span id = "current-question-number">1</span>/10</p>
-            <h2 id="question">Question</h2>
+        <section id="quiz-content" class="flex-center flex-column text-center"> <!--Quiz content that displays when start button is clicked-->
+            <p id = "question-number">Question <span id = "current-question-number"></span>/10</p>
+            <h2 id="question"></h2>
             <p class = "option-seperator"></p>
-            <div id="answer-buttons">
+            <div id="answer-buttons"> <!--Answer buttons for quiz-->
                 <div class = "choice-container">
                     <p class = "choice-prefix">A</p>
-                    <p class = "option-info" data-number = "1">Option 1</p>
+                    <p class = "option-info" data-number = "1"></p>
                 </div>
                 <div class = "choice-container">
                     <p class = "choice-prefix">B</p>
-                    <p class = "option-info" data-number = "2">Option 2</p>
+                    <p class = "option-info" data-number = "2"></p>
                 </div>
                 <div class = "choice-container">
                     <p class = "choice-prefix">C</p>
-                    <p class = "option-info" data-number = "3">Option 3</p>
+                    <p class = "option-info" data-number = "3"></p>
                 </div>
                 <div class = "choice-container">
                     <p class = "choice-prefix">D</p>
-                    <p class = "option-info" data-number = "4">Option 4</p>
+                    <p class = "option-info" data-number = "4"></p>
                 </div>
             </div>
         </section>
 
-        <section id = "end-content" class="flex-center flex-column text-center">
+        <section id = "end-content" class="flex-center flex-column text-center"> <!--End content that displays when quiz is done-->
             <h1>Quiz Complete!</h1>
             <p id = "final-score">Your final score is <span id = "final-score-points"></span>!</p>
-            <p id = "xp-message">+500xp</p>
+            <p id = "xp-message">+1000xp</p>
             <div id = "xp-tracker">
-                <div id = "xp-tracker-inner"></div>
+                <div id = "xp-tracker-inner"></div> <!--Player xp tracker-->
                     <div id = "level-tracker" class = "d-flex flex-row">
                         <p id = "level">Level <span id= "player-level"></span></p>
                         <p id = "player-xp"><span id = "current-xp"></span>/<span id = "max-xp"></span></p>
@@ -73,10 +73,11 @@
         </section>
     </main>
 
-    <section id = "loading-screen">
+    <section id = "loading-screen"> <!--Lottie-->
         <dotlottie-player src="https://lottie.host/b741b781-85ba-44a4-ab61-fa92685bc34d/hogrlivgr9.json" background="transparent" speed="1" style="width: 300px; height: 300px;" loop autoplay></dotlottie-player>
     </section>
 
+    <!--Javascript files-->
     <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script> 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
     <script src="../js/profile.js"></script>
