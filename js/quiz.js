@@ -33,12 +33,15 @@ let questions = [];
 
 function lottieLoading(){
     document.getElementById("loading-screen").style.display = "flex"; //Showing the lottie animation
+    document.getElementsByTagName("body")[0].style.background = "none"; //Changing the background 
     document.getElementsByTagName("body")[0].style.backgroundColor = "#061f37"; //Changing the background color 
     document.getElementsByTagName("main")[0].style.display = "none"; //Hiding the quiz content
 
     setTimeout(() => { //Change back after 3 seconds
         document.getElementById("loading-screen").style.display = "none"; //Hiding the lottie animation
-        document.getElementsByTagName("body")[0].style.backgroundColor = "white"; //Changing background back to white
+        document.getElementsByTagName("body")[0].style.background = "rgba(0, 0, 0, .30) url(../image/quiz/quiz-image.jpg)"; //Changing the background 
+        document.getElementsByTagName("body")[0].style.backgroundSize = "cover"; //Changing the background size
+        document.getElementsByTagName("body")[0].style.backgroundPosition = "center"; //Changing the background position
         document.getElementsByTagName("main")[0].style.display = "flex"; //Showing the quiz content
     }, 3000);
 }

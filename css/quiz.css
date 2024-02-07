@@ -1,6 +1,10 @@
 body{
     margin: 0;
     padding: 0; 
+    background: rgba(0, 0, 0, .30) url(../image/quiz/quiz-image.jpg);
+    background-blend-mode: darken;
+    background-size: cover;
+    background-position: center;
 }
 
 /*Styling quiz container to be in the center of the screen*/
@@ -20,6 +24,7 @@ body{
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    box-shadow: 0 10px rgba(0, 0, 0, .30);
 }
 
 /*Styling all buttons*/
