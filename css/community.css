@@ -1,17 +1,18 @@
-body{
-    color: #40483D;
-}
+/*Community Page CSS*/
 
+/*Main community container style*/
 #community-container{
     max-width: 90vw;
     margin: 5% auto auto auto;
 }
 
+/*Community Title alignment and margin*/
 #community-title{
     margin: 50px 0 50px 0;
     text-align: center;
 }
 
+/*Post Button design*/
 .post-button{
     width: 100%;
     margin-bottom: 30px;
@@ -25,6 +26,7 @@ body{
     transition: 0.35s;
 }
 
+/*post-button animation*/
 .post-button:hover{
     border: 1px solid black;
     color: #40483D;
@@ -37,10 +39,12 @@ body{
     color: #404a3d;
 }
 
+/*Post Container*/
 #post-container{
     margin-bottom: 30px;
 }
 
+/*Style for each respective posts*/
 .post-header{
     justify-content: space-between;
 }
@@ -96,6 +100,7 @@ body{
     margin-right: 2%;
 }
 
+/*Join button design and animation*/
 .join-button{
     width: 30%;
     border-radius: 90px;
@@ -114,8 +119,9 @@ body{
     box-shadow: 0 5px #666;
 }
 
+/*Add post and update post style*/
 #add-post-container, #update-post-container{
-    display: none;
+    display: none; /*Hide it so that it only shows then add post or update post button is clicked*/
     background-color: #A5b9AD;
     border-radius: 10px;
     margin-bottom: 10px;
@@ -153,6 +159,7 @@ body{
     margin: 5px 0;
 }
 
+/*Style for form inputs*/
 #post-start-date, #post-end-date, #update-post-start-date, #update-post-end-date{
     border-radius: 5px;
     color: gray;
@@ -177,20 +184,21 @@ body{
     padding: 5px 10px;
 }
 
+/*Alert message style*/
 .alert{
-    position: fixed;
+    position: fixed; /*Fixed position at the top of the screen*/
     top: 2%;
     width: 90vw;
 }
 
 #add-post-msg, #update-msg, #delete-msg{
-    display:none;
-    z-index: 1001;
+    display:none; /*Hide until action has been done*/
+    z-index: 1001; /*Make sure it always appears on top of other elements*/
 }
 
-
+/*Update post style*/
 #update-post-container{
-    position: fixed;
+    position: fixed; /*make sure it stays on top of the screen until it is submitted or cancelled*/
     top: 0;
     width: 80vw;
     height: 97vh;

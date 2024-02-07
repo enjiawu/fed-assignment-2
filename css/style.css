@@ -5,6 +5,11 @@
     font-family: 'poppins', sans-serif;
 }
 
+/*Apply to all body text*/
+body{
+    color: #40483D;
+}
+
 /* apply styles to all images */  
 img {
     width: 100%;
