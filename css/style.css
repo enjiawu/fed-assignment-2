@@ -23,6 +23,16 @@ img {
     width: 100px;
 }
 
+.user-login{
+    display: none;
+    color: #fff;
+    font-size: 20px;
+}
+
+.user-login:hover{
+    color: #40483D;
+}
+
 /* Mobile view */
 /* Navbar */
 .navigationbar{
@@ -38,6 +48,14 @@ img {
     background-color: #fff;
     box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
     z-index: 3;
+}
+
+.navigationbar.sticky .user-login{
+    color: #40483D;
+}
+
+.navigationbar.sticky .user-login:hover{
+    color: #558E4C;
 }
 
 .navigationbar.sticky .menu-list li a{
