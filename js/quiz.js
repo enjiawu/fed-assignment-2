@@ -50,31 +50,31 @@ startButton.addEventListener("click", function(){ //Add an event listener for wh
     document.getElementById("quiz-content-header").style.display = "flex"; //Show the quiz content header
     document.getElementById("quiz-content").style.display = "flex"; //Show the quiz content
 
-    fetch(url)
+    fetch(url) //Fetching the questions from the API
         .then(function(response) {
             return response.json();
         })
         .then((loadedQuestions) => {
-            questions = loadedQuestions.results.map((loadedQuestion) => {
+            questions = loadedQuestions.results.map((loadedQuestion) => { //Mapping the loaded questions to a formatted question object
                 const formattedQuestion = {
                     question: loadedQuestion.question,
                 };
     
-                const answerChoices = [...loadedQuestion.incorrect_answers];
-                formattedQuestion.answer = Math.floor(Math.random() * 4) + 1;
-                answerChoices.splice(
+                const answerChoices = [...loadedQuestion.incorrect_answers]; //Creating a copy of the incorrect answers
+                formattedQuestion.answer = Math.floor(Math.random() * 4) + 1; //Generating random number to determine position of correct answer
+                answerChoices.splice( //Inserting correct answer into answerChoices
                     formattedQuestion.answer - 1,
                     0,
                     loadedQuestion.correct_answer
                 );
     
-                answerChoices.forEach((choice, index) => {
+                answerChoices.forEach((choice, index) => { //Inserting the answer choices into the formattedQuestion object
                     formattedQuestion['choice' + (index + 1)] = choice;
                 });
     
-                return formattedQuestion;
+                return formattedQuestion; //Returning the formatted question
             });
-            startGame();
+            startGame(); //Starting the game
         })
     });
 
