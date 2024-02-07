@@ -100,7 +100,7 @@ document.addEventListener("DOMContentLoaded", function () {
       const loginPassword = document.getElementById('login-password').value;
 
       
-      if (loginEmail === "" || loginPassword === "" ||) { //Making sure all the fields are filled up
+      if (loginEmail === "" || loginPassword === "") { //Making sure all the fields are filled up
         alert("Please fill in all the fields");
         return;
       }
@@ -204,6 +204,7 @@ document.addEventListener("DOMContentLoaded", function () {
       // Implement secure token storage using HttpOnly cookies or other techniques
       localStorage.setItem('token', token); // Not recommended for production!
     }
+  }
 
   //For profile page
   if (window.location.pathname.includes("profile.html")) {
