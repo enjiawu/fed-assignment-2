@@ -25,10 +25,22 @@ The website is designed to provide an engaging and comprehensive experience for 
 
 ## Features
 ### Existing Features
+•	News page -  Fetches data from an API and displays News articles. Allows users to keep up with the latest news regarding the environment, as well as linking them to the original article should they wish to know more
+•	Statistics popup – A popup shows up to date data regarding the environment to raise awareness of the severity of climate change to inspire users to take action
+•	FAQ – Users can clear their uncertainties about using and navigating the website. Users can click on the questions to see the answers.
+
 
 ### Features left to implement
 
 ## Technologies Used
+1. HTML
+•	This project uses HTML as the markup language.
+2. CSS
+•	This project uses CSS for styling and formatting.
+3. JavaScript
+•	This project uses JS to enhance the features of the website.
+4. Bootstrap
+•	This project uses bootstrap to add responsiveness to the website
 
 ## Testing
 
