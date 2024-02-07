@@ -68,7 +68,7 @@ ul {
 /*Main community container style*/
 #community-container{
     max-width: 90vw;
-    margin: 5% auto auto auto;
+    margin: 5% auto 100px auto;
 }
 
 /*Post Button design*/
@@ -185,6 +185,7 @@ ul {
     border-radius: 10px;
     margin-bottom: 10px;
     transition: 0.35s;
+    z-index: 1000000000;
 }
 
 #add-new-post-header, #update-post-header{

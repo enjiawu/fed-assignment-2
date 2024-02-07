@@ -17,33 +17,52 @@ const historyUrl = 'https://greenrecycling-9fab.restdb.io/rest/history';
 const userdataUrl = 'https://greenrecycling-9fab.restdb.io/rest/userdata';
 const APIKEY = "65c2b0394405e18685db039c";
 var profileID = "";
-var userID = '65c2bffe249f9627000044b3';
+var userID = '';
 var userData = {};
 
-document.addEventListener("DOMContentLoaded", function () {
-  if (window.location.pathname.includes("index.html")) {
-    getUsers();
+document.addEventListener("DOMContentLoaded", function () { //Make sure that the document is okay
+  if (window.location.pathname.includes("index.html")) { //For log in and registration
     document.getElementById("add-update-msg").style.display = "none";
 
-    document.getElementById("register-submit").addEventListener("click", function (e) {
+    document.getElementById("register-submit").addEventListener("click", function (e) { //Check if register button has been clicked
+      e.preventDefault();
+      validateRegistration(); //Call validate registration function
+    });
 
-      let registerName = document.getElementById("register-name").value;
+    function validateRegistration() {
+      let registerName = document.getElementById("register-name").value; //Get the values from the form
       let registerEmail = document.getElementById("register-email").value;
       let registerPassword = document.getElementById("register-password").value;
- 
-      if (registerName === "" || registerEmail === "" || registerPassword === "") { //Making sure all the fields are filled up
-        alert("Please fill in all the fields");
+
+      if (registerName === "" || registerEmail === "" || registerPassword === "") { //Check if the form has empty fields
+        alert("Please fill in all fields."); //If it is then ask them to fill in again
         return;
       }
 
-      // Prevent default action of the button 
-      e.preventDefault();
+      fetch(userdataUrl, { 
+        method: "GET",
+        headers: {
+          "Content-Type": "application/json",
+          "x-apikey": APIKEY,
+          "Cache-Control": "no-cache",
+        },
+      })
+        .then((response) => response.json())
+        .then((data) => { //Fetching the data
+          const existingUser = data.find((user) => user.email === registerEmail); //Check if the user already exists in the data
+          if (existingUser) {
+            alert("User already exists"); //If it does then alert that user already exists
+          } else {
+            registerUser(registerName, registerEmail, registerPassword); //If it doesnt then register new user
+          }
+        });
+    }
 
-      // Adapted from restdb API
+    function registerUser(name, email, password) { //Function to register new user
       let jsondata = {
-        "name": registerName,
-        "email": registerEmail,
-        "password": registerPassword
+        name: name,
+        email: email,
+        password: password,
       };
 
       let settings = {
@@ -51,7 +70,7 @@ document.addEventListener("DOMContentLoaded", function () {
         headers: {
           "Content-Type": "application/json",
           "x-apikey": APIKEY,
-          "Cache-Control": "no-cache"
+          "Cache-Control": "no-cache",
         },
         body: JSON.stringify(jsondata),
         beforeSend: function () {
@@ -59,151 +78,76 @@ document.addEventListener("DOMContentLoaded", function () {
           document.getElementById("register-submit").disabled = true;
           // Clear our form using the form ID and triggering its reset feature
           document.getElementById("add-register-form").reset();
-        }
-      }
+        },
+      };
 
-      // Send our AJAX request over to the DB and print response of the RESTDB storage to console.
-      fetch("https://greenrecycling-9fab.restdb.io/rest/userdata", settings)
-        .then(response => response.json())
-        .then(data => {
+      fetch(userdataUrl, settings)
+        .then((response) => response.json())
+        .then((data) => {
           console.log(data);
           document.getElementById("register-submit").disabled = false;
-          // update frontend UI 
+          // update frontend UI
           document.getElementById("add-update-msg").style.display = "block";
           setTimeout(function () {
             document.getElementById("add-update-msg").style.display = "none";
-            document.getElementById("add-register-form").reset();
           }, 3000);
-          // Update our table 
-          getUsers();
         });
-    });//end click 
-  
-  
-    // function to allow to retrieve all the information in your contacts
-    function getUsers(limit = 10, all = true) {
-
-      // Create AJAX settings
-      let settings = {
-        method: "GET", // use GET to retrieve info
-        headers: {
-          "Content-Type": "application/json",
-          "x-apikey": APIKEY,
-          "Cache-Control": "no-cache"
-        },
-      }
     }
+  
+    document.getElementById("login-button").addEventListener("click", function (e) { //When log in button is clicked
 
-    function loginUser(event) {
       // Get user input (assuming you have input elements with IDs)
       const loginEmail = document.getElementById('login-email').value;
       const loginPassword = document.getElementById('login-password').value;
-
       
-      if (loginEmail === "" || loginPassword === "" ||) { //Making sure all the fields are filled up
+      if (loginEmail === "" || loginPassword === "") { //Making sure all the fields are filled up
         alert("Please fill in all the fields");
         return;
       }
-      event.preventDefault(); // Prevent default form submission
 
-      // Send data to server using HTTPS
+      e.preventDefault(); // Prevent default form submission
+
+      let successfulLogin = false; //To check if log in has been successful
+      let emailFound = false; //To check if email has been found
       fetch(userdataUrl, {
-        methods: "GET",
+        method: "GET",
         headers: {
-            "Content-Type": "application/json",
-            "x-apikey": APIKEY,
-            "Cache-Control": "no-cache"
+          "Content-Type": "application/json",
+          "x-apikey": APIKEY,
+          "Cache-Control": "no-cache",
         },
-        body: JSON.stringify({
-            "email": loginEmail,
-            "password": loginPassword
-        })
       })
-      .then(response => response.json())
-      .then(data => {
-        if (data.success){
-            const successPopup = document.getElementById('login-success');
-            successPopup.style.display = 'block';
-        }
-        else{
-            const successPopup = document.getElementById('login-success');
-            successPopup.style.display = 'block';
-        }
-      })
-      .catch(error => {
-        document.getElementById("login-success").style.display = "block";
-          setTimeout(function () {
-            document.getElementById("login-success").style.display = "none";
-          }, 3000);
-        console.error('Error:', error);
+        .then((response) => response.json())
+        .then((data) => {
+          for (let i = 0; i < data.length; i++) { //Iterating through all the users to find matching details
+            if (data[i].email === loginEmail && data[i].password === loginPassword) { //If the email and password match then log in
+              console.log(data[i]);
+              const successPopup = document.getElementById('login-success');
+              successPopup.style.display = 'block';
+              document.getElementById("login-container").style.display = "none";
+              emailFound = true;
+              successfulLogin = true;
+              userID = data[i]._id;
+              break;
+            }
+            else if(data[i].email === loginEmail && data[i].password!== loginPassword){ //If the email exists but the password is wrong then alert
+              alert("Incorrect password");
+              emailFound = true;
+              break;
+            }
+          }
 
-        // Handle errors, e.g., display an error message to the user
-      });
-    }
+          if (emailFound === false) { //If the email is not found then alert
+            alert("User does not exist. Please sign up first!");
+          }
+        });
 
-    // Use an event listener for the button click instead of onclick attribute
-    document.getElementById("login-button").addEventListener("click", loginUser);
-
-    function loginUser(event) {
-      event.preventDefault();
-
-      const loginEmail = document.getElementById('login-email').value;
-      const loginPassword = document.getElementById('login-password').value;
-
-
-      // Send hashed password to server using HTTPS
-      fetch('https://greenrecycling-9fab.restdb.io/rest/userdata', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          'x-apikey': APIKEY,
-          "Cache-Control": "no-cache"
-        },
-        body: JSON.stringify({
-          email: loginEmail,
-          password: loginPassword
-        })
-      })
-      .then(response => response.json())
-      .then(data => {
-        console.log(data)
-        if (data.success) {
-          // Handle successful login (store token, redirect, etc.)
-          handleSuccessfulLogin(data);
-        } else {
-          // Handle failed login (display specific error message)
-          handleError(data.error || 'Login failed.');
-        }
-      })
-      .catch(error => {
-        handleError('An error occurred. Please try again later.');
-        console.error('Error:', error);
-      });
-    }
-
-    function handleSuccessfulLogin(data) {
-      // Store token securely, redirect, display success message
-      storeToken(data.token); // Replace with secure storage
-      // Show the success message or any other logic you want to perform
-      document.getElementById("login-success").style.display = "block";
-    }
-
-    function handleError(message) {
-      // Display informative error message based on error code/message
-      displayError(message);
-    }
-
-    function displayError(message) {
-      // Implement user-friendly error display (e.g., inline messages, alerts)
-      console.error(message);
-      // Show the error message in a popup or other UI element
-      alert(message);
-    }
-
-    function storeToken(token) {
-      // Implement secure token storage using HttpOnly cookies or other techniques
-      localStorage.setItem('token', token); // Not recommended for production!
-    }
+        console.log(successfulLogin);
+        setTimeout(function () {
+          document.getElementById("login-success").style.display = "none"; //Hiding the success popup after 3 seconds
+        }, 3000);
+    });
+  }
 
   //For profile page
   if (window.location.pathname.includes("profile.html")) {
@@ -383,7 +327,7 @@ document.addEventListener("DOMContentLoaded", function () {
               }
 
               xpTrackerInner.style.width = (currentXp.innerHTML/maxXp.innerHTML)*100 + "%";
-              updateHistory("Quiz", "You completed a quiz!" + 1000); //calling function to update history details
+              updateHistory("Quiz", "You completed a quiz!" , 1000); //calling function to update history details
             }
           }
           
