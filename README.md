@@ -88,6 +88,10 @@ In conclusion, we designed this website to offer the educate users on the enviro
 •	This project uses bootstrap to add responsiveness to the website
 
 ## Testing
+**Responsive Design - Test on Different Browsers**
+1. Verify that the content does not spill out of the page as the screen size decreases.
+2. Verify that the content shrinks in size, including font size and image size.
+3. Verify that the content remains visually appealing and all functions continue to work normally as the screen size changes.
 
 ## Credits
 ### Content
