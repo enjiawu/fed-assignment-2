@@ -1,23 +1,15 @@
 # Enviornment Web Application
 FED Assignment 2
-| Group Members  | 
-| ------------- | 
-| Wu Enjia  | 
-| Xue Wenya  | 
-| Kaylea Luk |
+| Group Members  | Features |
+| ------------- | ---------- |
+| Wu Enjia  | Quiz, Community, Profile page and login system |
+| Xue Wenya  | Home, Contact, About page and login interface |
+| Kaylea Luk | FAQ, News page and statistics popup |
 
 This project aims to create a web application that fosters a heightened awareness of environmental issues and actively engages the general public in challenges geared towards environmental conservation. The platform is designed to cater to two distinct groups of users. Firstly, environmental enthusiasts who are eager to enrich their journey towards sustainability and a community to support them. Secondly, individuals who seek to expand their knowledge on effective contributions to environmental preservation. This web application aims to encourage users to partake in eco-friendly challenges, elevate their understanding of the current state of the environment, and establish a readily accessible community for both environmental enthusiasts and those aspiring to embark on an environmental journey.
 
-
-Brief description: \
-This project will consist of 5 main features. \
-Firstly, a profile page that will include a user's level, achievements and progress throughout their entire journey on the web application. \
-Secondly, a green challenges pop-up will be featured on the hero slider of the home page. The green challenges will reward users with points or virtual currency for completing green challenges. \
-Thirdly, an interactive map that shows the recycling corners in Singapore allows users to easily identify nearby recycling corners around Singapore. \
-Fourthly, educational quizzes about the environment, such as about good practices for saving the environment. \
-Lastly, a community forum page for users to post events and invite other users to join. 
-
-[Github Page](https://enjiawu.github.io/fed-assignment-2/index.html)
+[Github Page](https://enjiawu.github.io/fed-assignment-2/index.html) \
+[Video Pitch](https://connectnpedu-my.sharepoint.com/:v:/g/personal/s10256978_connect_np_edu_sg/EXzEp2w5qZ5DlenE9E5rtHcBUFp1ltSXTm9ncdR3i9ZjEA?e=LBhdFt&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D)
 
 ## Design Process
 The website is designed to provide an engaging and comprehensive experience for the general public interested in our environment by providing a responsive and gamified design. 
@@ -32,7 +24,7 @@ The website is designed to provide an engaging and comprehensive experience for 
 - The quiz feature allows users to test their knowledge and learn in an engaging and involved manner.
 
 **As a user, I want to discover ways to take action and make a positive impact on the environment.**
-- the community page shows information about various events related to the environment such as volunteering projects and webinars that people can join and participate in.
+- The community page shows information about various events related to the environment such as volunteering projects and webinars that people can join and participate in.
 
 **As a user, I want to be able to clarify any questions I may have about the website**
 - The FAQ page contains the many answers to questions that the user may have while navigating the website, and should their question not be there, the user can reach out to us for more information via the Contact Us page.
@@ -44,7 +36,7 @@ The website is designed to provide an engaging and comprehensive experience for 
 - The level system rewards the user with XP when they complete a quiz, offering a sense of accomplishment and progression through gamification.
 
 **As a user, I want to know the details of my account**
-- The profile page displays details of the user's account, which the user can view at any time.
+- The profile page displays details of the user's account, which the user can view at any time and personalize their experience.
 
 **As a user, I want to know about the purpose of the website**
 - The About page explains the intentions and goals behind the creation of this website and allows the user to become familiar with its purpose
@@ -57,15 +49,17 @@ In conclusion, we designed this website to educate users on the environment in a
 ### Existing Features
 •	**News page** -  Fetches data from an API and displays News articles. Allows users to keep up with the latest news regarding the environment, as well as linking them to the original article should they wish to know more
 
-•	**Statistics popup** – A popup shows up-to-date data regarding the environment to raise awareness of the severity of climate change to inspire users to take action
+• **Responsive Navigation Bar** - Provides a visually appealing and accessible navigation bar that transforms into a hamburger menu for smaller screens, ensuring seamless navigation across devices.
+
+•	**Statistics popup** – A popup shows up-to-date data regarding the environment to raise awareness of the severity of climate change to inspire users to take action.
 
 •	**FAQ** – Users can clear their uncertainties about using and navigating the website. Users can click on the questions to see the answers.
 
-•	**Home page** - introduction to the website, talks about the benefits and importance of recycling and links to all the other pages in the website.
+•	**Home page** - Introduction to the website, talks about the benefits and importance of recycling and links to all the other pages in the website.
 
-•	**About page** - The about page explains the intentions and goals behind the creation of this website, it seeks to motivate and inspire the user to join us in pushing for a greener world
+•	**About page** - The About page explains the intentions and goals behind the creation of this website, it seeks to motivate and inspire the user to join us in pushing for a greener world.
 
-•	**Community page** - The community page is for people to post and read about environmental events such as volunteering projects and webinars that people can join and participate in. Let's save the environment together!
+•	**Community page** - The community page is for people to post and read about environmental events such as volunteering projects and webinars that people can join and participate in. They can edit, delete and add posts.
 
 •	**Contact page** - Allows users to get in contact with us and provide feedback and report on problems that we may have missed during development, as well as ask questions that are not already included in the FAQ
 
@@ -75,9 +69,14 @@ In conclusion, we designed this website to educate users on the environment in a
 
 •	**Profile page** - The profile page shows information about the user's account, adds some personality sparkle individualism personalisation
 
-•	**Quiz feature** - The quiz feature allows users to test their knowledge and learn in an engaging and involved manner
+•	**Quiz** - The quiz allows users to test their knowledge and learn in an engaging and involved manner by generating random questions and answers that align with the topic of Science and Nature.
 
 ### Features left to implement
+**1. Enhanced Hover Effects for Images** 
+
+**2. One-time log-in to access the entire website**
+
+**3. Smooth visual transitions between sections and pages**
 
 ## Technologies Used
 **1. [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML)**
@@ -99,13 +98,67 @@ In conclusion, we designed this website to educate users on the environment in a
    - This project uses Climate News API to generate news articles on the news page.
 
 **7. [Live World Data API](https://rapidapi.com/jonaskoscielny/api/live-world-data)**
-   - This project uses Live World Data API to generate statistics for the home page pop up.
+   - This project uses Live World Data API to generate statistics for the home page pop-up.
 
 ## Testing
 **Responsive Design - Test on Different Browsers**
 1. Verify that the content does not spill out of the page as the screen size decreases.
 2. Verify that the content shrinks in size, including font size and image size.
 3. Verify that the content remains visually appealing and all functions continue to work normally as the screen size changes.
+
+**Contact Form**
+1. Go to the "Contact" page
+2. Verify that a "Success" pop up is shown upon submission of form
+
+**Newsletter**
+1. Go to the "Home" page
+2. Verify that a "Success" pop up is shown upon click of subscribe
+
+**Community - Add new post**
+1. Go to the "Community" page
+2. Click on the "Add new post" button
+3. Try to submit the empty form and verify that it will prompt you to fill up the empty inputs
+4. Try to submit the form with an invalid email address and verify that a relevant error message appears.
+5. Try to submit the form with a description of less than 50 words and verify that a relevant error message appears.
+6. Try to submit the form with all inputs valid and verify that a success message appears and that your post can be seen.
+
+**Community - Edit post**
+1. Go to the "Community" page
+2. Hover over the elipses on the top right side of a post and click edit
+3. Verify that all the inputs have been filled up with the respective post information
+4. Try to remove text from an input and verify that it will prompt you to fill up the empty inputs
+5. Try to submit the form with an invalid email address and verify that a relevant error message appears.
+6. Try to submit the form with a description of less than 50 words and verify that a relevant error message appears.
+7. Try to submit the form with all inputs valid and verify that a success message appears and that your post has been updated.
+
+**Community - Delete post**
+1. Go to the "Community" page
+2. Hover over the elipses on the top right side of a post and click delete
+3. Verify that your post has been deleted and is no longer displayed in the community page.
+
+**Log-in**
+1. Click on the Login button at the top right of the screen
+2. Verify that a form appears
+3. Try to submit the empty form and verify that it will prompt you to fill up the empty inputs
+4. Try to submit the form with an invalid email address and verify that a relevant error message appears.
+5. Try to submit the form with a registered email address and wrong password and verify that a relevant error message appears
+6. Try to submit the form with all inputs valid and verify that login button has changed to a profile icon.
+
+**Register**
+1. Click on the Login button at the top right of the screen
+2. Verify that a form appears
+3. Click on the register button at the bottom of the form
+4. Try to submit the empty form and verify that it will prompt you to fill up the empty inputs
+5. Try to submit the form with an invalid email address and verify that a relevant error message appears.
+6. Try to submit the form with all inputs valid and verify that a success message appears.
+
+**Quiz**
+1. Go to the "Quiz" page
+2. Click on the start button
+3. Verify that the questions and answers show up neatly
+4. Click on an option
+5. Verify that option turns red or green upon selection and that question details change 
+6. At the end of the quiz, verify that quiz points are correct and user xp has changed.
 
 ## Credits
 ### Media
@@ -124,4 +177,7 @@ In conclusion, we designed this website to educate users on the environment in a
   - https://www.pexels.com/photo/person-holding-white-and-green-plastic-bag-3962267
   - https://unsplash.com/photos/silhouette-of-off-road-car-h8nxGssjQXs
 
-
+### Acknowledgements 
+- Tutorials
+  - [Quiz API](https://www.youtube.com/watch?v=3aKOQn2NPFs)
+  - [FAQ](https://youtu.be/IcyXS9aL4bs?si=KvwqtUksvrQadlmt)

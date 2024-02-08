@@ -285,7 +285,7 @@ document.addEventListener("DOMContentLoaded", function () { //Make sure that the
   
   
   //Deleting a post
-  const APIKEY = "65c2b0394405e18685db039c";
+  const APIKEY = "65c4431fcca736f0586536bb";
   
     document.getElementById("post-container").addEventListener("click", function (e) { //Checking if post container delete button has been selected
         if (e.target.classList.contains("delete")) {
