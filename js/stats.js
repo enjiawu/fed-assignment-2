@@ -16,7 +16,7 @@
 const options = {
 	method: 'GET',
 	headers: {
-		'X-RapidAPI-Key': 'ddea8bd29dmsha6f041eae877d1fp14180fjsnb3b308bf90b6',
+		'X-RapidAPI-Key': '21108582f0msh0938192620ca2a9p1b5a25jsnbb27383d54f3',
 		'X-RapidAPI-Host': 'live-world-data.p.rapidapi.com'
 	}
 };
