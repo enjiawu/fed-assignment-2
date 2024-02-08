@@ -1,8 +1,6 @@
 // Execute code after the DOM content has loaded
 document.addEventListener("DOMContentLoaded", function () {
   const APIKEY = "65c221a140097ad343c8b65f"; // Replace APIKEY with your actual API key
-  document.getElementById("add-update-msg").style.display = "none";// Hide the initial display of the contact update message
-
   // Add event listener to the contact submit button
   document.getElementById("contact-submit").addEventListener("click", function (e) {
     // Prevent default action of the button 
@@ -47,10 +45,10 @@ document.addEventListener("DOMContentLoaded", function () {
         // Re-enable the contact submit button
         document.getElementById("contact-submit").disabled = false;
         // Display the contact update message
-        document.getElementById("add-update-msg").style.display = "block";
+        document.getElementById("add-update-contact").style.display = "block";
         //Remove this code if you want the message to stay visible until the user interacts with it
         setTimeout(function () {
-          document.getElementById("add-update-msg").style.display = "none";
+          document.getElementById("add-update-contact").style.display = "none";
           document.getElementById("add-contact-form").reset();
         }, 3000);
       });
