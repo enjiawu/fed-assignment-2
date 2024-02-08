@@ -8,6 +8,7 @@ FED Assignment 2
 
 This project aims to create a web application that fosters a heightened awareness of environmental issues and actively engages the general public in challenges geared towards environmental conservation. The platform is designed to cater to two distinct groups of users. Firstly, environmental enthusiasts who are eager to enrich their journey towards sustainability and a community to support them. Secondly, individuals who seek to expand their knowledge on effective contributions to environmental preservation. This web application aims to encourage users to partake in eco-friendly challenges, elevate their understanding of the current state of the environment, and establish a readily accessible community for both environmental enthusiasts and those aspiring to embark on an environmental journey.
 
+
 Brief description: \
 This project will consist of 5 main features. \
 Firstly, a profile page that will include a user's level, achievements and progress throughout their entire journey on the web application. \
@@ -16,6 +17,7 @@ Thirdly, an interactive map that shows the recycling corners in Singapore allows
 Fourthly, educational quizzes about the environment, such as about good practices for saving the environment. \
 Lastly, a community forum page for users to post events and invite other users to join. 
 
+[Github Page](https://enjiawu.github.io/fed-assignment-2/index.html)
 
 ## Design Process
 The website is designed to provide an engaging and comprehensive experience for the general public interested in our environment by providing a responsive and gamified design. 
@@ -32,22 +34,22 @@ The website is designed to provide an engaging and comprehensive experience for 
 **As a user, I want to discover ways to take action and make a positive impact on the environment.**
 - the community page shows information about various events related to the environment such as volunteering projects and webinars that people can join and participate in.
 
-**As a user, I want to be able to clarify any questions i may have about the website**
-- The FAQ page contains the many answers to questions that the user may have while navigating the website, and should their question not be there, the user can reach out to us for more information via the contact us page.
+**As a user, I want to be able to clarify any questions I may have about the website**
+- The FAQ page contains the many answers to questions that the user may have while navigating the website, and should their question not be there, the user can reach out to us for more information via the Contact Us page.
 
 **As a user, I want to have a personalised learning experience**
-- the user can create an account with their own username and level tracking, allowing for a sense of individuality and personalisation.
+- The user can create an account with their own username and level tracking, allowing for a sense of individuality and personalisation.
 
 **As a user, I want to feel a sense of accomplishment as I learn**
-- The level system rewards the user with xp when they complete a quiz, offering a sense of accomplishment and progression through gamification.
+- The level system rewards the user with XP when they complete a quiz, offering a sense of accomplishment and progression through gamification.
 
 **As a user, I want to know the details of my account**
-- the profile page displays details of the user's account, which the user can view at any time.
+- The profile page displays details of the user's account, which the user can view at any time.
 
 **As a user, I want to know about the purpose of the website**
-- The about page explains the intentions and goals behind the creation of this website, and allows the user to become familiar with its purpose
+- The About page explains the intentions and goals behind the creation of this website and allows the user to become familiar with its purpose
 
-In conclusion, we designed this website to offer the educate users on the environment in an engaging way. The website has gamification features to enhance the user experience, and seeks to inspire users to bring about positive change in the environment.
+In conclusion, we designed this website to educate users on the environment in an engaging way. The website has gamification features to enhance the user experience and seeks to inspire users to bring about positive environmental change.
 
 [Figma Link](https://www.figma.com/file/dDuVR3js5RHNZrQAFmejXv/FED-Assignment?type=design&node-id=0%3A1&mode=design&t=PRGTqcsSJe6tBqQE-1)
 
@@ -55,7 +57,7 @@ In conclusion, we designed this website to offer the educate users on the enviro
 ### Existing Features
 •	**News page** -  Fetches data from an API and displays News articles. Allows users to keep up with the latest news regarding the environment, as well as linking them to the original article should they wish to know more
 
-•	**Statistics popup** – A popup shows up to date data regarding the environment to raise awareness of the severity of climate change to inspire users to take action
+•	**Statistics popup** – A popup shows up-to-date data regarding the environment to raise awareness of the severity of climate change to inspire users to take action
 
 •	**FAQ** – Users can clear their uncertainties about using and navigating the website. Users can click on the questions to see the answers.
 
@@ -65,27 +67,27 @@ In conclusion, we designed this website to offer the educate users on the enviro
 
 •	**Community page** - The community page is for people to post and read about environmental events such as volunteering projects and webinars that people can join and participate in. Let's save the environment together!
 
-•	**Contact page** - Allows user to get in contact with us and provide feedback and report on problems that we may have missed during development, as well as ask questions that are not already included in the FAQ
+•	**Contact page** - Allows users to get in contact with us and provide feedback and report on problems that we may have missed during development, as well as ask questions that are not already included in the FAQ
 
 •	**Account creation** - Allows the user to have a more personalised experience, as well as track their progress
 
-•	**Levelling and xp** - Completing quizzes allows the user to gain xp and level up, this gives the user a sense of progression when completing a quiz, and encourages them to strive to do better to get more xp. This is a gamification feature.
+•	**Levelling and XP** - Completing quizzes allows the user to gain XP and level up, this gives the user a sense of progression when completing a quiz, and encourages them to strive to do better to get more xp. This is a gamification feature.
 
-•	**Profile page** - The profile page shows information about the user's account, adds some personality sparkle sparkle individualism personalisation
+•	**Profile page** - The profile page shows information about the user's account, adds some personality sparkle individualism personalisation
 
 •	**Quiz feature** - The quiz feature allows users to test their knowledge and learn in an engaging and involved manner
 
 ### Features left to implement
 
 ## Technologies Used
-1. HTML
-•	This project uses HTML as the markup language.
-2. CSS
-•	This project uses CSS for styling and formatting.
-3. JavaScript
-•	This project uses JS to enhance the features of the website.
-4. Bootstrap
-•	This project uses bootstrap to add responsiveness to the website
+**1. [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML)**
+   - This project uses HTML as the markup language.
+
+**2. [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS)**
+   - This project uses CSS for styling and formatting.
+
+**3. [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)**
+   - This project uses JS to enhance the features of the website.
 
 ## Testing
 **Responsive Design - Test on Different Browsers**
