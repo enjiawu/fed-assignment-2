@@ -161,10 +161,6 @@ In conclusion, we designed this website to educate users on the environment in a
 6. At the end of the quiz, verify that quiz points are correct and user xp has changed.
 
 ## Credits
-
-### Content
-- the FAQ section was made following youtube tutorial https://youtu.be/IcyXS9aL4bs?si=KvwqtUksvrQadlmt
-
 ### Media
 - The photos used in this site were obtained from
   - https://unsplash.com/photos/three-assorted-color-garbage-cans-PizD8punZsw
@@ -183,4 +179,5 @@ In conclusion, we designed this website to educate users on the environment in a
 
 ### Acknowledgements 
 - Tutorials
-  - [Quiz API](https://www.youtube.com/watch?v=3aKOQn2NPFs) 
+  - [Quiz API](https://www.youtube.com/watch?v=3aKOQn2NPFs)
+  - [FAQ](https://youtu.be/IcyXS9aL4bs?si=KvwqtUksvrQadlmt)
