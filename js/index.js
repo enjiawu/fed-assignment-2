@@ -10,6 +10,7 @@ const sr = ScrollReveal({
 sr.reveal('.hero-text', {delay:200, origin:'top'});
 sr.reveal('.hero-img', {delay:450, origin:'top'});
 
+
 // Execute code after the DOM content has loaded
 document.addEventListener("DOMContentLoaded", function () {
     const APIKEY = "65c221a140097ad343c8b65f"; // Replace APIKEY with your actual API key

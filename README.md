@@ -181,3 +181,4 @@ In conclusion, we designed this website to educate users on the environment in a
 - Tutorials
   - [Quiz API](https://www.youtube.com/watch?v=3aKOQn2NPFs)
   - [FAQ](https://youtu.be/IcyXS9aL4bs?si=KvwqtUksvrQadlmt)
+  - [Login & Register](https://www.youtube.com/watch?v=p1GmFCGuVjw)
