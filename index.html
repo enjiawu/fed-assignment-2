@@ -261,9 +261,17 @@
               <h2>Get Recycle News</h2>
               <p>Join us to receive our newsletter and become part of a growing community dedicated to creating positive change through recycling.</p>
             </div>
-            <div class="join-btn">
-              <input type="email" placeholder="Enter your email" name="mail" required>
-              <button type="submit" value="Subscribe">Subscribe</button>
+            <div id="add-update-email">
+              <div class="alert alert-success" role="alert">
+                <p>Welcome to Green Recycling Newsletter!</p>
+                <p>Thank you for subscribing. </p>
+              </div>
+            </div>
+            <div>
+              <form class="join-btn" id="add-subscribe-form">
+                <input type="email" id="subscribe-email" class="form-control" placeholder="Enter your email" name="mail" required>
+                <input class="subscribe-btn btn-primary" id="subscribe-submit" type="submit" value="Subscribe">
+              </form>
             </div>
           </div>
         </section>

@@ -57,9 +57,9 @@ p {
     left: 50%;
     transform: translate(-50%, -50%);
     padding: 30px;
-    background-color: #d4edda;
+    background-color: #155724;
     text-align: center;
-    color: #155724;
+    color: #c3e6cb;
     border: 1px solid #c3e6cb;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -337,7 +337,8 @@ p {
     border-radius: 2px 0 0 2px;
 }
 
-.join-btn button {
+
+.join-btn input[type="submit"] {
     background-color: #ecdd5e;
     border: none;
     outline: none;
@@ -348,9 +349,25 @@ p {
     font-weight: 500;
 }
 
-.join-btn button:hover{
+.join-btn input[type="submit"]:hover {
     background-color: #404a3d;
     color: #fff;
+}
+
+#add-update-email {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 30px;
+    background-color: #155724;
+    text-align: center;
+    color: #c3e6cb;
+    border: 1px solid #c3e6cb;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 10;
 }
 
 

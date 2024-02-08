@@ -38,10 +38,6 @@ p {
     font-weight: 400;
 }
 
-.contact-detail .container.hide{
-    display: none;
-}
-
 #add-update-msg {
     display: none;
     position: fixed;

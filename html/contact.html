@@ -193,51 +193,6 @@
         </div>
       </div>
 
-      <!--           -->
-      <div class="container mt-5 hide">
-        <h2>Table information of Contacts (<span id="total-contacts"></span>)</h2>
-        <table class="table" id="contact-list">
-          <thead>
-            <th>Name</th>
-            <th>Email</th>
-            <th>Message</th>
-            <th colspan="2">Actions</th>
-            
-          </thead>
-          <!-- This will be filled with information later -->
-          <tbody></tbody>
-        </table>
-      </div>
-      
-      <div class="container mt-5 hide" id="update-contact-container"> 
-        <div id="add-update-msg">
-          <div class="alert alert-success" role="alert">
-            Contact record updated sucessfully
-          </div>
-        </div>
-        <h4>Update Contact</h4>
-        <div class="form" id="update-contact">
-          <form id="update-contact-form">
-            <div class="form-group">
-              <label for="update-contact-name">Name</label>
-              <input type="text" id="update-contact-name" class="form-control" required>
-              </div>
-              <div class="form-group">
-              <label for="update-contact-email">Email</label>
-              <input type="email" id="update-contact-email" class="form-control" required>
-               <small id="update-contact-email-help" class="form-text text-muted">We'll never share your email with anyone else.</small>
-              </div>
-              <div class="form-group">
-              <label for="update-contact-msg">Message</label>
-              <textarea id="update-contact-msg" class="form-control" required>
-              </textarea>
-              <input type="hidden" id="update-contact-id">
-              </div>
-    
-              <input type="submit" value="Update Contact Details" class="btn btn-warning" id="update-contact-submit">
-            </form>
-        </div>
-      </div>
     </section>
   </main>
 
