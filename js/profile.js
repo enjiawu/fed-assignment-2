@@ -17,7 +17,7 @@ const historyUrl = 'https://greenrecycling-9fab.restdb.io/rest/history';
 const userdataUrl = 'https://greenrecycling-9fab.restdb.io/rest/userdata';
 const APIKEY = "65c2b0394405e18685db039c";
 var profileID = "";
-var userID = '';
+var userID = '65c2bffe249f9627000044b3';
 var userData = {};
 
 document.addEventListener("DOMContentLoaded", function () { //Make sure that the document is okay
@@ -54,8 +54,61 @@ document.addEventListener("DOMContentLoaded", function () { //Make sure that the
             alert("User already exists"); //If it does then alert that user already exists
           } else {
             registerUser(registerName, registerEmail, registerPassword); //If it doesnt then register new user
+            createProfile(registerEmail); //Create a new profile for the user
           }
-        });
+        });           
+    }
+
+    function createProfile(email) { //Function to create a new profile
+      fetch(userdataUrl, { 
+        method: "GET",
+        headers: {
+          "Content-Type": "application/json",
+          "x-apikey": APIKEY,
+          "Cache-Control": "no-cache",
+        },
+      })
+        .then((response) => response.json())
+        .then((data) => { //Fetching the data
+          for (let i = 0; i < data.length; i++) { //Loop through the data
+            if (data[i].email === email) { //If the email matches then create a new profile for the user
+              console.log(email);
+              let jsondata = {
+                "description": "This is my profile",
+                "level": 1,
+                "xp": 0,
+                "user": [
+                  {
+                    "_id": data[i]._id,
+                    "name": data[i].name,
+                    "email": data[i].email,
+                    "password": data[i].password,
+                  }
+                ],
+              };
+          
+              let settings = {
+                method: "POST", // use post to send info
+                headers: {
+                  "Content-Type": "application/json",
+                  "x-apikey": APIKEY,
+                  "Cache-Control": "no-cache",
+                },
+                body: JSON.stringify(jsondata),
+              };
+          
+              fetch(profileUrl, settings)
+                .then((response) => response.json())
+                .then((data) => {
+                  console.log(data);
+                })
+                .catch((error) => {
+                  console.error(error);
+                });
+              return;
+            }
+          }
+        });  
     }
 
     function registerUser(name, email, password) { //Function to register new user
@@ -126,9 +179,11 @@ document.addEventListener("DOMContentLoaded", function () { //Make sure that the
               successPopup.style.display = 'block';
               document.getElementById("user-login").style.display = "block";
               document.getElementById("login-container").style.display = "none";
+              document.getElementById("login-button-nav").style.display="none";
+              document.getElementById("login-success").style.display = "block"; //Hiding the success popup after 3 seconds
               emailFound = true;
               successfulLogin = true;
-              userID = data[i]._id;
+              localStorage.setItem("userID", data[i]._id); // Save the user ID in localStorage
               break;
             }
             else if(data[i].email === loginEmail && data[i].password!== loginPassword){ //If the email exists but the password is wrong then alert
@@ -194,8 +249,11 @@ document.addEventListener("DOMContentLoaded", function () { //Make sure that the
           .then(response => response.json())
           .then(response => {
             console.log(response);
+            console.log(userID);
             for (let i = 0; i < response.length; i++) {
-              if (response[i].user[0]._id == userID) {
+              console.log(response[i].user[0]._id);
+              if (response[i].user[0]._id == "65c2bffe249f9627000044b3") {
+                console.log(response);
                 profileID = response[i]._id;
                 username.innerHTML = response[i].user[0].name;
                 description.innerHTML = response[i].description;
@@ -213,7 +271,8 @@ document.addEventListener("DOMContentLoaded", function () { //Make sure that the
                 xpTrackerInner.style.width = (currentXp.innerHTML/maxXp.innerHTML)*100 + "%";
               }
             }
-        });
+        }
+        );
 
         fetch(historyUrl, settings)
         .then(response => response.json())
@@ -236,6 +295,7 @@ document.addEventListener("DOMContentLoaded", function () { //Make sure that the
             </div>`;
             }
           }
+          
 
           document.getElementById("history-containers").innerHTML = content;
         });
@@ -275,12 +335,16 @@ document.addEventListener("DOMContentLoaded", function () { //Make sure that the
           console.log(document.getElementById("edit-description").value);
           description.innerHTML = document.getElementById("edit-description").value;
 
-          //Updating display
-          document.getElementById("description-container").style.display = "flex"; //Showing the description container
-          document.getElementById("edit-description-container").style.display = "none"; //Hiding the edit description container
+          // Updating display
+          document.getElementById("description-container").style.display = "flex"; // Showing the description container
+          document.getElementById("edit-description-container").style.display = "none"; // Hiding the edit description container
 
-          getInfo(); //Calling the getInfo function to get the user data
-      });
+          getInfo(); // Calling the getInfo function to get the user data
+        })
+        .catch(error => {
+          console.error(error);
+          // Handle error if the fetch request fails
+        });
     }
   }
 
@@ -312,6 +376,7 @@ document.addEventListener("DOMContentLoaded", function () { //Make sure that the
           console.log(response);
           for (let i = 0; i < response.length; i++) {
             if (response[i].user[0]._id == userID ) {
+              console.log(response);
               profileID = response[i]._id;
               level.innerHTML = response[i].level;
               currentXp.innerHTML = response[i].xp + 1000;
