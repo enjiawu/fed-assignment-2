@@ -37,10 +37,13 @@
                   <a href="index.html"><img src="image/logo/GR-white.png" alt = "logo-white"></a>
               </div>
                 <nav>
+                  <!-- Navigation links -->
                   <ul class = "menu-list">
+                    <!-- Cancel button for mobile menu -->
                     <li class="icon cancel-btn">
                         <i class="fa fa-times"></i>
                     </li>
+                    <!-- Navigation links -->
                     <li class="active"><a href="index.html">Home</a></li>
                     <li><a href="html/about.html">About</a></li>
                     <li><a href="html/news.html">News</a></li>
@@ -52,6 +55,7 @@
                     <li class="user-login" id="user-login"><a href = "html/profile.html"><i class="fa fa-user"></i></a></li>
                 </ul>
                 </nav>
+                <!-- Menu button for mobile menu -->
                 <div class="icon menu-btn">
                     <i class="fa fa-bars"></i>
                 </div>
@@ -59,32 +63,41 @@
         </nav>
     </header>
 
+    <!-- Login and Register Pop-up -->
     <div class="wrapper-container">
       <div id = "login-container" class="wrapper">
+        <!-- Login success message -->
         <div id="login-success">
           <p>Welcome back</p>
         </div>
+        <!-- Close button -->
         <span class="icon-close"><ion-icon name="close"></ion-icon></span>
+        <!-- Login form -->
         <div class="form-box login">
           <h2>Login</h2>
           <form id="login-form">
+            <!-- Email input -->
             <div class="input-box">
               <span class="icon"><ion-icon name="mail"></ion-icon></span>
               <!-- Correct the id attribute to "login-email" -->
               <input type="email" id="login-email" required>
               <label>Email</label>
             </div>
+            <!-- Password input -->
             <div class="input-box">
               <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
               <input type="password" id="login-password" required>
               <label>Password</label>
             </div>
+            <!-- Remember me checkbox -->
             <div class="remeber-forgot">
               <label><input type="checkbox">Remember me</label>
             </div>
         
+            <!-- Login button -->
             <!-- Correct the onclick function to the login function directly -->
             <button type="button" class="btn" id="login-button">Login</button>
+            <!-- Login register link -->
             <div class="login-rigister">
               <p>Don't have an account?
                 <a href="#" class="register-link">Register</a>
@@ -93,6 +106,7 @@
           </form>
         </div>
 
+        <!-- Registration form -->
         <div class="form-box register">
           <h2>Registration</h2>
           <div id="add-update-msg">
