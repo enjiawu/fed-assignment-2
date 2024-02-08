@@ -8,11 +8,11 @@ const options = {
 };
 
 try {
+	//fetch data from the API
 	const response = await fetch(url, options);
 	const data = await response.json();
 	console.log(data);
 	console.log(data[1].title);
-	//console.log(response)
 
 	let newsData = "";
 for (let i = 0; i < data.length; i++) {
