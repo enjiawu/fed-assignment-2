@@ -100,6 +100,10 @@ In conclusion, we designed this website to educate users on the environment in a
 3. Verify that the content remains visually appealing and all functions continue to work normally as the screen size changes.
 
 ## Credits
+
+### Content
+- the FAQ section was made following youtube tutorial https://youtu.be/IcyXS9aL4bs?si=KvwqtUksvrQadlmt
+
 ### Media
 - The photos used in this site were obtained from
   - https://unsplash.com/photos/three-assorted-color-garbage-cans-PizD8punZsw
