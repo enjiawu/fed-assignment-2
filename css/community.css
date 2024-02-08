@@ -247,7 +247,7 @@ ul {
 /*Alert message style*/
 .alert{
     position: fixed; /*Fixed position at the top of the screen*/
-    top: 2%;
+    top: 20%;
     width: 90vw;
 }
 
