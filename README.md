@@ -97,6 +97,19 @@ In conclusion, we designed this website to offer the educate users on the enviro
 ### Content
 
 ### Media
+https://unsplash.com/photos/three-assorted-color-garbage-cans-PizD8punZsw
+https://unsplash.com/photos/assorted-box-lot-on-brown-wooden-pallets-qph7tJfcDys
+https://www.pexels.com/photo/pile-of-vehicle-tires-3283430
+https://unsplash.com/photos/black-plastic-garbage-bin-with-wheels-beside-wall-b0p818k8Ok8
+https://unsplash.com/photos/man-in-blue-shirt-sitting-on-sand-during-daytime-xch7jXAaqqo
+https://www.freepik.com/free-photo/view-green-forest-trees-with-co2_31481258.htm#query=Carbon%20Footprint%20Reduction&position=0&from_view=search&track=ais&uuid=20c6cfc6-4470-484b-ac9e-612598ff0fd7
+https://www.freepik.com/free-photo/light-bulb-with-miniature-house_8726653.htm#query=energy%20saving&position=33&from_view=search&track=ais&uuid=9d67ea58-624e-4e01-a697-09c4bc968822
+https://www.freepik.com/free-photo/recycling-concept-flat-lay_12246026.htm#query=paper%20recycling&position=1&from_view=search&track=ais&uuid=406d1234-2153-4890-b177-28ab5af95947
+https://www.pexels.com/photo/low-angle-shot-of-people-holding-a-garbage-bag-full-of-plastic-bottles-12492222
+https://www.pexels.com/photo/hands-of-people-putting-plastic-bottles-in-garbage-bag-7656748
+https://www.pexels.com/photo/plastic-bottles-in-a-mesh-bag-12492227
+https://www.pexels.com/photo/person-holding-white-and-green-plastic-bag-3962267
+
   
 ### Acknowledgements
 

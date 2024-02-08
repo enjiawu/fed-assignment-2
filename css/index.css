@@ -147,10 +147,8 @@ p {
     display: none;
     position: fixed;
     border-radius: 10px;
-    width: 100vw;
-    height: 100vh;
-    max-height: 50vh;
-    max-width: 80vw;
+    height: 80vh;
+    width: 80vw;
     justify-content: center;
     text-align: center;
     background-color: rgb(176, 226, 176);
@@ -160,6 +158,13 @@ p {
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 1000;
+  }
+
+  #popup-window h3 {
+    font-family: Bangers;
+    font-size: 3wh;
+    margin-top: 15px;
+    font-weight: normal;
   }
 
 #close-button {
