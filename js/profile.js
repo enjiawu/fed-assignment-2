@@ -3,11 +3,15 @@ function lottieLoading(){ //Function for loading lottie for 3 seconds
   document.getElementById("loading-screen").style.display = "flex"; //Showing the lottie animation
   document.getElementsByTagName("body")[0].style.backgroundColor = "#061f37"; //Changing the background color 
   document.getElementsByTagName("main")[0].style.display = "none"; //Hiding the community content
+  document.getElementsByTagName("footer")[0].style.display = "none"; //Hiding the footer
+  document.getElementsByTagName("nav")[0].style.display = "none"; //Hiding the footer
 
   setTimeout(() => { //Change back after 3 seconds
       document.getElementById("loading-screen").style.display = "none"; //Hiding the lottie animation
       document.getElementsByTagName("body")[0].style.backgroundColor = "white"; //Changing background back to white
-      document.getElementsByTagName("main")[0].style.display = "block"; //Showing the community content
+      document.getElementsByTagName("main")[0].style.display = "block"; //Showing the community 
+      document.getElementsByTagName("footer")[0].style.display = "block"; //Showing the footer
+      document.getElementsByTagName("nav")[0].style.display = "block"; //Showing the navcontent
   }, 5000);
 }
 
