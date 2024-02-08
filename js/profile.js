@@ -25,7 +25,7 @@ var userID = '65c2bffe249f9627000044b3';
 var userData = {};
 
 document.addEventListener("DOMContentLoaded", function () { //Make sure that the document is okay
-  if (window.location.pathname.includes("index.html")) { //For log in and registration
+  if (!window.location.pathname.includes("quiz.html")) { //For log in and registration
     document.getElementById("add-update-msg").style.display = "none";
 
     document.getElementById("register-submit").addEventListener("click", function (e) { //Check if register button has been clicked
@@ -179,12 +179,9 @@ document.addEventListener("DOMContentLoaded", function () { //Make sure that the
           for (let i = 0; i < data.length; i++) { //Iterating through all the users to find matching details
             if (data[i].email === loginEmail && data[i].password === loginPassword) { //If the email and password match then log in
               console.log(data[i]);
-              const successPopup = document.getElementById('login-success');
-              successPopup.style.display = 'block';
               document.getElementById("user-login").style.display = "block";
               document.getElementById("login-container").style.display = "none";
               document.getElementById("login-button-nav").style.display="none";
-              document.getElementById("login-success").style.display = "block"; //Hiding the success popup after 3 seconds
               emailFound = true;
               successfulLogin = true;
               localStorage.setItem("userID", data[i]._id); // Save the user ID in localStorage
@@ -203,9 +200,6 @@ document.addEventListener("DOMContentLoaded", function () { //Make sure that the
         });
 
         console.log(successfulLogin);
-        setTimeout(function () {
-          document.getElementById("login-success").style.display = "none"; //Hiding the success popup after 3 seconds
-        }, 3000);
     });
   }
 

@@ -75,7 +75,7 @@ document.addEventListener("DOMContentLoaded", function () { //Make sure that the
       }
   
       //Send AJAX request over to the DB and print response of the RESTDB storage to console.
-      fetch("https://greenrecycling-9fab.restdb.io/rest/post", settings)
+      fetch("https://greenrecycling-ce23.restdb.io/rest/post", settings)
         .then(response => response.json())
         .then(data => {
           console.log(data);
@@ -112,7 +112,7 @@ document.addEventListener("DOMContentLoaded", function () { //Make sure that the
       }
 
       //Making AJAX calls to modify post content by creating the content internally and running the loop to continously add on data
-      fetch("https://greenrecycling-9fab.restdb.io/rest/post", settings)
+      fetch("https://greenrecycling-ce23.restdb.io/rest/post", settings)
         .then(response => response.json())
         .then(response => {
             let content = "";
@@ -261,7 +261,7 @@ document.addEventListener("DOMContentLoaded", function () { //Make sure that the
         }
   
       //Sending AJAX request and hide the update contact form
-      fetch(`https://greenrecycling-9fab.restdb.io/rest/post/${postId}`, settings)
+      fetch(`https://greenrecycling-ce23.restdb.io/rest/post/${postId}`, settings)
         .then(response => response.json())
         .then(data => {
           console.log(data);
@@ -285,7 +285,7 @@ document.addEventListener("DOMContentLoaded", function () { //Make sure that the
   
   
   //Deleting a post
-  const APIKEY = "65c2b0394405e18685db039c";
+  const APIKEY = "65c4431fcca736f0586536bb";
   
     document.getElementById("post-container").addEventListener("click", function (e) { //Checking if post container delete button has been selected
         if (e.target.classList.contains("delete")) {
@@ -304,7 +304,7 @@ document.addEventListener("DOMContentLoaded", function () { //Make sure that the
       console.log("Deleting post with ID:", postId); 
 
       // Make an AJAX request to delete the contact
-      fetch(`https://greenrecycling-9fab.restdb.io/rest/post/${postId}`, {
+      fetch(`https://greenrecycling-ce23.restdb.io/rest/post/${postId}`, {
         method: "DELETE",
         headers: {
           "Content-Type": "application/json",
