@@ -1,14 +1,14 @@
 # Enviornment Web Application
 FED Assignment 2
-| Group Members  | 
-| ------------- | 
-| Wu Enjia  | 
-| Xue Wenya  | 
-| Kaylea Luk |
+| Group Members  | Features |
+| ------------- | ---------- |
+| Wu Enjia  | Quiz, Community, Profile page and login system |
+| Xue Wenya  | Home, Contact, About page and login interface |
+| Kaylea Luk | FAQ, News page and statistics popup |
 
 This project aims to create a web application that fosters a heightened awareness of environmental issues and actively engages the general public in challenges geared towards environmental conservation. The platform is designed to cater to two distinct groups of users. Firstly, environmental enthusiasts who are eager to enrich their journey towards sustainability and a community to support them. Secondly, individuals who seek to expand their knowledge on effective contributions to environmental preservation. This web application aims to encourage users to partake in eco-friendly challenges, elevate their understanding of the current state of the environment, and establish a readily accessible community for both environmental enthusiasts and those aspiring to embark on an environmental journey.
 
-[Github Page](https://enjiawu.github.io/fed-assignment-2/index.html)
+[Github Page](https://enjiawu.github.io/fed-assignment-2/index.html) \
 [Video Pitch](https://connectnpedu-my.sharepoint.com/:v:/g/personal/s10256978_connect_np_edu_sg/EXzEp2w5qZ5DlenE9E5rtHcBUFp1ltSXTm9ncdR3i9ZjEA?e=LBhdFt&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D)
 
 ## Design Process
@@ -57,7 +57,7 @@ In conclusion, we designed this website to educate users on the environment in a
 
 •	**Home page** - Introduction to the website, talks about the benefits and importance of recycling and links to all the other pages in the website.
 
-•	**About page** - The about page explains the intentions and goals behind the creation of this website, it seeks to motivate and inspire the user to join us in pushing for a greener world.
+•	**About page** - The About page explains the intentions and goals behind the creation of this website, it seeks to motivate and inspire the user to join us in pushing for a greener world.
 
 •	**Community page** - The community page is for people to post and read about environmental events such as volunteering projects and webinars that people can join and participate in. They can edit, delete and add posts.
 
@@ -74,7 +74,7 @@ In conclusion, we designed this website to educate users on the environment in a
 ### Features left to implement
 **1. Enhanced Hover Effects for Images** 
 
-**2. One time log in to access the entire website**
+**2. One-time log-in to access the entire website**
 
 **3. Smooth visual transitions between sections and pages**
 
@@ -98,7 +98,7 @@ In conclusion, we designed this website to educate users on the environment in a
    - This project uses Climate News API to generate news articles on the news page.
 
 **7. [Live World Data API](https://rapidapi.com/jonaskoscielny/api/live-world-data)**
-   - This project uses Live World Data API to generate statistics for the home page pop up.
+   - This project uses Live World Data API to generate statistics for the home page pop-up.
 
 ## Testing
 **Responsive Design - Test on Different Browsers**
@@ -161,10 +161,6 @@ In conclusion, we designed this website to educate users on the environment in a
 6. At the end of the quiz, verify that quiz points are correct and user xp has changed.
 
 ## Credits
-
-### Content
-- the FAQ section was made following youtube tutorial https://youtu.be/IcyXS9aL4bs?si=KvwqtUksvrQadlmt
-
 ### Media
 - The photos used in this site were obtained from
   - https://unsplash.com/photos/three-assorted-color-garbage-cans-PizD8punZsw
@@ -183,4 +179,5 @@ In conclusion, we designed this website to educate users on the environment in a
 
 ### Acknowledgements 
 - Tutorials
-  - [Quiz API](https://www.youtube.com/watch?v=3aKOQn2NPFs) 
+  - [Quiz API](https://www.youtube.com/watch?v=3aKOQn2NPFs)
+  - [FAQ](https://youtu.be/IcyXS9aL4bs?si=KvwqtUksvrQadlmt)
