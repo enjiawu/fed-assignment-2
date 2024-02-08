@@ -236,7 +236,7 @@ document.addEventListener("DOMContentLoaded", function () { //Make sure that the
     
     getInfo(); //Calling the getInfo function to get the user data
     
-    function getInfo(){
+    function getInfo(){ 
       //fetching of data for the profile page
       fetch(userdataUrl, settings)
       .then(response => response.json())
@@ -250,10 +250,11 @@ document.addEventListener("DOMContentLoaded", function () { //Make sure that the
             console.log(userID);
             for (let i = 0; i < response.length; i++) {
               console.log(response[i].user[0]._id);
-              if (response[i].user[0]._id == "65c2bffe249f9627000044b3") {
+              if (response[i].user[0]._id == "65c2bffe249f9627000044b3") { //Checking if user id is the user id of the whole profile
                 console.log(response);
+                //Changing UI display
                 profileID = response[i]._id;
-                username.innerHTML = response[i].user[0].name;
+                username.innerHTML = response[i].user[0].name; 
                 description.innerHTML = response[i].description;
                 level.innerHTML = response[i].level;
                 currentXp.innerHTML = response[i].xp;
@@ -277,7 +278,7 @@ document.addEventListener("DOMContentLoaded", function () { //Make sure that the
         .then(response => {
           let content = "";
     
-          for (var i = 0; i < response.length; i++) {
+          for (var i = 0; i < response.length; i++) {  //Formatting the history output
             if (response[i].user[0]._id == userID) {
               content = `${content}
               <div id = ${response[i]._id}>
