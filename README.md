@@ -8,7 +8,7 @@ FED Assignment 2
 
 This project aims to create a web application that fosters a heightened awareness of environmental issues and actively engages the general public in challenges geared towards environmental conservation. The platform is designed to cater to two distinct groups of users. Firstly, environmental enthusiasts who are eager to enrich their journey towards sustainability and a community to support them. Secondly, individuals who seek to expand their knowledge on effective contributions to environmental preservation. This web application aims to encourage users to partake in eco-friendly challenges, elevate their understanding of the current state of the environment, and establish a readily accessible community for both environmental enthusiasts and those aspiring to embark on an environmental journey.
 
-[Github Page](https://enjiawu.github.io/fed-assignment-2/index.html)
+[Github Page](https://enjiawu.github.io/fed-assignment-2/index.html) \
 [Video Pitch](https://connectnpedu-my.sharepoint.com/:v:/g/personal/s10256978_connect_np_edu_sg/EXzEp2w5qZ5DlenE9E5rtHcBUFp1ltSXTm9ncdR3i9ZjEA?e=LBhdFt&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D)
 
 ## Design Process
