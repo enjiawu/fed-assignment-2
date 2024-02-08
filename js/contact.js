@@ -1,11 +1,14 @@
+// Execute code after the DOM content has loaded
 document.addEventListener("DOMContentLoaded", function () {
-  const APIKEY = "65c221a140097ad343c8b65f";
-  document.getElementById("add-update-msg").style.display = "none";
+  const APIKEY = "65c221a140097ad343c8b65f"; // Replace APIKEY with your actual API key
+  document.getElementById("add-update-msg").style.display = "none";// Hide the initial display of the contact update message
 
+  // Add event listener to the contact submit button
   document.getElementById("contact-submit").addEventListener("click", function (e) {
     // Prevent default action of the button 
     e.preventDefault();
 
+    // Get values from the contact form inputs
     let contactName = document.getElementById("contact-name").value;
     let contactEmail = document.getElementById("contact-email").value;
     let contactSubject = document.getElementById("contact-subject").value;
@@ -19,6 +22,7 @@ document.addEventListener("DOMContentLoaded", function () {
       "message": contactMessage
     };
 
+    // AJAX request settings
     let settings = {
       method: "POST", // use post to send info
       headers: {
@@ -40,9 +44,11 @@ document.addEventListener("DOMContentLoaded", function () {
       .then(response => response.json())
       .then(data => {
         console.log(data);
+        // Re-enable the contact submit button
         document.getElementById("contact-submit").disabled = false;
-        // update frontend UI 
+        // Display the contact update message
         document.getElementById("add-update-msg").style.display = "block";
+        //Remove this code if you want the message to stay visible until the user interacts with it
         setTimeout(function () {
           document.getElementById("add-update-msg").style.display = "none";
           document.getElementById("add-contact-form").reset();
