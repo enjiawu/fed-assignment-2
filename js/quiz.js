@@ -57,7 +57,8 @@ startButton.addEventListener("click", function(){ //Add an event listener for wh
         .then(function(response) {
             return response.json();
         })
-        .then((loadedQuestions) => {
+        .then((loadedQuestions) => { 
+            //Followed YouTube tutorial to do: https://www.youtube.com/watch?v=3aKOQn2NPFs
             questions = loadedQuestions.results.map((loadedQuestion) => { //Mapping the loaded questions to a formatted question object
                 const formattedQuestion = {
                     question: loadedQuestion.question,
