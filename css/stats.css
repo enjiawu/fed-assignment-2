@@ -16,6 +16,10 @@
         left: 50%;
         transform: translate(-50%, -50%);
         z-index: 1000;
+        font-family: Bangers;
+        font-size: 3wh;
+        margin-top: 15px;
+        text-align: center;
       }
 
     #close-button {
