@@ -89,6 +89,18 @@ In conclusion, we designed this website to educate users on the environment in a
 **3. [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)**
    - This project uses JS to enhance the features of the website.
 
+**4. [Rest DB](https://restdb.io/)**
+   - This project uses Rest DB as the database to store necessary information.
+
+**5. [Trivia API](https://opentdb.com/api_config.php)**
+   - This project uses Trivia API to generate questions and answers for the quiz.
+
+**6. [Climate News API](https://rapidapi.com/AshfaqKabir/api/climate-news-api5/)**
+   - This project uses Climate News API to generate news articles on the news page.
+
+**7. [Live World Data API](https://rapidapi.com/jonaskoscielny/api/live-world-data)**
+   - This project uses Live World Data API to generate statistics for the home page pop up.
+
 ## Testing
 **Responsive Design - Test on Different Browsers**
 1. Verify that the content does not spill out of the page as the screen size decreases.
@@ -96,22 +108,20 @@ In conclusion, we designed this website to educate users on the environment in a
 3. Verify that the content remains visually appealing and all functions continue to work normally as the screen size changes.
 
 ## Credits
-### Content
-
 ### Media
-https://unsplash.com/photos/three-assorted-color-garbage-cans-PizD8punZsw
-https://unsplash.com/photos/assorted-box-lot-on-brown-wooden-pallets-qph7tJfcDys
-https://www.pexels.com/photo/pile-of-vehicle-tires-3283430
-https://unsplash.com/photos/black-plastic-garbage-bin-with-wheels-beside-wall-b0p818k8Ok8
-https://unsplash.com/photos/man-in-blue-shirt-sitting-on-sand-during-daytime-xch7jXAaqqo
-https://www.freepik.com/free-photo/view-green-forest-trees-with-co2_31481258.htm#query=Carbon%20Footprint%20Reduction&position=0&from_view=search&track=ais&uuid=20c6cfc6-4470-484b-ac9e-612598ff0fd7
-https://www.freepik.com/free-photo/light-bulb-with-miniature-house_8726653.htm#query=energy%20saving&position=33&from_view=search&track=ais&uuid=9d67ea58-624e-4e01-a697-09c4bc968822
-https://www.freepik.com/free-photo/recycling-concept-flat-lay_12246026.htm#query=paper%20recycling&position=1&from_view=search&track=ais&uuid=406d1234-2153-4890-b177-28ab5af95947
-https://www.pexels.com/photo/low-angle-shot-of-people-holding-a-garbage-bag-full-of-plastic-bottles-12492222
-https://www.pexels.com/photo/hands-of-people-putting-plastic-bottles-in-garbage-bag-7656748
-https://www.pexels.com/photo/plastic-bottles-in-a-mesh-bag-12492227
-https://www.pexels.com/photo/person-holding-white-and-green-plastic-bag-3962267
+- The photos used in this site were obtained from
+  - https://unsplash.com/photos/three-assorted-color-garbage-cans-PizD8punZsw
+  - https://unsplash.com/photos/assorted-box-lot-on-brown-wooden-pallets-qph7tJfcDys
+  - https://www.pexels.com/photo/pile-of-vehicle-tires-3283430
+  - https://unsplash.com/photos/black-plastic-garbage-bin-with-wheels-beside-wall-b0p818k8Ok8
+  - https://unsplash.com/photos/man-in-blue-shirt-sitting-on-sand-during-daytime-xch7jXAaqqo
+  - https://www.freepik.com/free-photo/view-green-forest-trees-with-co2_31481258.htm#query=Carbon%20Footprint%20Reduction&position=0&from_view=search&track=ais&uuid=20c6cfc6-4470-484b-ac9e-612598ff0fd7
+  - https://www.freepik.com/free-photo/light-bulb-with-miniature-house_8726653.htm#query=energy%20saving&position=33&from_view=search&track=ais&uuid=9d67ea58-624e-4e01-a697-09c4bc968822
+  - https://www.freepik.com/free-photo/recycling-concept-flat-lay_12246026.htm#query=paper%20recycling&position=1&from_view=search&track=ais&uuid=406d1234-2153-4890-b177-28ab5af95947
+  - https://www.pexels.com/photo/low-angle-shot-of-people-holding-a-garbage-bag-full-of-plastic-bottles-12492222
+  - https://www.pexels.com/photo/hands-of-people-putting-plastic-bottles-in-garbage-bag-7656748
+  - https://www.pexels.com/photo/plastic-bottles-in-a-mesh-bag-12492227
+  - https://www.pexels.com/photo/person-holding-white-and-green-plastic-bag-3962267
+  - https://unsplash.com/photos/silhouette-of-off-road-car-h8nxGssjQXs
 
-  
-### Acknowledgements
 
