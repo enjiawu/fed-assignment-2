@@ -13,54 +13,249 @@
 </head>
 
   <body>
-        <main id="profile-container"> <!--Main container for profile content-->
-          <section id = "profile-main" class = "d-flex flex-row"> <!---->
-            <img src="../image/profile/profile.png" alt="Profile Picture" id="profile-picture">
-            <div id = "profile-details" class = "d-flex flex-column">
-              <h2 id = "username">Username</h2>
-              <div id = "description-container" class = "flex-row">
-                <p id = "description"></p>
-                <a id = "edit-description-button">
-                  <img src = "../image/profile/edit.png" alt = "Edit" id = "edit-description-icon">
-                </a>
+    <header>
+      <!-- Navigation -->
+      <nav class="navigationbar">
+          <div class="content">
+              <div class="logo-green">
+                  <a href="../index.html"><img src="../image/logo/GR-green.png"/></a>
               </div>
-              <div id = "edit-description-container" class = "flex-row">
-                <form id = "edit-description-form">
-                  <div class="form-group">
-                    <textarea class="form-control" id="edit-description" rows="5" maxlength="100" placeholder="Enter your description here" required></textarea>
+              <div class="logo-white">
+                <a href="../index.html"><img src="../image/logo/GR-white.png"/></a>
+            </div>
+              <nav>
+                <ul class = "menu-list">
+                  <div class="icon cancel-btn">
+                      <i class="fa fa-times"></i>
                   </div>
-                  <div id = "buttons" class = "d-flex flex-row">
-                    <button id="save-description-button" type="submit">Save</button>
-                    <button id="cancel-button" type="submit">Cancel</button>
-                  </div>
-                </form>
+                  <li><a href="../index.html">Home</a></li>
+                  <li class="active"><a href="about.html">About</a></li>
+                  <li><a href="news.html">News</a></li>
+                  <li><a href="quiz.html">Quizzes</a></li>
+                  <li><a href="community.html">Community</a></li>
+                  <li><a href="contact.html">Contact</a></li> 
+                  <li><a href="faq.html">FAQ</a></li>  
+                  <button class="login-btn-pop">Login</button>
+                  <li class="user-login" id="user-login"><a href = "profile.html"><i class="fa fa-user"></i></a></li>
+              </ul>
+              </nav>
+              <div class="icon menu-btn">
+                  <i class="fa fa-bars"></i>
               </div>
-              <div id = "xp-tracker">
-                  <div id = "xp-tracker-inner"></div>
-                    <div id = "level-tracker" class = "d-flex flex-row">
-                        <p id = "level">Level <span id= "player-level"></span></p>
-                        <p id = "player-xp"><span id = "current-xp"></span>/<span id = "max-xp"></span></p>
-                    </div>
+          </div>
+      </nav>
+  </header>
+
+  <div class="wrapper-container">
+    <div id = "login-container" class="wrapper">
+      <div id="login-success">
+        <p>Welcome back</p>
+      </div>
+      <span class="icon-close"><ion-icon name="close"></ion-icon></span>
+      <div class="form-box login">
+        <h2>Login</h2>
+        <form id="login-form">
+          <div class="input-box">
+            <span class="icon"><ion-icon name="mail"></ion-icon></span>
+            <!-- Correct the id attribute to "login-email" -->
+            <input type="email" id="login-email" required>
+            <label>Email</label>
+          </div>
+          <div class="input-box">
+            <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
+            <input type="password" id="login-password" required>
+            <label>Password</label>
+          </div>
+          <div class="remeber-forgot">
+            <label><input type="checkbox">Remember me</label>
+          </div>
+      
+          <!-- Correct the onclick function to the login function directly -->
+          <button type="button" class="btn" id="login-button">Login</button>
+          <div class="login-rigister">
+            <p>Don't have an account?
+              <a href="#" class="register-link">Register</a>
+            </p>
+          </div>
+        </form>
+      </div>
+
+      <div class="form-box register">
+        <h2>Registration</h2>
+        <div id="add-update-msg">
+          <div class="alert alert-success" role="alert">
+            <p>Create Account Successfully.</p>
+          </div>
+        </div>
+        <div class="form" id="add-register">
+
+          <form id="add-register-form">
+          
+            <div class="input-box register-group">
+              <span class="icon"><ion-icon name="person"></ion-icon></span> 
+              <input type="text" id="register-name" class="register-control" name="name" required>
+              <label for="register-name">Username</label>
+              
+            </div>
+
+            <div class="input-box register-group">
+              <span class="icon"><ion-icon name="mail"></ion-icon></span>
+              <input type="email" id="register-email" class="register-control" name="email" required>
+              <label>Email</label>
+               
+            </div>
+
+            <div class="input-box register-group">
+              <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
+              <input type="password" id="register-password" class="register-control" name="password" required>
+              <label>Password</label>
+              
+            </div>
+
+            <div class="remeber-forgot">
+              <label><input id = "tnc" type="checkbox" required>I agree to the terms & conditions</label>
+            </div>
+            <input type="hidden" id="update-register-id">
+
+            <button type="submit" class="btn btn-warning" id="register-submit">Register</button>
+            <div class="login-rigister">
+              <p>Already have an account?
+                <a href="#" class="login-link">Login</a>
+              </p>
+            </div>
+          </form>
+        </div>
+        
+      </div>
+
+    </div>
+  </div>
+
+  <main>
+    <section class="profile-banner"> 
+      <div>
+        <h1>Welcome back!</h1>
+        <p>Explore and manage your personalized profile on Green Recycling.</p>
+      </div>
+    </section>
+  
+      <section id="profile-container"> <!--Main container for profile content-->
+        <div id = "profile-main" class = "d-flex flex-row"> <!---->
+          <img src="../image/profile/profile.png" alt="Profile Picture" id="profile-picture">
+          <div id = "profile-details" class = "d-flex flex-column">
+            <h2 id = "username">Username</h2>
+            <div id = "description-container" class = "flex-row">
+              <p id = "description"></p>
+              <a id = "edit-description-button">
+                <img src = "../image/profile/edit.png" alt = "Edit" id = "edit-description-icon">
+              </a>
+            </div>
+            <div id = "edit-description-container" class = "flex-row">
+              <form id = "edit-description-form">
+                <div class="form-group">
+                  <textarea class="form-control" id="edit-description" rows="5" maxlength="100" placeholder="Enter your description here" required></textarea>
                 </div>
+                <div id = "buttons" class = "d-flex flex-row">
+                  <button id="save-description-button" type="submit">Save</button>
+                  <button id="cancel-button" type="submit">Cancel</button>
+                </div>
+              </form>
+            </div>
+            <div id = "xp-tracker">
+                <div id = "xp-tracker-inner"></div>
+                  <div id = "level-tracker" class = "d-flex flex-row">
+                      <p id = "level">Level <span id= "player-level"></span></p>
+                      <p id = "player-xp"><span id = "current-xp"></span>/<span id = "max-xp"></span></p>
+                  </div>
               </div>
             </div>
-          </section>
+          </div>
+        </div>
+  
+        <!--Profile history container-->
+        <div id = "profile-history" class = "d-flex flex-column">
+          <h2>History</h2>
+          <div id = "history-containers" class = "d-flex flex-column"></div>
+        </div>
+      </section>
+  </main>
+  
 
-          <!--Profile history container-->
-          <section id = "profile-history" class = "d-flex flex-column">
-            <h2>History</h2>
-            <div id = "history-containers" class = "d-flex flex-column"></div>
-          </section>
-        </main>
+   <!-- footer section -->
+   <footer>
+    <div class="footer-row">
+      <div class="footer-col footer-logo">
+        <div class="footer-logo-img">
+          <img src="../image/logo/GR-white.png"/>
+        </div>
 
-        <!--Lottie-->
-        <section id = "loading-screen">
-          <dotlottie-player src="https://lottie.host/b741b781-85ba-44a4-ab61-fa92685bc34d/hogrlivgr9.json" background="transparent" speed="1" style="width: 300px; height: 300px;" loop autoplay></dotlottie-player>
-        </section>
-        
-        <!--Javascript files-->
-        <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script> 
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
-        <script src="../js/profile.js" type="module"></script>
+        <p>
+          Empower a Greener Tomorrow through Responsible Recycling with Green Recycle. Nurturing a Greener Future for All begins with a click.
+        </p>
+        <div class="social">
+          <a href="#"><i class="fa-brands fa-square-facebook"></i></a>
+          <a href="#"><i class="fa-brands fa-square-instagram"></i></a>
+          <a href="#"><i class="fa-brands fa-square-twitter"></i></a>
+        </div>
+      </div>
+      <div class="footer-col footer-nav">
+        <div class="footer-navbar">
+          <h4>Join Us</h4>
+          <nav>
+            <ul>
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="about.html#about-vision">Our Vision</a></li>
+              <li><a href="about.html#about-mission">Our Mission</a></li>
+              <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+          </nav>
+        </div>
+
+        <div class="footer-navbar">
+          <h4>Account</h4>
+          <nav>
+            <ul>
+              <li><a href="news.html">News</a></li>
+              <li><a href="profile.html">Profile</a></li>
+              <li><a href="quiz.html">Quizzes</a></li>
+              <li><a href="community.html">Community</a></li>
+            </ul>
+          </nav>
+        </div>
+
+        <div class="footer-navbar">
+          <h4>FAQ</h4>
+          <nav>
+            <ul>
+              <li><a href="faq.html">FAQ</a></li>
+              <li><a href="contact.html">Contact</a></li>
+              <li><a href="about.html">Recycling</a></li>
+              <li><a href="../index.html#benefits">Benefits</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+    <div class="copyright">
+      <p>Copyright © 2024, Green Recycling. All rights reserved</p>
+      <div class="policy">
+        <p><a href="#">Term of us</a></p>
+        <p><a href="#">Privacy policy</a></p>
+        <p><a href="#">Cookie policy</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <!--Lottie-->
+  <section id = "loading-screen">
+    <dotlottie-player src="https://lottie.host/b741b781-85ba-44a4-ab61-fa92685bc34d/hogrlivgr9.json" background="transparent" speed="1" style="width: 300px; height: 300px;" loop autoplay></dotlottie-player>
+  </section>
+  
+  <!--Javascript files-->
+  <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script> 
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+  <script src="../js/profile.js" type="module"></script>
+
+
   </body>
 </html>

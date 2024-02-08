@@ -10,13 +10,48 @@ body{
     color: #40483D;
 }
 
-main{
-    margin: 50px 10vw;
-}
-
 h2{
     font-size: 28px;
     font-weight: bold;
+}
+
+/* banner section */
+.profile-banner {
+    padding: 0 60px;
+    width: 100%;
+    min-height: 50vh;
+    background: rgba(0, 0, 0, .30) url(../image/community/community-banner.jpg);
+    background-blend-mode: darken;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+}
+
+.profile-banner h1 {
+    font-size: 45px;
+    line-height: 1;
+    color: #fff;
+    margin: 0 0 40px;
+    font-family: 'poppins', sans-serif;
+}
+
+.profile-banner p{
+    color: #fff;
+    font-family: 'poppins', sans-serif;
+    font-size: 15px;
+    line-height: 1.5;
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+
+#profile-container{
+    margin: 50px 10vw;
 }
 
 #profile-main{
