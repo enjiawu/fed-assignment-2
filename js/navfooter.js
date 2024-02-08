@@ -20,6 +20,7 @@ cancelBtn.onclick = () => {
 
 // Change navbar style on scroll
 window.onscroll = () => {
+    // Check if the page has been scrolled more than 20 pixels
     this.scrollY > 20
     ? navbar.classList.add("sticky")
     : navbar.classList.remove("sticky");
@@ -32,18 +33,22 @@ const registerLink = document.querySelector('.register-link');
 const popupBtn = document.querySelector('.login-btn-pop')
 const iconClose = document.querySelector('.icon-close')
 
+// Event listener for clicking on the Register link
 registerLink.addEventListener('click', ()=> {
     wrapper.classList.add('link-active');
 })
 
+// Event listener for clicking on the Login link
 loginLink.addEventListener('click', ()=> {
     wrapper.classList.remove('link-active');
 })
 
+// Event listener for clicking on the Login button to show the popup
 popupBtn.addEventListener('click', ()=> {
     wrapper.classList.add('pop-active');
 })
 
+// Event listener for clicking on the close icon to hide the popup
 iconClose.addEventListener('click', ()=> {
     wrapper.classList.remove('pop-active');
 })
