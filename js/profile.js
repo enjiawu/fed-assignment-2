@@ -143,11 +143,6 @@ document.addEventListener("DOMContentLoaded", function () { //Make sure that the
         .then((data) => {
           console.log(data);
           document.getElementById("register-submit").disabled = false;
-          // update frontend UI
-          document.getElementById("add-update-msg").style.display = "block";
-          setTimeout(function () {
-            document.getElementById("add-update-msg").style.display = "none";
-          }, 3000);
         });
     }
   
