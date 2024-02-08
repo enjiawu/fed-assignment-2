@@ -31,7 +31,7 @@ function lottieLoading(){ //Function for loading lottie for 3 seconds
 document.addEventListener("DOMContentLoaded", function () { //Make sure that the document is okay
     lottieLoading(); //Loading lottie animation
 
-    const APIKEY = "65c2b0394405e18685db039c"; //Our api key
+    const APIKEY = "65c4431fcca736f0586536bb"; //Our api key
     getPosts();  //Call get posts function
 
     document.getElementById("submit-post").addEventListener("click", function (e) { //When user submits the form to add new post

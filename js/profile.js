@@ -16,10 +16,10 @@ function lottieLoading(){ //Function for loading lottie for 3 seconds
 }
 
 //API keys and links 
-const profileUrl = 'https://greenrecycling-9fab.restdb.io/rest/profile';
-const historyUrl = 'https://greenrecycling-9fab.restdb.io/rest/history';
-const userdataUrl = 'https://greenrecycling-9fab.restdb.io/rest/userdata';
-const APIKEY = "65c2b0394405e18685db039c";
+const profileUrl = 'https://greenrecycling-ce23.restdb.io/rest/profile';
+const historyUrl = 'https://greenrecycling-ce23.restdb.io/rest/history';
+const userdataUrl = 'https://greenrecycling-ce23.restdb.io/rest/userdata';
+const APIKEY = "65c4431fcca736f0586536bb";
 var profileID = "";
 var userID = '65c2bffe249f9627000044b3';
 var userData = {};
