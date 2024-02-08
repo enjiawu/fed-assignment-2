@@ -109,42 +109,44 @@
         <!-- Registration form -->
         <div class="form-box register">
           <h2>Registration</h2>
+          <!-- Registration success message -->
           <div id="add-update-msg">
             <div class="alert alert-success" role="alert">
               <p>Create Account Successfully.</p>
             </div>
           </div>
           <div class="form" id="add-register">
-
             <form id="add-register-form">
-            
+            <!-- Username input -->
               <div class="input-box register-group">
                 <span class="icon"><ion-icon name="person"></ion-icon></span> 
                 <input type="text" id="register-name" class="register-control" name="name" required>
                 <label for="register-name">Username</label>
-                
               </div>
 
+              <!-- Email input -->
               <div class="input-box register-group">
                 <span class="icon"><ion-icon name="mail"></ion-icon></span>
                 <input type="email" id="register-email" class="register-control" name="email" required>
-                <label>Email</label>
-                 
+                <label>Email</label>   
               </div>
-
+              
+              <!-- Password input -->
               <div class="input-box register-group">
                 <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
                 <input type="password" id="register-password" class="register-control" name="password" required>
-                <label>Password</label>
-                
+                <label>Password</label> 
               </div>
 
+              <!-- Terms and conditions checkbox -->
               <div class="remeber-forgot">
                 <label><input id = "tnc" type="checkbox" required>I agree to the terms & conditions</label>
               </div>
               <input type="hidden" id="update-register-id">
 
+              <!-- Register button -->
               <button type="submit" class="btn btn-warning" id="register-submit">Register</button>
+              <!-- Register login link -->
               <div class="login-rigister">
                 <p>Already have an account?
                   <a href="#" class="login-link">Login</a>
