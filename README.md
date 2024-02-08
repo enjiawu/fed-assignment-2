@@ -8,16 +8,8 @@ FED Assignment 2
 
 This project aims to create a web application that fosters a heightened awareness of environmental issues and actively engages the general public in challenges geared towards environmental conservation. The platform is designed to cater to two distinct groups of users. Firstly, environmental enthusiasts who are eager to enrich their journey towards sustainability and a community to support them. Secondly, individuals who seek to expand their knowledge on effective contributions to environmental preservation. This web application aims to encourage users to partake in eco-friendly challenges, elevate their understanding of the current state of the environment, and establish a readily accessible community for both environmental enthusiasts and those aspiring to embark on an environmental journey.
 
-
-Brief description: \
-This project will consist of 5 main features. \
-Firstly, a profile page that will include a user's level, achievements and progress throughout their entire journey on the web application. \
-Secondly, a green challenges pop-up will be featured on the hero slider of the home page. The green challenges will reward users with points or virtual currency for completing green challenges. \
-Thirdly, an interactive map that shows the recycling corners in Singapore allows users to easily identify nearby recycling corners around Singapore. \
-Fourthly, educational quizzes about the environment, such as about good practices for saving the environment. \
-Lastly, a community forum page for users to post events and invite other users to join. 
-
 [Github Page](https://enjiawu.github.io/fed-assignment-2/index.html)
+[Video Pitch](https://connectnpedu-my.sharepoint.com/:v:/g/personal/s10256978_connect_np_edu_sg/EXzEp2w5qZ5DlenE9E5rtHcBUFp1ltSXTm9ncdR3i9ZjEA?e=LBhdFt&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D)
 
 ## Design Process
 The website is designed to provide an engaging and comprehensive experience for the general public interested in our environment by providing a responsive and gamified design. 
